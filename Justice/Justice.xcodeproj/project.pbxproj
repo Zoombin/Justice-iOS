@@ -52,6 +52,7 @@
 		7762AE161B3D016F008470F5 /* JSAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE151B3D016F008470F5 /* JSAPIManager.m */; };
 		7762AE1A1B3D04DD008470F5 /* JSServiceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE191B3D04DD008470F5 /* JSServiceCategory.m */; };
 		7762AE1D1B3D04EC008470F5 /* JSService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE1C1B3D04EC008470F5 /* JSService.m */; };
+		7762AE201B3D18E0008470F5 /* JSServiceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,8 @@
 		7762AE191B3D04DD008470F5 /* JSServiceCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSServiceCategory.m; sourceTree = "<group>"; };
 		7762AE1B1B3D04EC008470F5 /* JSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSService.h; sourceTree = "<group>"; };
 		7762AE1C1B3D04EC008470F5 /* JSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSService.m; sourceTree = "<group>"; };
+		7762AE1E1B3D18E0008470F5 /* JSServiceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSServiceDetailsViewController.h; sourceTree = "<group>"; };
+		7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSServiceDetailsViewController.m; sourceTree = "<group>"; };
 		A61BF0946A2B8FFDB2A195DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +255,8 @@
 				771ED7111B3918A70051584D /* JSJusticeViewController.m */,
 				771ED7131B3918BD0051584D /* JSLawViewController.h */,
 				771ED7141B3918BD0051584D /* JSLawViewController.m */,
+				7762AE1E1B3D18E0008470F5 /* JSServiceDetailsViewController.h */,
+				7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */,
 				771ED7161B3918E90051584D /* JSSigninViewController.h */,
 				771ED7171B3918E90051584D /* JSSigninViewController.m */,
 				771ED7191B3918F60051584D /* JSSignupViewController.h */,
@@ -521,6 +526,7 @@
 				7762AE0D1B3D00F7008470F5 /* ZBBottomIndexView.m in Sources */,
 				7762AE0A1B3D00F7008470F5 /* UIViewController+HUD.m in Sources */,
 				7762AE031B3D00F7008470F5 /* UICollectionViewCell+ZBUtilites.m in Sources */,
+				7762AE201B3D18E0008470F5 /* JSServiceDetailsViewController.m in Sources */,
 				7762AE061B3D00F7008470F5 /* UIDevice+ZBUtilites.m in Sources */,
 				7762AE0B1B3D00F7008470F5 /* UIViewController+ImagePicker.m in Sources */,
 				7762AE101B3D00F7008470F5 /* ZBModel.m in Sources */,

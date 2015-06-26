@@ -11,5 +11,6 @@
 
 #import	"JSAPIManager.h"
 #import "UIViewController+HUD.h"
+#import "UIImageView+AFNetworking.h"
 
 #endif

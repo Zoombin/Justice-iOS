@@ -10,6 +10,7 @@
 #import "Header.h"
 #import "JSService.h"
 #import "JSServiceCategory.h"
+#import "JSServiceDetailsViewController.h"
 
 @interface JSLawViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -90,6 +91,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
 	return 1;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	JSServiceCategory *serviceCategory = _serviceCategories[indexPath.section];
+	JSService *service = serviceCategory.services[indexPath.row];
+	JSServiceDetailsViewController *serviceDetailsViewController = [[JSServiceDetailsViewController alloc] initWithNibName:nil bundle:nil];
+	serviceDetailsViewController.service = service;
+	[self.navigationController pushViewController:serviceDetailsViewController animated:YES];
 }
 
 @end
