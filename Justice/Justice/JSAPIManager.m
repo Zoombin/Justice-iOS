@@ -12,6 +12,7 @@
 NSString * const JS_HOST = @"http://127.0.0.1/dushuhu-web/";
 NSString * const JS_API_PREFIX = @"index.php?";
 NSString * const JS_ACTION = @"action";
+NSString * const JS_DATA = @"data";
 
 @implementation JSAPIManager
 
@@ -36,7 +37,7 @@ NSString * const JS_ACTION = @"action";
 
 - (void)servicesInCategories:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
 	[self GET:[self pathWithActionName:@"getServices"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSArray *multiAttributes = [responseObject valueForKeyPath:@"data"];
+		NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
 		if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if (block) block(nil, error, nil);
@@ -44,12 +45,17 @@ NSString * const JS_ACTION = @"action";
 }
 
 - (void)newsInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
-	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-	if (page) {
-		parameters[@"page"] = page;
-	}
-	[self GET:[self pathWithActionName:@"getNews"] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSArray *multiAttributes = [responseObject valueForKeyPath:@"data"];
+	[self GET:[self pathWithActionName:@"getNews"] parameters:@{@"page" : page} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
+		if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		if (block) block(nil, error, nil);
+	}];
+}
+
+- (void)galleriesInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
+	[self GET:[self pathWithActionName:@"getGalleries"] parameters:@{@"page" : page} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
 		if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 		if (block) block(nil, error, nil);

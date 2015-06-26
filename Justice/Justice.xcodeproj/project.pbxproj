@@ -55,6 +55,9 @@
 		7762AE201B3D18E0008470F5 /* JSServiceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */; };
 		7762AE231B3D2A92008470F5 /* JSNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE221B3D2A92008470F5 /* JSNews.m */; };
 		7762AE261B3D2B85008470F5 /* JSNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE251B3D2B85008470F5 /* JSNewsTableViewCell.m */; };
+		7783FF651B3DA11E0006B594 /* JSGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF641B3DA11E0006B594 /* JSGallery.m */; };
+		7783FF681B3DA2080006B594 /* JSGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */; };
+		7783FF6C1B3DA5150006B594 /* JSGalleryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +164,12 @@
 		7762AE221B3D2A92008470F5 /* JSNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNews.m; sourceTree = "<group>"; };
 		7762AE241B3D2B85008470F5 /* JSNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewsTableViewCell.h; sourceTree = "<group>"; };
 		7762AE251B3D2B85008470F5 /* JSNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewsTableViewCell.m; sourceTree = "<group>"; };
+		7783FF631B3DA11E0006B594 /* JSGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGallery.h; sourceTree = "<group>"; };
+		7783FF641B3DA11E0006B594 /* JSGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGallery.m; sourceTree = "<group>"; };
+		7783FF661B3DA2080006B594 /* JSGalleryPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGalleryPhoto.h; sourceTree = "<group>"; };
+		7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGalleryPhoto.m; sourceTree = "<group>"; };
+		7783FF6A1B3DA5150006B594 /* JSGalleryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGalleryDetailsViewController.h; sourceTree = "<group>"; };
+		7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGalleryDetailsViewController.m; sourceTree = "<group>"; };
 		A61BF0946A2B8FFDB2A195DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +221,7 @@
 				771ED6E31B39165E0051584D /* AppDelegate.m */,
 				7762AE141B3D016F008470F5 /* JSAPIManager.h */,
 				7762AE151B3D016F008470F5 /* JSAPIManager.m */,
+				7783FF691B3DA3700006B594 /* Categories */,
 				771ED71E1B391B550051584D /* Views */,
 				771ED71D1B391B490051584D /* Models */,
 				771ED71C1B391B400051584D /* Controllers */,
@@ -253,6 +263,8 @@
 			children = (
 				771ED7071B3917CC0051584D /* JSNewsViewController.h */,
 				771ED7081B3917CC0051584D /* JSNewsViewController.m */,
+				7783FF6A1B3DA5150006B594 /* JSGalleryDetailsViewController.h */,
+				7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */,
 				771ED70A1B39185F0051584D /* JSExamViewController.h */,
 				771ED70B1B39185F0051584D /* JSExamViewController.m */,
 				771ED70D1B3918720051584D /* JSChatViewController.h */,
@@ -280,6 +292,10 @@
 				7762AE1C1B3D04EC008470F5 /* JSService.m */,
 				7762AE211B3D2A92008470F5 /* JSNews.h */,
 				7762AE221B3D2A92008470F5 /* JSNews.m */,
+				7783FF631B3DA11E0006B594 /* JSGallery.h */,
+				7783FF641B3DA11E0006B594 /* JSGallery.m */,
+				7783FF661B3DA2080006B594 /* JSGalleryPhoto.h */,
+				7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -360,6 +376,14 @@
 				7762ADF61B3D00F7008470F5 /* ZBViewController.m */,
 			);
 			path = ZBUtilities;
+			sourceTree = "<group>";
+		};
+		7783FF691B3DA3700006B594 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7D5A5A0228FDB1ED2353EDE5 /* Pods */ = {
@@ -538,6 +562,7 @@
 				7762AE0A1B3D00F7008470F5 /* UIViewController+HUD.m in Sources */,
 				7762AE031B3D00F7008470F5 /* UICollectionViewCell+ZBUtilites.m in Sources */,
 				7762AE201B3D18E0008470F5 /* JSServiceDetailsViewController.m in Sources */,
+				7783FF6C1B3DA5150006B594 /* JSGalleryDetailsViewController.m in Sources */,
 				7762AE061B3D00F7008470F5 /* UIDevice+ZBUtilites.m in Sources */,
 				7762AE261B3D2B85008470F5 /* JSNewsTableViewCell.m in Sources */,
 				7762AE0B1B3D00F7008470F5 /* UIViewController+ImagePicker.m in Sources */,
@@ -549,10 +574,12 @@
 				7762AE161B3D016F008470F5 /* JSAPIManager.m in Sources */,
 				771ED7121B3918A70051584D /* JSJusticeViewController.m in Sources */,
 				7762AE1A1B3D04DD008470F5 /* JSServiceCategory.m in Sources */,
+				7783FF651B3DA11E0006B594 /* JSGallery.m in Sources */,
 				7762AE081B3D00F7008470F5 /* UITableViewCell+ZBUtilities.m in Sources */,
 				771ED7181B3918E90051584D /* JSSigninViewController.m in Sources */,
 				7762ADFD1B3D00F7008470F5 /* NSNumber+PrintableMeasurement.m in Sources */,
 				7762AE0F1B3D00F7008470F5 /* ZBHorizontalScrollTableViewCell.m in Sources */,
+				7783FF681B3DA2080006B594 /* JSGalleryPhoto.m in Sources */,
 				7762AE1D1B3D04EC008470F5 /* JSService.m in Sources */,
 				7762AE0E1B3D00F7008470F5 /* ZBFiveStarsRateView.m in Sources */,
 				7762AE051B3D00F7008470F5 /* UIColor+Random.m in Sources */,

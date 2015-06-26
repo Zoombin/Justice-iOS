@@ -9,11 +9,15 @@
 #import "JSNewsViewController.h"
 #import "Header.h"
 #import "JSNews.h"
+#import "JSGallery.h"
+#import "JSGalleryPhoto.h"
+#import "JSGalleryDetailsViewController.h"
 
 @interface JSNewsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (readwrite) UITableView *tableView;
 @property (readwrite) NSArray *multiNews;
+@property (readwrite) NSArray *galleries;
 
 @end
 
@@ -37,10 +41,18 @@
 	[self.view addSubview:_tableView];
 	
 	[self displayHUD:@"加载中..."];
-	[[JSAPIManager shared] newsInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+//	[[JSAPIManager shared] newsInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+//		[self hideHUD:YES];
+//		if (!error) {
+//			_multiNews = [JSNews multiWithAttributesArray:multiAttributes];
+//			[_tableView reloadData];
+//		}
+//	}];
+	
+	[[JSAPIManager shared] galleriesInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
 		[self hideHUD:YES];
 		if (!error) {
-			_multiNews = [JSNews multiWithAttributesArray:multiAttributes];
+			_galleries = [JSGallery multiWithAttributesArray:multiAttributes];
 			[_tableView reloadData];
 		}
 	}];
@@ -58,7 +70,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return _multiNews.count;
+	return _galleries.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,31 +78,34 @@
 	if (!cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:[UITableViewCell identifier]];
 	}
-	JSNews *news = _multiNews[indexPath.row];
-	cell.textLabel.text = news.title;
-	NSMutableString *detailsString = [NSMutableString string];
-	[detailsString appendString:[news.content substringToIndex:40]];
-	[detailsString appendString:@"\n"];
-	[detailsString appendString:@"2015-07-10"];//hard code
-	cell.detailTextLabel.text = detailsString;
-	cell.detailTextLabel.numberOfLines = 0;
+//	JSNews *news = _multiNews[indexPath.row];
+//	cell.textLabel.text = news.title;
+//	NSMutableString *detailsString = [NSMutableString string];
+//	[detailsString appendString:[news.content substringToIndex:40]];
+//	[detailsString appendString:@"\n"];
+//	[detailsString appendString:@"2015-07-10"];//hard code
+//	cell.detailTextLabel.text = detailsString;
+//	cell.detailTextLabel.numberOfLines = 0;
+//	
+//	if (news.imagePath.length) {
+//		[cell.imageView setImageWithURL:[NSURL URLWithString:news.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
+//	}
 	
-	CGFloat const widthOfImage = 80;
-	CGRect rect = cell.imageView.frame;
-
-	rect.size.width = widthOfImage;
-	rect.size.height = widthOfImage;
-	cell.imageView.frame = rect;
-//	NSLog(@"rect: %@", NSStringFromCGRect(rect));
-	
-	if (news.imagePath.length) {
-		[cell.imageView setImageWithURL:[NSURL URLWithString:news.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
-	}
+	JSGallery *gallery = _galleries[indexPath.row];
+	cell.textLabel.text = gallery.title;
 	return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	return 100;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	JSGallery *gallery = _galleries[indexPath.row];
+	JSGalleryDetailsViewController *galleryDetailsViewController = [[JSGalleryDetailsViewController alloc] initWithNibName:nil bundle:nil];
+	galleryDetailsViewController.gallery = gallery;
+	[self.navigationController pushViewController:galleryDetailsViewController animated:YES];
 }
 
 @end
