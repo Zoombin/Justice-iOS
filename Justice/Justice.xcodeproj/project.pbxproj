@@ -49,6 +49,9 @@
 		7762AE111B3D00F7008470F5 /* ZBTextValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762ADF31B3D00F7008470F5 /* ZBTextValidate.m */; };
 		7762AE121B3D00F7008470F5 /* ZBUtilities.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7762ADF41B3D00F7008470F5 /* ZBUtilities.podspec */; };
 		7762AE131B3D00F7008470F5 /* ZBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762ADF61B3D00F7008470F5 /* ZBViewController.m */; };
+		7762AE161B3D016F008470F5 /* JSAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE151B3D016F008470F5 /* JSAPIManager.m */; };
+		7762AE1A1B3D04DD008470F5 /* JSServiceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE191B3D04DD008470F5 /* JSServiceCategory.m */; };
+		7762AE1D1B3D04EC008470F5 /* JSService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE1C1B3D04EC008470F5 /* JSService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,13 @@
 		7762ADF41B3D00F7008470F5 /* ZBUtilities.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZBUtilities.podspec; sourceTree = "<group>"; };
 		7762ADF51B3D00F7008470F5 /* ZBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBViewController.h; sourceTree = "<group>"; };
 		7762ADF61B3D00F7008470F5 /* ZBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBViewController.m; sourceTree = "<group>"; };
+		7762AE141B3D016F008470F5 /* JSAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAPIManager.h; sourceTree = "<group>"; };
+		7762AE151B3D016F008470F5 /* JSAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAPIManager.m; sourceTree = "<group>"; };
+		7762AE171B3D03B0008470F5 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		7762AE181B3D04DD008470F5 /* JSServiceCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSServiceCategory.h; sourceTree = "<group>"; };
+		7762AE191B3D04DD008470F5 /* JSServiceCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSServiceCategory.m; sourceTree = "<group>"; };
+		7762AE1B1B3D04EC008470F5 /* JSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSService.h; sourceTree = "<group>"; };
+		7762AE1C1B3D04EC008470F5 /* JSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSService.m; sourceTree = "<group>"; };
 		A61BF0946A2B8FFDB2A195DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,8 +198,11 @@
 		771ED6DD1B39165D0051584D /* Justice */ = {
 			isa = PBXGroup;
 			children = (
+				7762AE171B3D03B0008470F5 /* Header.h */,
 				771ED6E21B39165E0051584D /* AppDelegate.h */,
 				771ED6E31B39165E0051584D /* AppDelegate.m */,
+				7762AE141B3D016F008470F5 /* JSAPIManager.h */,
+				7762AE151B3D016F008470F5 /* JSAPIManager.m */,
 				771ED71E1B391B550051584D /* Views */,
 				771ED71D1B391B490051584D /* Models */,
 				771ED71C1B391B400051584D /* Controllers */,
@@ -250,6 +263,10 @@
 		771ED71D1B391B490051584D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7762AE181B3D04DD008470F5 /* JSServiceCategory.h */,
+				7762AE191B3D04DD008470F5 /* JSServiceCategory.m */,
+				7762AE1B1B3D04EC008470F5 /* JSService.h */,
+				7762AE1C1B3D04EC008470F5 /* JSService.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -511,11 +528,14 @@
 				7762AE131B3D00F7008470F5 /* ZBViewController.m in Sources */,
 				7762AE001B3D00F7008470F5 /* NSString+ZBUtilites.m in Sources */,
 				771ED6E11B39165E0051584D /* main.m in Sources */,
+				7762AE161B3D016F008470F5 /* JSAPIManager.m in Sources */,
 				771ED7121B3918A70051584D /* JSJusticeViewController.m in Sources */,
+				7762AE1A1B3D04DD008470F5 /* JSServiceCategory.m in Sources */,
 				7762AE081B3D00F7008470F5 /* UITableViewCell+ZBUtilities.m in Sources */,
 				771ED7181B3918E90051584D /* JSSigninViewController.m in Sources */,
 				7762ADFD1B3D00F7008470F5 /* NSNumber+PrintableMeasurement.m in Sources */,
 				7762AE0F1B3D00F7008470F5 /* ZBHorizontalScrollTableViewCell.m in Sources */,
+				7762AE1D1B3D04EC008470F5 /* JSService.m in Sources */,
 				7762AE0E1B3D00F7008470F5 /* ZBFiveStarsRateView.m in Sources */,
 				7762AE051B3D00F7008470F5 /* UIColor+Random.m in Sources */,
 				7762ADFC1B3D00F7008470F5 /* MBProgressHUD+Appearance.m in Sources */,
