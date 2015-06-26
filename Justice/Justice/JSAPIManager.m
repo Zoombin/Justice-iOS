@@ -29,12 +29,26 @@ NSString * const JS_ACTION = @"action";
 	return _shared;
 }
 
-- (NSString *)APIPathWithActionName:(NSString *)actionName {
-	return [NSString stringWithFormat:@"%@%@=%@", JS_API_PREFIX, JS_ACTION, actionName];
+- (NSString *)pathWithActionName:(NSString *)actionName {
+	NSMutableString *path = [NSMutableString stringWithFormat:@"%@%@=%@", JS_API_PREFIX, JS_ACTION, actionName];
+	return path;
 }
 
 - (void)servicesInCategories:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
-	[self GET:[self APIPathWithActionName:@"getServices"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	[self GET:[self pathWithActionName:@"getServices"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSArray *multiAttributes = [responseObject valueForKeyPath:@"data"];
+		if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		if (block) block(nil, error, nil);
+	}];
+}
+
+- (void)newsInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
+	NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+	if (page) {
+		parameters[@"page"] = page;
+	}
+	[self GET:[self pathWithActionName:@"getNews"] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
 		NSArray *multiAttributes = [responseObject valueForKeyPath:@"data"];
 		if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {

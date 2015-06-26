@@ -53,6 +53,8 @@
 		7762AE1A1B3D04DD008470F5 /* JSServiceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE191B3D04DD008470F5 /* JSServiceCategory.m */; };
 		7762AE1D1B3D04EC008470F5 /* JSService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE1C1B3D04EC008470F5 /* JSService.m */; };
 		7762AE201B3D18E0008470F5 /* JSServiceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */; };
+		7762AE231B3D2A92008470F5 /* JSNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE221B3D2A92008470F5 /* JSNews.m */; };
+		7762AE261B3D2B85008470F5 /* JSNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762AE251B3D2B85008470F5 /* JSNewsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,10 @@
 		7762AE1C1B3D04EC008470F5 /* JSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSService.m; sourceTree = "<group>"; };
 		7762AE1E1B3D18E0008470F5 /* JSServiceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSServiceDetailsViewController.h; sourceTree = "<group>"; };
 		7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSServiceDetailsViewController.m; sourceTree = "<group>"; };
+		7762AE211B3D2A92008470F5 /* JSNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNews.h; sourceTree = "<group>"; };
+		7762AE221B3D2A92008470F5 /* JSNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNews.m; sourceTree = "<group>"; };
+		7762AE241B3D2B85008470F5 /* JSNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewsTableViewCell.h; sourceTree = "<group>"; };
+		7762AE251B3D2B85008470F5 /* JSNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewsTableViewCell.m; sourceTree = "<group>"; };
 		A61BF0946A2B8FFDB2A195DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +278,8 @@
 				7762AE191B3D04DD008470F5 /* JSServiceCategory.m */,
 				7762AE1B1B3D04EC008470F5 /* JSService.h */,
 				7762AE1C1B3D04EC008470F5 /* JSService.m */,
+				7762AE211B3D2A92008470F5 /* JSNews.h */,
+				7762AE221B3D2A92008470F5 /* JSNews.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -279,6 +287,8 @@
 		771ED71E1B391B550051584D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7762AE241B3D2B85008470F5 /* JSNewsTableViewCell.h */,
+				7762AE251B3D2B85008470F5 /* JSNewsTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -511,6 +521,7 @@
 				7762ADFF1B3D00F7008470F5 /* NSString+Hex.m in Sources */,
 				771ED6E41B39165E0051584D /* AppDelegate.m in Sources */,
 				7762AE111B3D00F7008470F5 /* ZBTextValidate.m in Sources */,
+				7762AE231B3D2A92008470F5 /* JSNews.m in Sources */,
 				7762AE041B3D00F7008470F5 /* UIColor+Hex.m in Sources */,
 				7762AE0C1B3D00F7008470F5 /* UIViewController+ZBUtilites.m in Sources */,
 				7762AE071B3D00F7008470F5 /* UIImage+LogN.m in Sources */,
@@ -528,6 +539,7 @@
 				7762AE031B3D00F7008470F5 /* UICollectionViewCell+ZBUtilites.m in Sources */,
 				7762AE201B3D18E0008470F5 /* JSServiceDetailsViewController.m in Sources */,
 				7762AE061B3D00F7008470F5 /* UIDevice+ZBUtilites.m in Sources */,
+				7762AE261B3D2B85008470F5 /* JSNewsTableViewCell.m in Sources */,
 				7762AE0B1B3D00F7008470F5 /* UIViewController+ImagePicker.m in Sources */,
 				7762AE101B3D00F7008470F5 /* ZBModel.m in Sources */,
 				7762AE091B3D00F7008470F5 /* UIView+ZBUtilites.m in Sources */,

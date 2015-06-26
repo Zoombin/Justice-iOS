@@ -65,10 +65,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *identifier = @"Cell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[UITableViewCell identifier]];
 	if (!cell) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[UITableViewCell identifier]];
 	}
 	JSServiceCategory *serviceCategory = _serviceCategories[indexPath.section];
 	JSService *service = serviceCategory.services[indexPath.row];
