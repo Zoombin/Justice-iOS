@@ -11,7 +11,7 @@
 #import "JSExamViewController.h"
 #import "JSChatViewController.h"
 #import "JSJusticeViewController.h"
-#import "JSLawViewController.h"
+#import "JSServicesViewController.h"
 
 @interface AppDelegate ()
 
@@ -36,7 +36,7 @@
 	JSJusticeViewController *justiceViewController = [[JSJusticeViewController alloc] initWithNibName:nil bundle:nil];
 	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:justiceViewController]];
 	
-	JSLawViewController *lawViewController = [[JSLawViewController alloc] initWithNibName:nil bundle:nil];
+	JSServicesViewController *lawViewController = [[JSServicesViewController alloc] initWithNibName:nil bundle:nil];
 	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:lawViewController]];
 	
 	UITabBarController *tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];

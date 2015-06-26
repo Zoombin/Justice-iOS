@@ -1,5 +1,5 @@
 //
-//  JSLawViewController.h
+//  JSServicesViewController.h
 //  Justice
 //
 //  Created by zhangbin on 6/23/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSLawViewController : UIViewController
+@interface JSServicesViewController : UIViewController
 
 @end

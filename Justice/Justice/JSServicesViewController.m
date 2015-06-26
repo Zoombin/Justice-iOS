@@ -1,25 +1,25 @@
 //
-//  JSLawViewController.m
+//  JSServicesViewController.m
 //  Justice
 //
 //  Created by zhangbin on 6/23/15.
 //  Copyright (c) 2015 zoombin. All rights reserved.
 //
 
-#import "JSLawViewController.h"
+#import "JSServicesViewController.h"
 #import "Header.h"
 #import "JSService.h"
 #import "JSServiceCategory.h"
 #import "JSServiceDetailsViewController.h"
 
-@interface JSLawViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface JSServicesViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (readwrite) UITableView *tableView;
 @property (readwrite) NSArray *serviceCategories;
 
 @end
 
-@implementation JSLawViewController
+@implementation JSServicesViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
