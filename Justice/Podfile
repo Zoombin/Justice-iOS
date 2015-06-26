@@ -1,0 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.1'
+pod 'AFNetworking', '~> 2.5.3'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'IQKeyboardManager', '~> 3.2.3'
