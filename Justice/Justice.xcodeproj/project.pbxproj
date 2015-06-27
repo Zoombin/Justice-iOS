@@ -20,6 +20,7 @@
 		771ED7151B3918BD0051584D /* JSServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED7141B3918BD0051584D /* JSServicesViewController.m */; };
 		771ED7181B3918E90051584D /* JSSigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED7171B3918E90051584D /* JSSigninViewController.m */; };
 		771ED71B1B3918F60051584D /* JSSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED71A1B3918F60051584D /* JSSignupViewController.m */; };
+		7723994B1B3E53E20086D0A7 /* JSVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7723994A1B3E53E20086D0A7 /* JSVideo.m */; };
 		7762ADF71B3D00F7008470F5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7762ADC11B3D00F7008470F5 /* .gitignore */; };
 		7762ADF81B3D00F7008470F5 /* CLLocation+NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762ADC31B3D00F7008470F5 /* CLLocation+NSDictionary.m */; };
 		7762ADF91B3D00F7008470F5 /* CLLocation+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7762ADC51B3D00F7008470F5 /* CLLocation+NSString.m */; };
@@ -97,6 +98,8 @@
 		771ED7171B3918E90051584D /* JSSigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSigninViewController.m; sourceTree = "<group>"; };
 		771ED7191B3918F60051584D /* JSSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSignupViewController.h; sourceTree = "<group>"; };
 		771ED71A1B3918F60051584D /* JSSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSignupViewController.m; sourceTree = "<group>"; };
+		772399491B3E53E20086D0A7 /* JSVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSVideo.h; sourceTree = "<group>"; };
+		7723994A1B3E53E20086D0A7 /* JSVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSVideo.m; sourceTree = "<group>"; };
 		7762ADC11B3D00F7008470F5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7762ADC21B3D00F7008470F5 /* CLLocation+NSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+NSDictionary.h"; sourceTree = "<group>"; };
 		7762ADC31B3D00F7008470F5 /* CLLocation+NSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+NSDictionary.m"; sourceTree = "<group>"; };
@@ -296,6 +299,8 @@
 				7783FF641B3DA11E0006B594 /* JSGallery.m */,
 				7783FF661B3DA2080006B594 /* JSGalleryPhoto.h */,
 				7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */,
+				772399491B3E53E20086D0A7 /* JSVideo.h */,
+				7723994A1B3E53E20086D0A7 /* JSVideo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 				7762AE081B3D00F7008470F5 /* UITableViewCell+ZBUtilities.m in Sources */,
 				771ED7181B3918E90051584D /* JSSigninViewController.m in Sources */,
 				7762ADFD1B3D00F7008470F5 /* NSNumber+PrintableMeasurement.m in Sources */,
+				7723994B1B3E53E20086D0A7 /* JSVideo.m in Sources */,
 				7762AE0F1B3D00F7008470F5 /* ZBHorizontalScrollTableViewCell.m in Sources */,
 				7783FF681B3DA2080006B594 /* JSGalleryPhoto.m in Sources */,
 				7762AE1D1B3D04EC008470F5 /* JSService.m in Sources */,

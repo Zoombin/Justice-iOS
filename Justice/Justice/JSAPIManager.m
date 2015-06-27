@@ -62,4 +62,14 @@ NSString * const JS_DATA = @"data";
 	}];
 }
 
+- (void)videosInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
+	[self GET:[self pathWithActionName:@"getVideos"] parameters:@{@"page" : page} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
+		if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		if (block) block(nil, error, nil);
+	}];
+}
+
+
 @end

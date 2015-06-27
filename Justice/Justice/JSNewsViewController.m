@@ -12,12 +12,14 @@
 #import "JSGallery.h"
 #import "JSGalleryPhoto.h"
 #import "JSGalleryDetailsViewController.h"
+#import "JSVideo.h"
 
 @interface JSNewsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (readwrite) UITableView *tableView;
 @property (readwrite) NSArray *multiNews;
 @property (readwrite) NSArray *galleries;
+@property (readwrite) NSArray *videos;
 
 @end
 
@@ -49,10 +51,20 @@
 //		}
 //	}];
 	
-	[[JSAPIManager shared] galleriesInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+	
+//	[[JSAPIManager shared] galleriesInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+//		[self hideHUD:YES];
+//		if (!error) {
+//			_galleries = [JSGallery multiWithAttributesArray:multiAttributes];
+//			[_tableView reloadData];
+//		}
+//	}];
+	
+	
+	[[JSAPIManager shared] videosInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
 		[self hideHUD:YES];
 		if (!error) {
-			_galleries = [JSGallery multiWithAttributesArray:multiAttributes];
+			_videos = [JSVideo multiWithAttributesArray:multiAttributes];
 			[_tableView reloadData];
 		}
 	}];
@@ -70,7 +82,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return _galleries.count;
+	return _videos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,8 +103,14 @@
 //		[cell.imageView setImageWithURL:[NSURL URLWithString:news.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
 //	}
 	
-	JSGallery *gallery = _galleries[indexPath.row];
-	cell.textLabel.text = gallery.title;
+	
+//	JSGallery *gallery = _galleries[indexPath.row];
+//	cell.textLabel.text = gallery.title;
+	
+	
+	JSVideo *video = _videos[indexPath.row];
+	cell.textLabel.text = video.title;
+	
 	return cell;
 }
 
@@ -102,10 +120,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	JSGallery *gallery = _galleries[indexPath.row];
-	JSGalleryDetailsViewController *galleryDetailsViewController = [[JSGalleryDetailsViewController alloc] initWithNibName:nil bundle:nil];
-	galleryDetailsViewController.gallery = gallery;
-	[self.navigationController pushViewController:galleryDetailsViewController animated:YES];
+//	JSGallery *gallery = _galleries[indexPath.row];
+//	JSGalleryDetailsViewController *galleryDetailsViewController = [[JSGalleryDetailsViewController alloc] initWithNibName:nil bundle:nil];
+//	galleryDetailsViewController.gallery = gallery;
+//	[self.navigationController pushViewController:galleryDetailsViewController animated:YES];
 }
 
 @end
