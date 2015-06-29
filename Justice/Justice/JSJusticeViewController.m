@@ -21,6 +21,9 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		self.title = @"公证服务";
+		UIImage *normalImage = [UIImage imageNamed:@"Justice"];
+		UIImage *selectedImage = [UIImage imageNamed:@"JusticeHighlighted"];
+		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.title image:normalImage selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 	}
 	return self;
 }
@@ -33,7 +36,7 @@
 	[self.view addSubview:scrollView];
 	
 	CGRect rect = CGRectZero;
-	UIImage *image = [UIImage imageNamed:@"Justice"];
+	UIImage *image = [UIImage imageNamed:@"JusticeOfficial"];
 	rect.origin.x = (self.view.bounds.size.width - image.size.width) / 2;
 	rect.origin.y = 50;
 	rect.size = image.size;

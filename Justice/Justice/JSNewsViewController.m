@@ -32,6 +32,9 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		self.title = @"普法宣传";
+		UIImage *normalImage = [UIImage imageNamed:@"News"];
+		UIImage *selectedImage = [UIImage imageNamed:@"NewsHighlighted"];
+		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.title image:normalImage selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 	}
 	return self;
 }

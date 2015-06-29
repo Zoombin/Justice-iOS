@@ -18,6 +18,9 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		self.title = @"在线考试";
+		UIImage *normalImage = [UIImage imageNamed:@"Examination"];
+		UIImage *selectedImage = [UIImage imageNamed:@"ExaminationHighlighted"];
+		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.title image:normalImage selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 	}
 	return self;
 }

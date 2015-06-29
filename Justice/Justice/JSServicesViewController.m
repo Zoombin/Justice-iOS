@@ -25,6 +25,9 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		self.title = @"法律服务";
+		UIImage *normalImage = [UIImage imageNamed:@"Service"];
+		UIImage *selectedImage = [UIImage imageNamed:@"ServiceHighlighted"];
+		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.title image:normalImage selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 	}
 	return self;
 }

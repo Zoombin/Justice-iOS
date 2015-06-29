@@ -18,6 +18,9 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		self.title = @"律师在线";
+		UIImage *normalImage = [UIImage imageNamed:@"Lawyer"];
+		UIImage *selectedImage = [UIImage imageNamed:@"LawyerHighlighted"];
+		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.title image:normalImage selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 	}
 	return self;
 }
