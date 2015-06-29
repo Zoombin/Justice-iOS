@@ -7,6 +7,7 @@
 //
 
 #import "JSSigninViewController.h"
+#import "Header.h"
 
 @interface JSSigninViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
+	
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(backOrClose)];
 }
 
 - (void)didReceiveMemoryWarning {

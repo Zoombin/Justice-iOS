@@ -59,6 +59,7 @@
 		7783FF651B3DA11E0006B594 /* JSGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF641B3DA11E0006B594 /* JSGallery.m */; };
 		7783FF681B3DA2080006B594 /* JSGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */; };
 		7783FF6C1B3DA5150006B594 /* JSGalleryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */; };
+		77A0DF401B41787A007ED2BD /* JSReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,8 @@
 		7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGalleryPhoto.m; sourceTree = "<group>"; };
 		7783FF6A1B3DA5150006B594 /* JSGalleryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGalleryDetailsViewController.h; sourceTree = "<group>"; };
 		7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGalleryDetailsViewController.m; sourceTree = "<group>"; };
+		77A0DF3E1B41787A007ED2BD /* JSReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSReservationViewController.h; sourceTree = "<group>"; };
+		77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSReservationViewController.m; sourceTree = "<group>"; };
 		A61BF0946A2B8FFDB2A195DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +277,8 @@
 				771ED70E1B3918720051584D /* JSChatViewController.m */,
 				771ED7101B3918A70051584D /* JSJusticeViewController.h */,
 				771ED7111B3918A70051584D /* JSJusticeViewController.m */,
+				77A0DF3E1B41787A007ED2BD /* JSReservationViewController.h */,
+				77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */,
 				771ED7131B3918BD0051584D /* JSServicesViewController.h */,
 				771ED7141B3918BD0051584D /* JSServicesViewController.m */,
 				7762AE1E1B3D18E0008470F5 /* JSServiceDetailsViewController.h */,
@@ -581,6 +586,7 @@
 				7762AE1A1B3D04DD008470F5 /* JSServiceCategory.m in Sources */,
 				7783FF651B3DA11E0006B594 /* JSGallery.m in Sources */,
 				7762AE081B3D00F7008470F5 /* UITableViewCell+ZBUtilities.m in Sources */,
+				77A0DF401B41787A007ED2BD /* JSReservationViewController.m in Sources */,
 				771ED7181B3918E90051584D /* JSSigninViewController.m in Sources */,
 				7762ADFD1B3D00F7008470F5 /* NSNumber+PrintableMeasurement.m in Sources */,
 				7723994B1B3E53E20086D0A7 /* JSVideo.m in Sources */,

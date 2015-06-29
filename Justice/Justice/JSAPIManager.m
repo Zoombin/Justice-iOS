@@ -13,6 +13,7 @@ NSString * const JS_HOST = @"http://127.0.0.1/dushuhu-web/";
 NSString * const JS_API_PREFIX = @"index.php?";
 NSString * const JS_ACTION = @"action";
 NSString * const JS_DATA = @"data";
+NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 
 @implementation JSAPIManager
 
@@ -28,6 +29,28 @@ NSString * const JS_DATA = @"data";
 		_shared.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
 	});
 	return _shared;
+}
+
++ (BOOL)sessionValid {
+	return [self userID] ? YES : NO;
+}
+
++ (NSNumber *)userID {
+//	return @(1);//TODO: hardcode for test
+	NSNumber *userID = [[NSUserDefaults standardUserDefaults] objectForKey:JS_USER_ID_KEY];
+	return userID;
+}
+
++ (void)saveUserID:(NSNumber *)userID {
+	if (userID) {
+		[[NSUserDefaults standardUserDefaults] setObject:userID forKey:JS_USER_ID_KEY];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
+}
+
++ (void)removeUserID {
+	[[NSUserDefaults standardUserDefaults] removeObjectForKey:JS_USER_ID_KEY];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (NSString *)pathWithActionName:(NSString *)actionName {

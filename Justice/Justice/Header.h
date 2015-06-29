@@ -13,5 +13,6 @@
 #import "UIViewController+HUD.h"
 #import "UIImageView+AFNetworking.h"
 #import "UITableViewCell+ZBUtilities.h"
+#import "UIViewController+ZBUtilites.h"
 
 #endif

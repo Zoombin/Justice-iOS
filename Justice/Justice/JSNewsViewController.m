@@ -17,9 +17,12 @@
 @interface JSNewsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (readwrite) UITableView *tableView;
+@property (readwrite) UICollectionView *collectionView;
+@property (readwrite) UITableView *videosTableView;
 @property (readwrite) NSArray *multiNews;
 @property (readwrite) NSArray *galleries;
 @property (readwrite) NSArray *videos;
+@property (readwrite) UISegmentedControl *segmentedControl;
 
 @end
 
@@ -41,6 +44,11 @@
 	_tableView.dataSource = self;
 	_tableView.delegate = self;
 	[self.view addSubview:_tableView];
+	
+	_segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"趣闻", @"照片", @"视频"]];
+	_segmentedControl.selectedSegmentIndex = 0;
+	[_segmentedControl addTarget:self action:@selector(segmentedControlChanged) forControlEvents:UIControlEventValueChanged];
+	self.navigationItem.titleView = _segmentedControl;
 	
 	[self displayHUD:@"加载中..."];
 //	[[JSAPIManager shared] newsInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
@@ -73,6 +81,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)segmentedControlChanged {
+	_tableView.hidden = _collectionView.hidden = _videosTableView.hidden = YES;
+	if (_segmentedControl.selectedSegmentIndex == 0) {
+		_tableView.hidden = NO;
+	} else if (_segmentedControl.selectedSegmentIndex == 1) {
+		_collectionView.hidden = NO;
+	} else {
+		_videosTableView.hidden = NO;
+	}	
 }
 
 #pragma mark - UITableViewDelegate

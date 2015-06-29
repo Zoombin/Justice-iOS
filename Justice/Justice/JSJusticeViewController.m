@@ -7,6 +7,9 @@
 //
 
 #import "JSJusticeViewController.h"
+#import "Header.h"
+#import "JSSigninViewController.h"
+#import "JSReservationViewController.h"
 
 @interface JSJusticeViewController ()
 
@@ -24,12 +27,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.view.backgroundColor = [UIColor whiteColor];
+	self.view.backgroundColor = [UIColor colorWithRed:230/255.0f green:230/255.0f blue:230/255.0f alpha:1.0f];
+	
+	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+	[self.view addSubview:scrollView];
+	
+	CGRect rect = CGRectZero;
+	UIImage *image = [UIImage imageNamed:@"Justice"];
+	rect.origin.x = (self.view.bounds.size.width - image.size.width) / 2;
+	rect.origin.y = 50;
+	rect.size = image.size;
+	UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
+	imageView.image = image;
+	[scrollView addSubview:imageView];
+	
+	rect.size.width = 180;
+	rect.size.height = 44;
+	rect.origin.x = (self.view.bounds.size.width - rect.size.width) / 2;
+	rect.origin.y = CGRectGetMaxY(imageView.frame) + 20;
+	UIButton *reserveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	reserveButton.frame = rect;
+	[reserveButton setBackgroundColor:[UIColor colorWithRed:23/255.0f green:125/255.0f blue:251/255.0f alpha:1.0f]];
+	reserveButton.layer.cornerRadius = 10;
+	[reserveButton setTitle:@"我要预约" forState:UIControlStateNormal];
+	[reserveButton addTarget:self action:@selector(reserve) forControlEvents:UIControlEventTouchUpInside];
+	[scrollView addSubview:reserveButton];
+	
+	rect.origin.y = CGRectGetMaxY(reserveButton.frame) + 30;
+	UIButton *myReservationButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	myReservationButton.frame = rect;
+	[myReservationButton setBackgroundColor:[UIColor colorWithRed:223/255.0f green:135/255.0f blue:34/255.0f alpha:1.0f]];
+	myReservationButton.layer.cornerRadius = reserveButton.layer.cornerRadius;
+	[myReservationButton setTitle:@"我的预约" forState:UIControlStateNormal];
+	[myReservationButton addTarget:self action:@selector(myReservation) forControlEvents:UIControlEventTouchUpInside];
+	[scrollView addSubview:myReservationButton];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)reserve {
+	[self goReservation:NO];
+}
+
+- (void)myReservation {
+	[self goReservation:YES];
+}
+
+- (void)goReservation:(BOOL)myReservation {
+	if (![JSAPIManager sessionValid]) {
+		JSSigninViewController *signinViewController = [[JSSigninViewController alloc] initWithNibName:nil bundle:nil];
+		[self presentViewController:[[UINavigationController alloc] initWithRootViewController:signinViewController] animated:YES completion:nil];
+	} else {
+		JSReservationViewController *reservationViewController = [[JSReservationViewController alloc] initWithNibName:nil bundle:nil];
+		reservationViewController.myReservation = myReservation;
+		[self.navigationController pushViewController:reservationViewController animated:YES];
+	}
 }
 
 @end
