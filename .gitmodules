@@ -1,3 +1,9 @@
 [submodule "Justice/Submodules/ZBUtilities"]
 	path = Justice/Submodules/ZBUtilities
 	url = https://github.com/qq30135878/zbutilities.git
+[submodule "Justice/Submodules/MBProgressHUD"]
+	path = Justice/Submodules/MBProgressHUD
+	url = https://github.com/matej/MBProgressHUD.git
+[submodule "Justice/Submodules/AFNetworking"]
+	path = Justice/Submodules/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
