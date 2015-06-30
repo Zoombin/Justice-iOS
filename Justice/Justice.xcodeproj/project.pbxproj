@@ -59,6 +59,7 @@
 		7783FF681B3DA2080006B594 /* JSGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */; };
 		7783FF6C1B3DA5150006B594 /* JSGalleryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */; };
 		77A0DF401B41787A007ED2BD /* JSReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */; };
+		77A0DF431B4230A1007ED2BD /* AppDelegate+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A0DF421B4230A1007ED2BD /* AppDelegate+JS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,8 @@
 		7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGalleryDetailsViewController.m; sourceTree = "<group>"; };
 		77A0DF3E1B41787A007ED2BD /* JSReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSReservationViewController.h; sourceTree = "<group>"; };
 		77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSReservationViewController.m; sourceTree = "<group>"; };
+		77A0DF411B4230A1007ED2BD /* AppDelegate+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JS.h"; sourceTree = "<group>"; };
+		77A0DF421B4230A1007ED2BD /* AppDelegate+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JS.m"; sourceTree = "<group>"; };
 		A61BF0946A2B8FFDB2A195DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +226,8 @@
 				7762AE171B3D03B0008470F5 /* Header.h */,
 				771ED6E21B39165E0051584D /* AppDelegate.h */,
 				771ED6E31B39165E0051584D /* AppDelegate.m */,
+				77A0DF411B4230A1007ED2BD /* AppDelegate+JS.h */,
+				77A0DF421B4230A1007ED2BD /* AppDelegate+JS.m */,
 				7762AE141B3D016F008470F5 /* JSAPIManager.h */,
 				7762AE151B3D016F008470F5 /* JSAPIManager.m */,
 				7783FF691B3DA3700006B594 /* Categories */,
@@ -592,6 +597,7 @@
 				7762AE0E1B3D00F7008470F5 /* ZBFiveStarsRateView.m in Sources */,
 				7762AE051B3D00F7008470F5 /* UIColor+Random.m in Sources */,
 				7762ADFC1B3D00F7008470F5 /* MBProgressHUD+Appearance.m in Sources */,
+				77A0DF431B4230A1007ED2BD /* AppDelegate+JS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

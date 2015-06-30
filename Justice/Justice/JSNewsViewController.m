@@ -50,6 +50,7 @@
 	
 	_segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"趣闻", @"照片", @"视频"]];
 	_segmentedControl.selectedSegmentIndex = 0;
+	_segmentedControl.tintColor = [UIColor whiteColor];
 	[_segmentedControl addTarget:self action:@selector(segmentedControlChanged) forControlEvents:UIControlEventValueChanged];
 	self.navigationItem.titleView = _segmentedControl;
 	

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppDelegate+JS.h"
 #import "JSNewsViewController.h"
 #import "JSExaminationViewController.h"
 #import "JSLawyersViewController.h"
@@ -21,6 +22,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	[self customizeAppearance];
 
 	NSMutableArray *controllers = [NSMutableArray array];
 	
