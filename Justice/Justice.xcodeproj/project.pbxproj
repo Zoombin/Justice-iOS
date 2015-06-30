@@ -13,8 +13,8 @@
 		771ED6EF1B39165F0051584D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771ED6EE1B39165F0051584D /* Images.xcassets */; };
 		771ED6FE1B39165F0051584D /* JusticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6FD1B39165F0051584D /* JusticeTests.m */; };
 		771ED7091B3917CC0051584D /* JSNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED7081B3917CC0051584D /* JSNewsViewController.m */; };
-		771ED70C1B39185F0051584D /* JSExamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED70B1B39185F0051584D /* JSExamViewController.m */; };
-		771ED70F1B3918720051584D /* JSChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED70E1B3918720051584D /* JSChatViewController.m */; };
+		771ED70C1B39185F0051584D /* JSExaminationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED70B1B39185F0051584D /* JSExaminationViewController.m */; };
+		771ED70F1B3918720051584D /* JSLawyersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED70E1B3918720051584D /* JSLawyersViewController.m */; };
 		771ED7121B3918A70051584D /* JSJusticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED7111B3918A70051584D /* JSJusticeViewController.m */; };
 		771ED7151B3918BD0051584D /* JSServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED7141B3918BD0051584D /* JSServicesViewController.m */; };
 		771ED7181B3918E90051584D /* JSSigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED7171B3918E90051584D /* JSSigninViewController.m */; };
@@ -85,10 +85,10 @@
 		771ED6FD1B39165F0051584D /* JusticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JusticeTests.m; sourceTree = "<group>"; };
 		771ED7071B3917CC0051584D /* JSNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewsViewController.h; sourceTree = "<group>"; };
 		771ED7081B3917CC0051584D /* JSNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewsViewController.m; sourceTree = "<group>"; };
-		771ED70A1B39185F0051584D /* JSExamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSExamViewController.h; sourceTree = "<group>"; };
-		771ED70B1B39185F0051584D /* JSExamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSExamViewController.m; sourceTree = "<group>"; };
-		771ED70D1B3918720051584D /* JSChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChatViewController.h; sourceTree = "<group>"; };
-		771ED70E1B3918720051584D /* JSChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChatViewController.m; sourceTree = "<group>"; };
+		771ED70A1B39185F0051584D /* JSExaminationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSExaminationViewController.h; sourceTree = "<group>"; };
+		771ED70B1B39185F0051584D /* JSExaminationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSExaminationViewController.m; sourceTree = "<group>"; };
+		771ED70D1B3918720051584D /* JSLawyersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLawyersViewController.h; sourceTree = "<group>"; };
+		771ED70E1B3918720051584D /* JSLawyersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLawyersViewController.m; sourceTree = "<group>"; };
 		771ED7101B3918A70051584D /* JSJusticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJusticeViewController.h; sourceTree = "<group>"; };
 		771ED7111B3918A70051584D /* JSJusticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJusticeViewController.m; sourceTree = "<group>"; };
 		771ED7131B3918BD0051584D /* JSServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSServicesViewController.h; sourceTree = "<group>"; };
@@ -268,10 +268,10 @@
 				771ED7081B3917CC0051584D /* JSNewsViewController.m */,
 				7783FF6A1B3DA5150006B594 /* JSGalleryDetailsViewController.h */,
 				7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */,
-				771ED70A1B39185F0051584D /* JSExamViewController.h */,
-				771ED70B1B39185F0051584D /* JSExamViewController.m */,
-				771ED70D1B3918720051584D /* JSChatViewController.h */,
-				771ED70E1B3918720051584D /* JSChatViewController.m */,
+				771ED70A1B39185F0051584D /* JSExaminationViewController.h */,
+				771ED70B1B39185F0051584D /* JSExaminationViewController.m */,
+				771ED70D1B3918720051584D /* JSLawyersViewController.h */,
+				771ED70E1B3918720051584D /* JSLawyersViewController.m */,
 				771ED7101B3918A70051584D /* JSJusticeViewController.h */,
 				771ED7111B3918A70051584D /* JSJusticeViewController.m */,
 				77A0DF3E1B41787A007ED2BD /* JSReservationViewController.h */,
@@ -557,13 +557,13 @@
 				7762AE071B3D00F7008470F5 /* UIImage+LogN.m in Sources */,
 				7762ADFE1B3D00F7008470F5 /* NSString+BundleExtensions.m in Sources */,
 				771ED7091B3917CC0051584D /* JSNewsViewController.m in Sources */,
-				771ED70F1B3918720051584D /* JSChatViewController.m in Sources */,
+				771ED70F1B3918720051584D /* JSLawyersViewController.m in Sources */,
 				7762AE011B3D00F7008470F5 /* README.md in Sources */,
 				7762ADF81B3D00F7008470F5 /* CLLocation+NSDictionary.m in Sources */,
 				7762ADFA1B3D00F7008470F5 /* IPAddress.m in Sources */,
 				771ED71B1B3918F60051584D /* JSSignupViewController.m in Sources */,
 				7762ADF91B3D00F7008470F5 /* CLLocation+NSString.m in Sources */,
-				771ED70C1B39185F0051584D /* JSExamViewController.m in Sources */,
+				771ED70C1B39185F0051584D /* JSExaminationViewController.m in Sources */,
 				7762AE0D1B3D00F7008470F5 /* ZBBottomIndexView.m in Sources */,
 				7762AE0A1B3D00F7008470F5 /* UIViewController+HUD.m in Sources */,
 				7762AE031B3D00F7008470F5 /* UICollectionViewCell+ZBUtilites.m in Sources */,

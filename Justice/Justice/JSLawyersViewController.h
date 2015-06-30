@@ -1,5 +1,5 @@
 //
-//  JSExamViewController.h
+//  JSLawyersViewController.h
 //  Justice
 //
 //  Created by zhangbin on 6/23/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSExamViewController : UIViewController
+@interface JSLawyersViewController : UIViewController
 
 @end

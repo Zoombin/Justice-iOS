@@ -1,5 +1,5 @@
 //
-//  JSChatViewController.h
+//  JSExaminationViewController.h
 //  Justice
 //
 //  Created by zhangbin on 6/23/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSChatViewController : UIViewController
+@interface JSExaminationViewController : UIViewController
 
 @end

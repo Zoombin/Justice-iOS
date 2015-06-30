@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "JSNewsViewController.h"
-#import "JSExamViewController.h"
-#import "JSChatViewController.h"
+#import "JSExaminationViewController.h"
+#import "JSLawyersViewController.h"
 #import "JSJusticeViewController.h"
 #import "JSServicesViewController.h"
 
@@ -27,10 +27,10 @@
 	JSNewsViewController *newsViewController = [[JSNewsViewController alloc] initWithNibName:nil bundle:nil];
 	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:newsViewController]];
 	
-	JSExamViewController *examViewController = [[JSExamViewController alloc] initWithNibName:nil bundle:nil];
+	JSExaminationViewController *examViewController = [[JSExaminationViewController alloc] initWithNibName:nil bundle:nil];
 	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:examViewController]];
 	
-	JSChatViewController *chatViewController = [[JSChatViewController alloc] initWithNibName:nil bundle:nil];
+	JSLawyersViewController *chatViewController = [[JSLawyersViewController alloc] initWithNibName:nil bundle:nil];
 	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:chatViewController]];
 	
 	JSJusticeViewController *justiceViewController = [[JSJusticeViewController alloc] initWithNibName:nil bundle:nil];
