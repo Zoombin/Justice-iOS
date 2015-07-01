@@ -1,5 +1,5 @@
 //
-//  JSNewsTableViewCell.h
+//  JSVideoTableViewCell.h
 //  Justice
 //
 //  Created by yc on 15-7-1.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSNewsTableViewCell : UITableViewCell
+@interface JSVideoTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UIImageView *imgView;
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
