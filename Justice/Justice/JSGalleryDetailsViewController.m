@@ -28,6 +28,13 @@
 		[imageView setImageWithURL:[NSURL URLWithString:photo.imagePath] placeholderImage:[UIImage new]];
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
 		[scrollView addSubview:imageView];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(i * rect.size.width, CGRectGetMaxY(imageView.frame) - 30, rect.size.width, 30)];
+        titleLabel.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
+        titleLabel.textColor = [UIColor whiteColor];
+        titleLabel.text = [NSString stringWithFormat:@"\t%@", photo.content];
+        titleLabel.font = [UIFont systemFontOfSize:14];
+        [scrollView addSubview:titleLabel];
 	}
 	
 	scrollView.contentSize = CGSizeMake(_gallery.photos.count * self.view.bounds.size.width, scrollView.bounds.size.height);

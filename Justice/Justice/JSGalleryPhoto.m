@@ -15,6 +15,7 @@
 	if (self) {
 		_ID = [attributes[@"id"] notNull];
 		_imagePath = [attributes[@"image"] notNull];
+        _content = [attributes[@"content"] notNull];
 	}
 	return self;
 }

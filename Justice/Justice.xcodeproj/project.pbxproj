@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1800DC4E1B45FB6B0046F2D7 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC4D1B45FB6B0046F2D7 /* BaiduMapAPI.framework */; };
+		1800DC501B45FB9B0046F2D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC4F1B45FB9B0046F2D7 /* CoreLocation.framework */; };
+		1800DC521B45FBA50046F2D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC511B45FBA50046F2D7 /* QuartzCore.framework */; };
+		1800DC541B45FBAF0046F2D7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC531B45FBAF0046F2D7 /* OpenGLES.framework */; };
+		1800DC561B45FBBB0046F2D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC551B45FBBB0046F2D7 /* SystemConfiguration.framework */; };
+		1800DC581B45FBC30046F2D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC571B45FBC30046F2D7 /* CoreGraphics.framework */; };
+		1800DC5A1B45FBD00046F2D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC591B45FBD00046F2D7 /* Security.framework */; };
+		1800DC621B45FF190046F2D7 /* JSRouteSearchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC611B45FF190046F2D7 /* JSRouteSearchViewController.mm */; };
+		1800DC651B45FFE20046F2D7 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */; };
+		1800DC671B4600CB0046F2D7 /* JSRouteSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */; };
 		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
 		583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */; };
 		583A3E3C1B452E210087FDA3 /* JSImgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E3A1B452E210087FDA3 /* JSImgTableViewCell.m */; };
@@ -18,7 +28,7 @@
 		587C00C91B43E01F00475114 /* JSNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C00C71B43E01F00475114 /* JSNewsDetailViewController.m */; };
 		587C00CA1B43E01F00475114 /* JSNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587C00C81B43E01F00475114 /* JSNewsDetailViewController.xib */; };
 		771ED6E11B39165E0051584D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E01B39165E0051584D /* main.m */; };
-		771ED6E41B39165E0051584D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E31B39165E0051584D /* AppDelegate.m */; };
+		771ED6E41B39165E0051584D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E31B39165E0051584D /* AppDelegate.mm */; };
 		771ED6EF1B39165F0051584D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771ED6EE1B39165F0051584D /* Images.xcassets */; };
 		771ED6FE1B39165F0051584D /* JusticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6FD1B39165F0051584D /* JusticeTests.m */; };
 		771ED7091B3917CC0051584D /* JSNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED7081B3917CC0051584D /* JSNewsViewController.m */; };
@@ -99,6 +109,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1800DC4D1B45FB6B0046F2D7 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = "Library/BaiduMap/Release-iphonesimulator/BaiduMapAPI.framework"; sourceTree = "<group>"; };
+		1800DC4F1B45FB9B0046F2D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1800DC511B45FBA50046F2D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1800DC531B45FBAF0046F2D7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1800DC551B45FBBB0046F2D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1800DC571B45FBC30046F2D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1800DC591B45FBD00046F2D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1800DC601B45FF190046F2D7 /* JSRouteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRouteSearchViewController.h; sourceTree = "<group>"; };
+		1800DC611B45FF190046F2D7 /* JSRouteSearchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JSRouteSearchViewController.mm; sourceTree = "<group>"; };
+		1800DC631B45FFE20046F2D7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Rotate.h"; path = "Justice/UIImage+Rotate.h"; sourceTree = "<group>"; };
+		1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "Justice/UIImage+Rotate.m"; sourceTree = "<group>"; };
+		1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRouteSearchViewController.xib; sourceTree = "<group>"; };
 		583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewViewController.h; sourceTree = "<group>"; };
 		583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewViewController.m; sourceTree = "<group>"; };
 		583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSWebViewViewController.xib; sourceTree = "<group>"; };
@@ -118,7 +140,7 @@
 		771ED6DF1B39165D0051584D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		771ED6E01B39165E0051584D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		771ED6E21B39165E0051584D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		771ED6E31B39165E0051584D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		771ED6E31B39165E0051584D /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		771ED6EE1B39165F0051584D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		771ED6F71B39165F0051584D /* JusticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JusticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		771ED6FC1B39165F0051584D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -259,6 +281,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1800DC5A1B45FBD00046F2D7 /* Security.framework in Frameworks */,
+				1800DC581B45FBC30046F2D7 /* CoreGraphics.framework in Frameworks */,
+				1800DC561B45FBBB0046F2D7 /* SystemConfiguration.framework in Frameworks */,
+				1800DC541B45FBAF0046F2D7 /* OpenGLES.framework in Frameworks */,
+				1800DC521B45FBA50046F2D7 /* QuartzCore.framework in Frameworks */,
+				1800DC501B45FB9B0046F2D7 /* CoreLocation.framework in Frameworks */,
+				1800DC4E1B45FB6B0046F2D7 /* BaiduMapAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +301,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1800DC421B45F9DF0046F2D7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		771ED6D21B39165D0051584D = {
 			isa = PBXGroup;
 			children = (
+				1800DC421B45F9DF0046F2D7 /* Library */,
 				7762ADBF1B3D00F7008470F5 /* Submodules */,
 				771ED6DD1B39165D0051584D /* Justice */,
 				771ED6FA1B39165F0051584D /* JusticeTests */,
@@ -297,7 +334,7 @@
 			children = (
 				7762AE171B3D03B0008470F5 /* Header.h */,
 				771ED6E21B39165E0051584D /* AppDelegate.h */,
-				771ED6E31B39165E0051584D /* AppDelegate.m */,
+				771ED6E31B39165E0051584D /* AppDelegate.mm */,
 				77A0DF411B4230A1007ED2BD /* AppDelegate+JS.h */,
 				77A0DF421B4230A1007ED2BD /* AppDelegate+JS.m */,
 				7762AE141B3D016F008470F5 /* JSAPIManager.h */,
@@ -356,6 +393,9 @@
 				771ED7081B3917CC0051584D /* JSNewsViewController.m */,
 				77A0DF3E1B41787A007ED2BD /* JSReservationViewController.h */,
 				77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */,
+				1800DC601B45FF190046F2D7 /* JSRouteSearchViewController.h */,
+				1800DC611B45FF190046F2D7 /* JSRouteSearchViewController.mm */,
+				1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */,
 				7762AE1E1B3D18E0008470F5 /* JSServiceDetailsViewController.h */,
 				7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */,
 				771ED7131B3918BD0051584D /* JSServicesViewController.h */,
@@ -481,6 +521,8 @@
 		7783FF691B3DA3700006B594 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				1800DC631B45FFE20046F2D7 /* UIImage+Rotate.h */,
+				1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */,
 			);
 			name = Categories;
 			path = ..;
@@ -550,6 +592,13 @@
 		808C7CD93B35E6AEEA53AF7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1800DC591B45FBD00046F2D7 /* Security.framework */,
+				1800DC571B45FBC30046F2D7 /* CoreGraphics.framework */,
+				1800DC551B45FBBB0046F2D7 /* SystemConfiguration.framework */,
+				1800DC531B45FBAF0046F2D7 /* OpenGLES.framework */,
+				1800DC511B45FBA50046F2D7 /* QuartzCore.framework */,
+				1800DC4F1B45FB9B0046F2D7 /* CoreLocation.framework */,
+				1800DC4D1B45FB6B0046F2D7 /* BaiduMapAPI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -637,6 +686,7 @@
 				7762AE121B3D00F7008470F5 /* ZBUtilities.podspec in Resources */,
 				583A3E3D1B452E210087FDA3 /* JSImgTableViewCell.xib in Resources */,
 				583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */,
+				1800DC671B4600CB0046F2D7 /* JSRouteSearchViewController.xib in Resources */,
 				587C00C01B43D51200475114 /* JSNewsTableViewCell.xib in Resources */,
 				7762ADF71B3D00F7008470F5 /* .gitignore in Resources */,
 				7762ADFB1B3D00F7008470F5 /* LICENSE in Resources */,
@@ -663,7 +713,7 @@
 				771ED7151B3918BD0051584D /* JSServicesViewController.m in Sources */,
 				7762AE021B3D00F7008470F5 /* UIActionSheet+ZBUtilities.m in Sources */,
 				7762ADFF1B3D00F7008470F5 /* NSString+Hex.m in Sources */,
-				771ED6E41B39165E0051584D /* AppDelegate.m in Sources */,
+				771ED6E41B39165E0051584D /* AppDelegate.mm in Sources */,
 				77A0DF5F1B42478F007ED2BD /* AFURLResponseSerialization.m in Sources */,
 				7762AE111B3D00F7008470F5 /* ZBTextValidate.m in Sources */,
 				7762AE231B3D2A92008470F5 /* JSNews.m in Sources */,
@@ -676,6 +726,7 @@
 				583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */,
 				77A0DF751B424795007ED2BD /* UIAlertView+AFNetworking.m in Sources */,
 				7762ADFE1B3D00F7008470F5 /* NSString+BundleExtensions.m in Sources */,
+				1800DC651B45FFE20046F2D7 /* UIImage+Rotate.m in Sources */,
 				771ED7091B3917CC0051584D /* JSNewsViewController.m in Sources */,
 				771ED70F1B3918720051584D /* JSLawyersViewController.m in Sources */,
 				7762AE011B3D00F7008470F5 /* README.md in Sources */,
@@ -686,6 +737,7 @@
 				7762ADF91B3D00F7008470F5 /* CLLocation+NSString.m in Sources */,
 				771ED70C1B39185F0051584D /* JSExaminationViewController.m in Sources */,
 				77A0DF7D1B42479F007ED2BD /* MBProgressHUD.m in Sources */,
+				1800DC621B45FF190046F2D7 /* JSRouteSearchViewController.mm in Sources */,
 				7762AE0D1B3D00F7008470F5 /* ZBBottomIndexView.m in Sources */,
 				7762AE0A1B3D00F7008470F5 /* UIViewController+HUD.m in Sources */,
 				77A0DF741B424795007ED2BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -836,6 +888,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphoneos",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphonesimulator",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Justice/Info.plist;
@@ -868,6 +925,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphoneos",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphonesimulator",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Justice/Info.plist;

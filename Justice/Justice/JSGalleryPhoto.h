@@ -12,5 +12,5 @@
 
 @property (nonatomic, strong) NSNumber *ID;
 @property (nonatomic, strong) NSString *imagePath;
-
+@property (nonatomic, strong) NSString *content;
 @end

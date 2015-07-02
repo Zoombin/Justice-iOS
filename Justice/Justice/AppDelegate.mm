@@ -18,12 +18,21 @@
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    BMKMapManager* _mapManager;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self customizeAppearance];
-
+    
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"F9rypUZMz2ZwrcKhGUZwMMOw"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+    
 	NSMutableArray *controllers = [NSMutableArray array];
 	
 	JSNewsViewController *newsViewController = [[JSNewsViewController alloc] initWithNibName:nil bundle:nil];

@@ -7,6 +7,7 @@
 //
 
 #import "JSServiceDetailsViewController.h"
+#import "JSRouteSearchViewController.h"
 #import "Header.h"
 
 @implementation JSServiceDetailsViewController
@@ -14,7 +15,8 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
-	
+    self.navigationController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"地址" style:UIBarButtonItemStyleBordered target:self action:@selector(showLocation)];
+    
 	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
 	[self.view addSubview:scrollView];
 	
@@ -47,6 +49,11 @@
 	phoneLabel.font = addressLabel.font;
 	[scrollView addSubview:phoneLabel];
 	phoneLabel.text = _service.phone;
+}
+
+- (void)showLocation {
+    JSRouteSearchViewController *routeSearchViewContrller = [JSRouteSearchViewController new];
+    [self.navigationController pushViewController:routeSearchViewContrller animated:YES];
 }
 
 @end

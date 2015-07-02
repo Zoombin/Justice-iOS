@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) NSString *phone;
 //@property (nonatomic, strong) CLLocation *location;
+@property (nonatomic, strong) NSString *latitude;
+@property (nonatomic, strong) NSString *longtitude;
 @property (nonatomic, strong) NSDate *createdDate;
 
 @end

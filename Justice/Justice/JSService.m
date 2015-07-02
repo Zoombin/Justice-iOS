@@ -19,6 +19,8 @@
 		_address = [attributes[@"address"] notNull];
 		_phone = [attributes[@"phone"] notNull];
 		//@property (nonatomic, strong) CLLocation *location;
+        _latitude = [attributes[@"latitude"] notNull];
+        _longtitude = [attributes[@"longitude"] notNull];
 		_createdDate = [attributes[@"created_date"] notNull];
 	}
 	return self;
