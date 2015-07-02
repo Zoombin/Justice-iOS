@@ -16,12 +16,15 @@
 #import "JSNewsTableViewCell.h"
 #import "JSNewsDetailViewController.h"
 #import "JSVideoTableViewCell.h"
+#import "JSWebViewViewController.h"
+#import "JSImgTableViewCell.h"
 
 @interface JSNewsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (readwrite) UITableView *tableView;
 @property (readwrite) UICollectionView *collectionView;
 @property (readwrite) UITableView *videosTableView;
+@property (readwrite) NSArray *bannerNews;
 @property (readwrite) NSArray *multiNews;
 @property (readwrite) NSArray *galleries;
 @property (readwrite) NSArray *videos;
@@ -58,6 +61,58 @@
     self.navigationItem.titleView = _segmentedControl;
     
     [self loadInfo];
+    [self getBannerView];
+}
+
+- (void)showBannerView {
+    if ([_bannerNews count] == 0) {
+        return;
+    }
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = 150;
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, height)];
+    scrollView.pagingEnabled = YES;
+    scrollView.contentSize = CGSizeMake(screenWidth * [_bannerNews count], 0);
+    for (int i = 0; i < [_bannerNews count]; i++) {
+        JSNews *news = _bannerNews[i];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(i * screenWidth, 0, screenWidth, height)];
+        imgView.contentMode = UIViewContentModeScaleAspectFit;
+        [imgView setImageWithURL:[NSURL URLWithString:news.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
+        imgView.userInteractionEnabled = YES;
+        imgView.tag = i;
+        [scrollView addSubview:imgView];
+        
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bannerBkgClick:)];
+        [imgView addGestureRecognizer:gesture];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(i * screenWidth, CGRectGetMaxY(imgView.frame) - 30, screenWidth, 30)];
+        titleLabel.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
+        titleLabel.textColor = [UIColor whiteColor];
+        titleLabel.text = [NSString stringWithFormat:@"\t%@", news.title];
+        titleLabel.font = [UIFont systemFontOfSize:14];
+        [scrollView addSubview:titleLabel];
+    }
+    
+    [_tableView setTableHeaderView:scrollView];
+}
+
+- (void)bannerBkgClick:(UIGestureRecognizer *)gesture {
+    UIView *view = [gesture view];
+    JSNews *news = _bannerNews[view.tag];
+    JSNewsDetailViewController *detailViewController = [JSNewsDetailViewController new];
+    detailViewController.news = news;
+    detailViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+- (void)getBannerView {
+    [[JSAPIManager shared] getBanner:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+        if (!error) {
+            NSLog(@"%@", multiAttributes);
+            _bannerNews = [JSNews multiWithAttributesArray:multiAttributes];
+            [self showBannerView];
+        }
+    }];
 }
 
 - (void)loadInfo {
@@ -67,6 +122,7 @@
             [self hideHUD:YES];
             if (!error) {
                 _multiNews = [JSNews multiWithAttributesArray:multiAttributes];
+                [self showBannerView];
                 [_tableView reloadData];
             }
         }];
@@ -75,7 +131,8 @@
             [self hideHUD:YES];
             if (!error) {
                 _galleries = [JSGallery multiWithAttributesArray:multiAttributes];
-//                [_tableView reloadData];
+                [_tableView setTableHeaderView:nil];
+                [_tableView reloadData];
             }
         }];
     } else {
@@ -83,6 +140,7 @@
             [self hideHUD:YES];
             if (!error) {
                 _videos = [JSVideo multiWithAttributesArray:multiAttributes];
+                [_tableView setTableHeaderView:nil];
                 [_tableView reloadData];
             }
         }];
@@ -95,14 +153,14 @@
 }
 
 - (void)segmentedControlChanged {
-    _tableView.hidden = _collectionView.hidden = _videosTableView.hidden = YES;
-    if (_segmentedControl.selectedSegmentIndex == 0) {
-        _tableView.hidden = NO;
-    } else if (_segmentedControl.selectedSegmentIndex == 1) {
-        _collectionView.hidden = NO;
-    } else {
-        _tableView.hidden = NO;
-    }
+//    _tableView.hidden = _collectionView.hidden = _videosTableView.hidden = YES;
+//    if (_segmentedControl.selectedSegmentIndex == 0) {
+//        _tableView.hidden = NO;
+//    } else if (_segmentedControl.selectedSegmentIndex == 1) {
+//        _collectionView.hidden = NO;
+//    } else {
+//        _tableView.hidden = NO;
+//    }
     [self loadInfo];
 }
 
@@ -115,6 +173,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (_segmentedControl.selectedSegmentIndex == 0) {
         return _multiNews.count;
+    } else if (_segmentedControl.selectedSegmentIndex == 1) {
+        return _galleries.count;
     }
     return _videos.count;
 }
@@ -139,6 +199,24 @@
         if (news.imagePath.length) {
             [cell.imgView
              setImageWithURL:[NSURL URLWithString:news.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
+        }
+        return cell;
+    } else if (_segmentedControl.selectedSegmentIndex == 1) {
+        static NSString *CellIdentifier = @"UITableViewCell";
+        JSImgTableViewCell *cell = (JSImgTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:@"JSImgTableViewCell" owner:nil options:nil];
+            cell = [nibs lastObject];
+            cell.backgroundColor = [UIColor clearColor];
+        }
+        
+        JSGallery *gallery = _galleries[indexPath.row];
+        cell.titleLabel.text = gallery.title;
+        if ([gallery.photos count] > 0) {
+            JSGalleryPhoto *photo = gallery.photos[0];
+            if (photo.imagePath.length) {
+                [cell.imgView setImageWithURL:[NSURL URLWithString:photo.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
+            }
         }
         return cell;
     } else if (_segmentedControl.selectedSegmentIndex == 2) {
@@ -173,15 +251,22 @@
     if (_segmentedControl.selectedSegmentIndex == 0) {
         JSNewsDetailViewController *detailViewController = [JSNewsDetailViewController new];
         detailViewController.news = _multiNews[indexPath.row];
+        detailViewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:detailViewController animated:YES];
+    } else if (_segmentedControl.selectedSegmentIndex == 1) {
+        JSGallery *gallery = _galleries[indexPath.row];
+        JSGalleryDetailsViewController *galleryDetailsViewController = [[JSGalleryDetailsViewController alloc] initWithNibName:nil bundle:nil];
+        galleryDetailsViewController.gallery = gallery;
+        galleryDetailsViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:galleryDetailsViewController animated:YES];
+
     } else if (_segmentedControl.selectedSegmentIndex == 2) {
         JSVideo *video = _videos[indexPath.row];
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:video.streamPath]];
+        JSWebViewViewController *webViewController = [JSWebViewViewController new];
+        webViewController.url = video.streamPath;
+        webViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:webViewController animated:YES];
     }
-    //	JSGallery *gallery = _galleries[indexPath.row];
-    //	JSGalleryDetailsViewController *galleryDetailsViewController = [[JSGalleryDetailsViewController alloc] initWithNibName:nil bundle:nil];
-    //	galleryDetailsViewController.gallery = gallery;
-    //	[self.navigationController pushViewController:galleryDetailsViewController animated:YES];
 }
 
 @end

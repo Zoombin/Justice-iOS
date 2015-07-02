@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
+		583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */; };
+		583A3E3C1B452E210087FDA3 /* JSImgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E3A1B452E210087FDA3 /* JSImgTableViewCell.m */; };
+		583A3E3D1B452E210087FDA3 /* JSImgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E3B1B452E210087FDA3 /* JSImgTableViewCell.xib */; };
 		587C00BF1B43D51200475114 /* JSNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C00BD1B43D51200475114 /* JSNewsTableViewCell.m */; };
 		587C00C01B43D51200475114 /* JSNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587C00BE1B43D51200475114 /* JSNewsTableViewCell.xib */; };
 		587C00C41B43D91400475114 /* JSVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C00C21B43D91400475114 /* JSVideoTableViewCell.m */; };
@@ -95,6 +99,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewViewController.h; sourceTree = "<group>"; };
+		583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewViewController.m; sourceTree = "<group>"; };
+		583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSWebViewViewController.xib; sourceTree = "<group>"; };
+		583A3E391B452E210087FDA3 /* JSImgTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSImgTableViewCell.h; sourceTree = "<group>"; };
+		583A3E3A1B452E210087FDA3 /* JSImgTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSImgTableViewCell.m; sourceTree = "<group>"; };
+		583A3E3B1B452E210087FDA3 /* JSImgTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSImgTableViewCell.xib; sourceTree = "<group>"; };
 		587C00BC1B43D51200475114 /* JSNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewsTableViewCell.h; sourceTree = "<group>"; };
 		587C00BD1B43D51200475114 /* JSNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewsTableViewCell.m; sourceTree = "<group>"; };
 		587C00BE1B43D51200475114 /* JSNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -354,6 +364,9 @@
 				771ED7171B3918E90051584D /* JSSigninViewController.m */,
 				771ED7191B3918F60051584D /* JSSignupViewController.h */,
 				771ED71A1B3918F60051584D /* JSSignupViewController.m */,
+				583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */,
+				583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */,
+				583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -386,6 +399,9 @@
 				587C00C11B43D91400475114 /* JSVideoTableViewCell.h */,
 				587C00C21B43D91400475114 /* JSVideoTableViewCell.m */,
 				587C00C31B43D91400475114 /* JSVideoTableViewCell.xib */,
+				583A3E391B452E210087FDA3 /* JSImgTableViewCell.h */,
+				583A3E3A1B452E210087FDA3 /* JSImgTableViewCell.m */,
+				583A3E3B1B452E210087FDA3 /* JSImgTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -619,6 +635,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7762AE121B3D00F7008470F5 /* ZBUtilities.podspec in Resources */,
+				583A3E3D1B452E210087FDA3 /* JSImgTableViewCell.xib in Resources */,
+				583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */,
 				587C00C01B43D51200475114 /* JSNewsTableViewCell.xib in Resources */,
 				7762ADF71B3D00F7008470F5 /* .gitignore in Resources */,
 				7762ADFB1B3D00F7008470F5 /* LICENSE in Resources */,
@@ -655,6 +673,7 @@
 				587C00C41B43D91400475114 /* JSVideoTableViewCell.m in Sources */,
 				7762AE0C1B3D00F7008470F5 /* UIViewController+ZBUtilites.m in Sources */,
 				7762AE071B3D00F7008470F5 /* UIImage+LogN.m in Sources */,
+				583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */,
 				77A0DF751B424795007ED2BD /* UIAlertView+AFNetworking.m in Sources */,
 				7762ADFE1B3D00F7008470F5 /* NSString+BundleExtensions.m in Sources */,
 				771ED7091B3917CC0051584D /* JSNewsViewController.m in Sources */,
@@ -680,6 +699,7 @@
 				7762AE101B3D00F7008470F5 /* ZBModel.m in Sources */,
 				77A0DF5E1B42478F007ED2BD /* AFURLRequestSerialization.m in Sources */,
 				7762AE091B3D00F7008470F5 /* UIView+ZBUtilites.m in Sources */,
+				583A3E3C1B452E210087FDA3 /* JSImgTableViewCell.m in Sources */,
 				77A0DF7A1B424795007ED2BD /* UIWebView+AFNetworking.m in Sources */,
 				77A0DF5B1B42478F007ED2BD /* AFNetworkReachabilityManager.m in Sources */,
 				7762AE131B3D00F7008470F5 /* ZBViewController.m in Sources */,

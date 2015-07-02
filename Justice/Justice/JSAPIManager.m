@@ -95,5 +95,14 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 	}];
 }
 
+- (void)getBanner:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
+    [self GET:[self pathWithActionName:@"getBannerNews"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
 
 @end

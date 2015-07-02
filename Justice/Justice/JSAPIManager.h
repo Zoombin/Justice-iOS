@@ -17,6 +17,7 @@
 - (void)newsInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 - (void)galleriesInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 - (void)videosInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
+- (void)getBanner:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 
 
 @end
