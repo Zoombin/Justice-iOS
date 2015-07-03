@@ -49,6 +49,8 @@
 	phoneLabel.font = addressLabel.font;
 	[scrollView addSubview:phoneLabel];
 	phoneLabel.text = _service.phone;
+    
+    [self performSelector:@selector(showLocation) withObject:nil afterDelay:2.0];
 }
 
 - (void)showLocation {

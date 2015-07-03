@@ -13,7 +13,6 @@
 		1800DC561B45FBBB0046F2D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC551B45FBBB0046F2D7 /* SystemConfiguration.framework */; };
 		1800DC581B45FBC30046F2D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC571B45FBC30046F2D7 /* CoreGraphics.framework */; };
 		1800DC5A1B45FBD00046F2D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC591B45FBD00046F2D7 /* Security.framework */; };
-		1800DC621B45FF190046F2D7 /* JSRouteSearchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC611B45FF190046F2D7 /* JSRouteSearchViewController.mm */; };
 		1800DC651B45FFE20046F2D7 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */; };
 		1800DC671B4600CB0046F2D7 /* JSRouteSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */; };
 		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
@@ -27,6 +26,7 @@
 		587C00C91B43E01F00475114 /* JSNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C00C71B43E01F00475114 /* JSNewsDetailViewController.m */; };
 		587C00CA1B43E01F00475114 /* JSNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587C00C81B43E01F00475114 /* JSNewsDetailViewController.xib */; };
 		588ED09A1B4626CB00A50FBC /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588ED0991B4626CB00A50FBC /* BaiduMapAPI.framework */; };
+		588ED09C1B46301600A50FBC /* JSRouteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588ED09B1B46301600A50FBC /* JSRouteSearchViewController.m */; };
 		771ED6E11B39165E0051584D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E01B39165E0051584D /* main.m */; };
 		771ED6E41B39165E0051584D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E31B39165E0051584D /* AppDelegate.mm */; };
 		771ED6EF1B39165F0051584D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771ED6EE1B39165F0051584D /* Images.xcassets */; };
@@ -117,7 +117,6 @@
 		1800DC571B45FBC30046F2D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1800DC591B45FBD00046F2D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1800DC601B45FF190046F2D7 /* JSRouteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRouteSearchViewController.h; sourceTree = "<group>"; };
-		1800DC611B45FF190046F2D7 /* JSRouteSearchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JSRouteSearchViewController.mm; sourceTree = "<group>"; };
 		1800DC631B45FFE20046F2D7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Rotate.h"; path = "Justice/UIImage+Rotate.h"; sourceTree = "<group>"; };
 		1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "Justice/UIImage+Rotate.m"; sourceTree = "<group>"; };
 		1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRouteSearchViewController.xib; sourceTree = "<group>"; };
@@ -137,6 +136,7 @@
 		587C00C71B43E01F00475114 /* JSNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewsDetailViewController.m; sourceTree = "<group>"; };
 		587C00C81B43E01F00475114 /* JSNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNewsDetailViewController.xib; sourceTree = "<group>"; };
 		588ED0991B4626CB00A50FBC /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = Library/BaiduMap/BaiduMapAPI.framework; sourceTree = "<group>"; };
+		588ED09B1B46301600A50FBC /* JSRouteSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRouteSearchViewController.m; sourceTree = "<group>"; };
 		771ED6DB1B39165D0051584D /* Justice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		771ED6DF1B39165D0051584D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		771ED6E01B39165E0051584D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -395,7 +395,7 @@
 				77A0DF3E1B41787A007ED2BD /* JSReservationViewController.h */,
 				77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */,
 				1800DC601B45FF190046F2D7 /* JSRouteSearchViewController.h */,
-				1800DC611B45FF190046F2D7 /* JSRouteSearchViewController.mm */,
+				588ED09B1B46301600A50FBC /* JSRouteSearchViewController.m */,
 				1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */,
 				7762AE1E1B3D18E0008470F5 /* JSServiceDetailsViewController.h */,
 				7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */,
@@ -739,7 +739,6 @@
 				7762ADF91B3D00F7008470F5 /* CLLocation+NSString.m in Sources */,
 				771ED70C1B39185F0051584D /* JSExaminationViewController.m in Sources */,
 				77A0DF7D1B42479F007ED2BD /* MBProgressHUD.m in Sources */,
-				1800DC621B45FF190046F2D7 /* JSRouteSearchViewController.mm in Sources */,
 				7762AE0D1B3D00F7008470F5 /* ZBBottomIndexView.m in Sources */,
 				7762AE0A1B3D00F7008470F5 /* UIViewController+HUD.m in Sources */,
 				77A0DF741B424795007ED2BD /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -762,6 +761,7 @@
 				7762AE161B3D016F008470F5 /* JSAPIManager.m in Sources */,
 				771ED7121B3918A70051584D /* JSJusticeViewController.m in Sources */,
 				77A0DF781B424795007ED2BD /* UIProgressView+AFNetworking.m in Sources */,
+				588ED09C1B46301600A50FBC /* JSRouteSearchViewController.m in Sources */,
 				7762AE1A1B3D04DD008470F5 /* JSServiceCategory.m in Sources */,
 				7783FF651B3DA11E0006B594 /* JSGallery.m in Sources */,
 				7762AE081B3D00F7008470F5 /* UITableViewCell+ZBUtilities.m in Sources */,
