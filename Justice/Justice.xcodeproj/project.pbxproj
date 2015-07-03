@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1800DC4E1B45FB6B0046F2D7 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC4D1B45FB6B0046F2D7 /* BaiduMapAPI.framework */; };
 		1800DC501B45FB9B0046F2D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC4F1B45FB9B0046F2D7 /* CoreLocation.framework */; };
 		1800DC521B45FBA50046F2D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC511B45FBA50046F2D7 /* QuartzCore.framework */; };
 		1800DC541B45FBAF0046F2D7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC531B45FBAF0046F2D7 /* OpenGLES.framework */; };
@@ -27,6 +26,7 @@
 		587C00C51B43D91400475114 /* JSVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587C00C31B43D91400475114 /* JSVideoTableViewCell.xib */; };
 		587C00C91B43E01F00475114 /* JSNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C00C71B43E01F00475114 /* JSNewsDetailViewController.m */; };
 		587C00CA1B43E01F00475114 /* JSNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587C00C81B43E01F00475114 /* JSNewsDetailViewController.xib */; };
+		588ED09A1B4626CB00A50FBC /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588ED0991B4626CB00A50FBC /* BaiduMapAPI.framework */; };
 		771ED6E11B39165E0051584D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E01B39165E0051584D /* main.m */; };
 		771ED6E41B39165E0051584D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E31B39165E0051584D /* AppDelegate.mm */; };
 		771ED6EF1B39165F0051584D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771ED6EE1B39165F0051584D /* Images.xcassets */; };
@@ -136,6 +136,7 @@
 		587C00C61B43E01F00475114 /* JSNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewsDetailViewController.h; sourceTree = "<group>"; };
 		587C00C71B43E01F00475114 /* JSNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewsDetailViewController.m; sourceTree = "<group>"; };
 		587C00C81B43E01F00475114 /* JSNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNewsDetailViewController.xib; sourceTree = "<group>"; };
+		588ED0991B4626CB00A50FBC /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = Library/BaiduMap/BaiduMapAPI.framework; sourceTree = "<group>"; };
 		771ED6DB1B39165D0051584D /* Justice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		771ED6DF1B39165D0051584D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		771ED6E01B39165E0051584D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -281,13 +282,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				588ED09A1B4626CB00A50FBC /* BaiduMapAPI.framework in Frameworks */,
 				1800DC5A1B45FBD00046F2D7 /* Security.framework in Frameworks */,
 				1800DC581B45FBC30046F2D7 /* CoreGraphics.framework in Frameworks */,
 				1800DC561B45FBBB0046F2D7 /* SystemConfiguration.framework in Frameworks */,
 				1800DC541B45FBAF0046F2D7 /* OpenGLES.framework in Frameworks */,
 				1800DC521B45FBA50046F2D7 /* QuartzCore.framework in Frameworks */,
 				1800DC501B45FB9B0046F2D7 /* CoreLocation.framework in Frameworks */,
-				1800DC4E1B45FB6B0046F2D7 /* BaiduMapAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +593,7 @@
 		808C7CD93B35E6AEEA53AF7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				588ED0991B4626CB00A50FBC /* BaiduMapAPI.framework */,
 				1800DC591B45FBD00046F2D7 /* Security.framework */,
 				1800DC571B45FBC30046F2D7 /* CoreGraphics.framework */,
 				1800DC551B45FBBB0046F2D7 /* SystemConfiguration.framework */,
@@ -892,6 +894,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphoneos",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphonesimulator",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
@@ -929,6 +932,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphoneos",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphonesimulator",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
