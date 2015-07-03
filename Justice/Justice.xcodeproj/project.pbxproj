@@ -15,6 +15,7 @@
 		1800DC5A1B45FBD00046F2D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC591B45FBD00046F2D7 /* Security.framework */; };
 		1800DC651B45FFE20046F2D7 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */; };
 		1800DC671B4600CB0046F2D7 /* JSRouteSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */; };
+		581AD8741B463D3C00FC4480 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581AD8731B463D3C00FC4480 /* MapKit.framework */; };
 		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
 		583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */; };
 		583A3E3C1B452E210087FDA3 /* JSImgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E3A1B452E210087FDA3 /* JSImgTableViewCell.m */; };
@@ -120,6 +121,7 @@
 		1800DC631B45FFE20046F2D7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Rotate.h"; path = "Justice/UIImage+Rotate.h"; sourceTree = "<group>"; };
 		1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "Justice/UIImage+Rotate.m"; sourceTree = "<group>"; };
 		1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRouteSearchViewController.xib; sourceTree = "<group>"; };
+		581AD8731B463D3C00FC4480 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewViewController.h; sourceTree = "<group>"; };
 		583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewViewController.m; sourceTree = "<group>"; };
 		583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSWebViewViewController.xib; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581AD8741B463D3C00FC4480 /* MapKit.framework in Frameworks */,
 				588ED09A1B4626CB00A50FBC /* BaiduMapAPI.framework in Frameworks */,
 				1800DC5A1B45FBD00046F2D7 /* Security.framework in Frameworks */,
 				1800DC581B45FBC30046F2D7 /* CoreGraphics.framework in Frameworks */,
@@ -593,6 +596,7 @@
 		808C7CD93B35E6AEEA53AF7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				581AD8731B463D3C00FC4480 /* MapKit.framework */,
 				588ED0991B4626CB00A50FBC /* BaiduMapAPI.framework */,
 				1800DC591B45FBD00046F2D7 /* Security.framework */,
 				1800DC571B45FBC30046F2D7 /* CoreGraphics.framework */,
@@ -654,6 +658,7 @@
 				TargetAttributes = {
 					771ED6DA1B39165D0051584D = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = ZD6A9QR3J4;
 					};
 					771ED6F61B39165F0051584D = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -890,6 +895,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphoneos",
@@ -920,6 +927,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -928,6 +936,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap/Release-iphoneos",
@@ -958,6 +968,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
