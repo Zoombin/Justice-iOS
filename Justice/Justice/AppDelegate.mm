@@ -13,6 +13,7 @@
 #import "JSLawyersViewController.h"
 #import "JSJusticeViewController.h"
 #import "JSServicesViewController.h"
+#import "JSLawHelpViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,8 +28,8 @@
 	[self customizeAppearance];
     
     _mapManager = [[BMKMapManager alloc]init];
-    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-    BOOL ret = [_mapManager start:@"F9rypUZMz2ZwrcKhGUZwMMOw"  generalDelegate:nil];
+    // 如果要关注网络及授权验证事件，请设定generalDelegate参数
+    BOOL ret = [_mapManager start:@"F9rypUZMz2ZwrcKhGUZwMMOw" generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }
@@ -49,6 +50,9 @@
 	
 	JSServicesViewController *lawViewController = [[JSServicesViewController alloc] initWithNibName:nil bundle:nil];
 	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:lawViewController]];
+    
+    JSLawHelpViewController *lawHelpViewController = [JSLawHelpViewController new];
+    [controllers addObject:[[UINavigationController alloc] initWithRootViewController:lawHelpViewController]];
 	
 	UITabBarController *tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
 	tabBarController.viewControllers = controllers;

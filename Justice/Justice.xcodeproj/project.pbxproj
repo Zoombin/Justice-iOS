@@ -15,6 +15,9 @@
 		1800DC5A1B45FBD00046F2D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800DC591B45FBD00046F2D7 /* Security.framework */; };
 		1800DC651B45FFE20046F2D7 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */; };
 		1800DC671B4600CB0046F2D7 /* JSRouteSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */; };
+		1800DC6B1B4669640046F2D7 /* JSLawHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC691B4669640046F2D7 /* JSLawHelpViewController.m */; };
+		1800DC6C1B4669640046F2D7 /* JSLawHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC6A1B4669640046F2D7 /* JSLawHelpViewController.xib */; };
+		1800DC6E1B466DF10046F2D7 /* lawhelp.html in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC6D1B466DF10046F2D7 /* lawhelp.html */; };
 		581AD8741B463D3C00FC4480 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581AD8731B463D3C00FC4480 /* MapKit.framework */; };
 		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
 		583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */; };
@@ -121,6 +124,10 @@
 		1800DC631B45FFE20046F2D7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Rotate.h"; path = "Justice/UIImage+Rotate.h"; sourceTree = "<group>"; };
 		1800DC641B45FFE20046F2D7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "Justice/UIImage+Rotate.m"; sourceTree = "<group>"; };
 		1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRouteSearchViewController.xib; sourceTree = "<group>"; };
+		1800DC681B4669640046F2D7 /* JSLawHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLawHelpViewController.h; sourceTree = "<group>"; };
+		1800DC691B4669640046F2D7 /* JSLawHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLawHelpViewController.m; sourceTree = "<group>"; };
+		1800DC6A1B4669640046F2D7 /* JSLawHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSLawHelpViewController.xib; sourceTree = "<group>"; };
+		1800DC6D1B466DF10046F2D7 /* lawhelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lawhelp.html; sourceTree = "<group>"; };
 		581AD8731B463D3C00FC4480 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewViewController.h; sourceTree = "<group>"; };
 		583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewViewController.m; sourceTree = "<group>"; };
@@ -356,6 +363,7 @@
 		771ED6DE1B39165D0051584D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1800DC6D1B466DF10046F2D7 /* lawhelp.html */,
 				771ED6DF1B39165D0051584D /* Info.plist */,
 				771ED6E01B39165E0051584D /* main.m */,
 			);
@@ -411,6 +419,9 @@
 				583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */,
 				583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */,
 				583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */,
+				1800DC681B4669640046F2D7 /* JSLawHelpViewController.h */,
+				1800DC691B4669640046F2D7 /* JSLawHelpViewController.m */,
+				1800DC6A1B4669640046F2D7 /* JSLawHelpViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -694,7 +705,9 @@
 				583A3E3D1B452E210087FDA3 /* JSImgTableViewCell.xib in Resources */,
 				583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */,
 				1800DC671B4600CB0046F2D7 /* JSRouteSearchViewController.xib in Resources */,
+				1800DC6E1B466DF10046F2D7 /* lawhelp.html in Resources */,
 				587C00C01B43D51200475114 /* JSNewsTableViewCell.xib in Resources */,
+				1800DC6C1B4669640046F2D7 /* JSLawHelpViewController.xib in Resources */,
 				7762ADF71B3D00F7008470F5 /* .gitignore in Resources */,
 				7762ADFB1B3D00F7008470F5 /* LICENSE in Resources */,
 				587C00C51B43D91400475114 /* JSVideoTableViewCell.xib in Resources */,
@@ -786,6 +799,7 @@
 				77A0DF5C1B42478F007ED2BD /* AFSecurityPolicy.m in Sources */,
 				77A0DF591B42478F007ED2BD /* AFHTTPRequestOperationManager.m in Sources */,
 				77A0DF5D1B42478F007ED2BD /* AFURLConnectionOperation.m in Sources */,
+				1800DC6B1B4669640046F2D7 /* JSLawHelpViewController.m in Sources */,
 				7762ADFC1B3D00F7008470F5 /* MBProgressHUD+Appearance.m in Sources */,
 				77A0DF431B4230A1007ED2BD /* AppDelegate+JS.m in Sources */,
 			);
