@@ -40,6 +40,7 @@
 		1800DCC71B46771A0046F2D7 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DCB21B46771A0046F2D7 /* UIScrollView+MJExtension.m */; };
 		1800DCC81B46771A0046F2D7 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DCB41B46771A0046F2D7 /* UIScrollView+MJRefresh.m */; };
 		1800DCC91B46771A0046F2D7 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DCB61B46771A0046F2D7 /* UIView+MJExtension.m */; };
+		1800DCCB1B46819E0046F2D7 /* JSGalleryDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800DCCA1B46819E0046F2D7 /* JSGalleryDetailsViewController.xib */; };
 		581AD8741B463D3C00FC4480 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581AD8731B463D3C00FC4480 /* MapKit.framework */; };
 		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
 		583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */; };
@@ -193,6 +194,7 @@
 		1800DCB41B46771A0046F2D7 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		1800DCB51B46771A0046F2D7 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		1800DCB61B46771A0046F2D7 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		1800DCCA1B46819E0046F2D7 /* JSGalleryDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSGalleryDetailsViewController.xib; sourceTree = "<group>"; };
 		581AD8731B463D3C00FC4480 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewViewController.h; sourceTree = "<group>"; };
 		583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewViewController.m; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 				771ED70B1B39185F0051584D /* JSExaminationViewController.m */,
 				7783FF6A1B3DA5150006B594 /* JSGalleryDetailsViewController.h */,
 				7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */,
+				1800DCCA1B46819E0046F2D7 /* JSGalleryDetailsViewController.xib */,
 				1800DC751B4672050046F2D7 /* JSJusticeNoticeViewController.h */,
 				1800DC761B4672050046F2D7 /* JSJusticeNoticeViewController.m */,
 				1800DC771B4672050046F2D7 /* JSJusticeNoticeViewController.xib */,
@@ -874,6 +877,7 @@
 				1800DC6E1B466DF10046F2D7 /* lawhelp.html in Resources */,
 				587C00C01B43D51200475114 /* JSNewsTableViewCell.xib in Resources */,
 				1800DCC51B46771A0046F2D7 /* MJRefresh.bundle in Resources */,
+				1800DCCB1B46819E0046F2D7 /* JSGalleryDetailsViewController.xib in Resources */,
 				1800DC6C1B4669640046F2D7 /* JSLawHelpViewController.xib in Resources */,
 				7762ADF71B3D00F7008470F5 /* .gitignore in Resources */,
 				7762ADFB1B3D00F7008470F5 /* LICENSE in Resources */,

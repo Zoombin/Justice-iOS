@@ -12,5 +12,5 @@
 @interface JSGalleryDetailsViewController : UIViewController
 
 @property (nonatomic, strong) JSGallery *gallery;
-
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @end
