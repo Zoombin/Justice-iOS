@@ -18,6 +18,7 @@
 #import "JSVideoTableViewCell.h"
 #import "JSWebViewViewController.h"
 #import "JSImgTableViewCell.h"
+#import "MJRefresh.h"
 
 @interface JSNewsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,14 +26,16 @@
 @property (readwrite) UICollectionView *collectionView;
 @property (readwrite) UITableView *videosTableView;
 @property (readwrite) NSArray *bannerNews;
-@property (readwrite) NSArray *multiNews;
-@property (readwrite) NSArray *galleries;
-@property (readwrite) NSArray *videos;
+@property (readwrite) NSMutableArray *multiNews;
+@property (readwrite) NSMutableArray *galleries;
+@property (readwrite) NSMutableArray *videos;
 @property (readwrite) UISegmentedControl *segmentedControl;
 
 @end
 
-@implementation JSNewsViewController
+@implementation JSNewsViewController {
+    int index;
+}
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -41,6 +44,10 @@
         UIImage *normalImage = [UIImage imageNamed:@"News"];
         UIImage *selectedImage = [UIImage imageNamed:@"NewsHighlighted"];
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.title image:normalImage selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        index = 0;
+        _multiNews = [NSMutableArray array];
+        _galleries = [NSMutableArray array];
+        _videos = [NSMutableArray array];
     }
     return self;
 }
@@ -54,18 +61,29 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        index = 0;
+        [self loadInfo:NO];
+    }];
+    
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        index++;
+        [self loadInfo:YES];
+    }];
+    
     _segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"趣闻", @"照片", @"视频"]];
     _segmentedControl.selectedSegmentIndex = 0;
     _segmentedControl.tintColor = [UIColor whiteColor];
     [_segmentedControl addTarget:self action:@selector(segmentedControlChanged) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = _segmentedControl;
     
-    [self loadInfo];
-    [self getBannerView];
+    [self loadInfo:NO];
 }
 
 - (void)showBannerView {
-    if ([_bannerNews count] == 0) {
+    if ([_bannerNews count] == 0 && _segmentedControl.selectedSegmentIndex != 0) {
         return;
     }
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
@@ -106,6 +124,9 @@
 }
 
 - (void)getBannerView {
+    if ([_bannerNews count] != 0) {
+        return;
+    }
     [[JSAPIManager shared] getBanner:^(NSArray *multiAttributes, NSError *error, NSString *message) {
         if (!error) {
             NSLog(@"%@", multiAttributes);
@@ -115,31 +136,47 @@
     }];
 }
 
-- (void)loadInfo {
+- (void)loadInfo:(BOOL)isLoadMore {
     [self displayHUD:@"加载中..."];
+    [self getBannerView];
     if (_segmentedControl.selectedSegmentIndex == 0) {
-        [[JSAPIManager shared] newsInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+        [[JSAPIManager shared] newsInPage:@(index) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
             [self hideHUD:YES];
+            [self.tableView.header endRefreshing];
+            [self.tableView.footer endRefreshing];
             if (!error) {
-                _multiNews = [JSNews multiWithAttributesArray:multiAttributes];
+                if (!isLoadMore) {
+                    [_multiNews removeAllObjects];
+                }
+                [_multiNews addObjectsFromArray:[JSNews multiWithAttributesArray:multiAttributes]];
                 [self showBannerView];
                 [_tableView reloadData];
             }
         }];
     } else if (_segmentedControl.selectedSegmentIndex == 1) {
-        [[JSAPIManager shared] galleriesInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+        [[JSAPIManager shared] galleriesInPage:@(index) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
             [self hideHUD:YES];
+            [self.tableView.header endRefreshing];
+            [self.tableView.footer endRefreshing];
             if (!error) {
-                _galleries = [JSGallery multiWithAttributesArray:multiAttributes];
+                if (!isLoadMore) {
+                    [_galleries removeAllObjects];
+                }
+                [_galleries addObjectsFromArray:[JSGallery multiWithAttributesArray:multiAttributes]];
                 [_tableView setTableHeaderView:nil];
                 [_tableView reloadData];
             }
         }];
     } else {
-        [[JSAPIManager shared] videosInPage:@(0) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+        [[JSAPIManager shared] videosInPage:@(index) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
             [self hideHUD:YES];
+            [self.tableView.header endRefreshing];
+            [self.tableView.footer endRefreshing];
             if (!error) {
-                _videos = [JSVideo multiWithAttributesArray:multiAttributes];
+                if (!isLoadMore) {
+                    [_videos removeAllObjects];
+                }
+                [_videos addObjectsFromArray:[JSVideo multiWithAttributesArray:multiAttributes]];
                 [_tableView setTableHeaderView:nil];
                 [_tableView reloadData];
             }
@@ -153,15 +190,8 @@
 }
 
 - (void)segmentedControlChanged {
-//    _tableView.hidden = _collectionView.hidden = _videosTableView.hidden = YES;
-//    if (_segmentedControl.selectedSegmentIndex == 0) {
-//        _tableView.hidden = NO;
-//    } else if (_segmentedControl.selectedSegmentIndex == 1) {
-//        _collectionView.hidden = NO;
-//    } else {
-//        _tableView.hidden = NO;
-//    }
-    [self loadInfo];
+    index = 0;
+    [self loadInfo:NO];
 }
 
 #pragma mark - UITableViewDelegate

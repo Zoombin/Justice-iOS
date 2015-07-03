@@ -10,6 +10,7 @@
 #import "Header.h"
 #import "JSSigninViewController.h"
 #import "JSReservationViewController.h"
+#import "JSJusticeNoticeViewController.h"
 
 @interface JSJusticeViewController ()
 
@@ -48,6 +49,16 @@
 	rect.size.height = 44;
 	rect.origin.x = (self.view.bounds.size.width - rect.size.width) / 2;
 	rect.origin.y = CGRectGetMaxY(imageView.frame) + 20;
+    
+    UIButton *justiceNoticeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    justiceNoticeButton.frame = rect;
+    [justiceNoticeButton setBackgroundColor:[UIColor colorWithRed:42/255.0f green:125/255.0f blue:23/255.0f alpha:1.0f]];
+    justiceNoticeButton.layer.cornerRadius = 10;
+    [justiceNoticeButton setTitle:@"公证须知" forState:UIControlStateNormal];
+    [justiceNoticeButton addTarget:self action:@selector(notice) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:justiceNoticeButton];
+    
+    rect.origin.y = CGRectGetMaxY(justiceNoticeButton.frame) + 30;
 	UIButton *reserveButton = [UIButton buttonWithType:UIButtonTypeCustom];
 	reserveButton.frame = rect;
 	[reserveButton setBackgroundColor:[UIColor colorWithRed:23/255.0f green:125/255.0f blue:251/255.0f alpha:1.0f]];
@@ -64,11 +75,19 @@
 	[myReservationButton setTitle:@"我的预约" forState:UIControlStateNormal];
 	[myReservationButton addTarget:self action:@selector(myReservation) forControlEvents:UIControlEventTouchUpInside];
 	[scrollView addSubview:myReservationButton];
+    
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, CGRectGetMaxY(rect) + 50);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)notice {
+    JSJusticeNoticeViewController *justiceNoticeViewController = [JSJusticeNoticeViewController new];
+    justiceNoticeViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:justiceNoticeViewController animated:YES];
 }
 
 - (void)reserve {
