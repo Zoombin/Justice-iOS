@@ -11,6 +11,8 @@
 #import "JSSigninViewController.h"
 #import "JSReservationViewController.h"
 #import "JSJusticeNoticeViewController.h"
+#import "JSOrderedViewController.h"
+#import "JSOrderViewController.h"
 
 @interface JSJusticeViewController ()
 
@@ -103,10 +105,14 @@
 		JSSigninViewController *signinViewController = [[JSSigninViewController alloc] initWithNibName:nil bundle:nil];
 		[self presentViewController:[[UINavigationController alloc] initWithRootViewController:signinViewController] animated:YES completion:nil];
 	} else {
-		JSReservationViewController *reservationViewController = [[JSReservationViewController alloc] initWithNibName:nil bundle:nil];
-		reservationViewController.myReservation = myReservation;
-		[self.navigationController pushViewController:reservationViewController animated:YES];
-	}
+        if (myReservation) {
+            JSOrderedViewController *orderedViewController = [JSOrderedViewController new];
+            [self.navigationController pushViewController:orderedViewController animated:YES];
+        } else {
+            JSOrderViewController *orderViewController = [JSOrderViewController new];
+            [self.navigationController pushViewController:orderViewController animated:YES];
+        }
+    }
 }
 
 @end

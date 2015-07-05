@@ -15,7 +15,8 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"地址" style:UIBarButtonItemStyleBordered target:self action:@selector(showLocation)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"导航" style:UIBarButtonItemStyleBordered target:self action:@selector(showLocation)];
     
 	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
 	[self.view addSubview:scrollView];
@@ -49,8 +50,6 @@
 	phoneLabel.font = addressLabel.font;
 	[scrollView addSubview:phoneLabel];
 	phoneLabel.text = _service.phone;
-    
-    [self performSelector:@selector(showLocation) withObject:nil afterDelay:2.0];
 }
 
 - (void)showLocation {

@@ -27,7 +27,7 @@
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(i * width, CGRectGetMaxY(imageView.frame) - 30, width, 30)];
         titleLabel.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
         titleLabel.textColor = [UIColor whiteColor];
-        titleLabel.text = [NSString stringWithFormat:@"\t%@", photo.content == nil? @"23333333" : photo.content];
+        titleLabel.text = [NSString stringWithFormat:@"\t%@", photo.content == nil? @"" : photo.content];
         titleLabel.font = [UIFont systemFontOfSize:14];
         [_scrollView addSubview:titleLabel];
 	}

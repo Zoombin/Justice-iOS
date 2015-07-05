@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NoticeView.h"
 
-@interface JSJusticeNoticeViewController : UIViewController
+@interface JSJusticeNoticeViewController : UIViewController<UIWebViewDelegate, NoticeViewDelegate>
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @end
