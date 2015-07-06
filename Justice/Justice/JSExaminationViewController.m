@@ -7,6 +7,8 @@
 //
 
 #import "JSExaminationViewController.h"
+#import "JSSigninViewController.h"
+#import "JSAPIManager.h"
 
 @interface JSExaminationViewController ()
 
@@ -55,11 +57,19 @@
 }
 
 - (void)onlineButtonClick {
-    
+    if (![JSAPIManager sessionValid]) {
+        JSSigninViewController *signinViewController = [JSSigninViewController new];
+        signinViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:signinViewController animated:YES];
+    }
 }
 
 - (void)scoreButtonClick {
-    
+    if (![JSAPIManager sessionValid]) {
+        JSSigninViewController *signinViewController = [JSSigninViewController new];
+        signinViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:signinViewController animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

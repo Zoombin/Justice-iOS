@@ -10,4 +10,8 @@
 
 @interface JSSigninViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UITextField *accountTextField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
+- (IBAction)signInButtonClicked:(id)sender;
+- (IBAction)signUpButtonClicked:(id)sender;
 @end

@@ -59,6 +59,33 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 	return path;
 }
 
+- (void)getUserInfo:(NSNumber *)userId withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
+    [self GET:[self pathWithActionName:@"getUserInfo"] parameters:@{@"user_id" : userId} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block(attributes, nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
+- (void)signIn:(NSString *)userName andPassword:(NSString *)password withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
+    [self GET:[self pathWithActionName:@"signin"] parameters:@{@"account" : userName, @"password" : password} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block(responseObject, nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
+- (void)signUp:(NSString *)userName andPassword:(NSString *)password withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
+    [self GET:[self pathWithActionName:@"signup"] parameters:@{@"account" : userName, @"password" : password} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block(responseObject, nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
 - (void)servicesInCategories:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
 	[self GET:[self pathWithActionName:@"getServices"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 		NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];

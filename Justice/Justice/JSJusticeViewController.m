@@ -102,8 +102,9 @@
 
 - (void)goReservation:(BOOL)myReservation {
 	if (![JSAPIManager sessionValid]) {
-		JSSigninViewController *signinViewController = [[JSSigninViewController alloc] initWithNibName:nil bundle:nil];
-		[self presentViewController:[[UINavigationController alloc] initWithRootViewController:signinViewController] animated:YES completion:nil];
+        JSSigninViewController *signinViewController = [JSSigninViewController new];
+        signinViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:signinViewController animated:YES];
 	} else {
         if (myReservation) {
             JSOrderedViewController *orderedViewController = [JSOrderedViewController new];
