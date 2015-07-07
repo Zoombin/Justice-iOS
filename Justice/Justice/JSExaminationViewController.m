@@ -8,7 +8,9 @@
 
 #import "JSExaminationViewController.h"
 #import "JSSigninViewController.h"
+#import "UIViewController+HUD.h"
 #import "JSAPIManager.h"
+#import "JSExamDetailViewController.h"
 
 @interface JSExaminationViewController ()
 
@@ -57,19 +59,22 @@
 }
 
 - (void)onlineButtonClick {
-    if (![JSAPIManager sessionValid]) {
-        JSSigninViewController *signinViewController = [JSSigninViewController new];
-        signinViewController.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:signinViewController animated:YES];
-    }
+//    if (![JSAPIManager sessionValid]) {
+//        JSSigninViewController *signinViewController = [JSSigninViewController new];
+//        signinViewController.hidesBottomBarWhenPushed = YES;
+//        [self.navigationController pushViewController:signinViewController animated:YES];
+//    }
+    JSExamDetailViewController *examDetailViewController = [JSExamDetailViewController new];
+    [self.navigationController pushViewController:examDetailViewController animated:YES];
 }
 
 - (void)scoreButtonClick {
-    if (![JSAPIManager sessionValid]) {
-        JSSigninViewController *signinViewController = [JSSigninViewController new];
-        signinViewController.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:signinViewController animated:YES];
-    }
+//    if (![JSAPIManager sessionValid]) {
+//        JSSigninViewController *signinViewController = [JSSigninViewController new];
+//        signinViewController.hidesBottomBarWhenPushed = YES;
+//        [self.navigationController pushViewController:signinViewController animated:YES];
+//    }
+    [self displayHUDTitle:nil message:@"积分兑换功能还未上线，敬请期待。。。"];
 }
 
 - (void)didReceiveMemoryWarning {

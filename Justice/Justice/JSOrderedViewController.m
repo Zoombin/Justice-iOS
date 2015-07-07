@@ -7,6 +7,8 @@
 //
 
 #import "JSOrderedViewController.h"
+#import "JSAPIManager.h"
+#import "UIViewController+HUD.h"
 
 @interface JSOrderedViewController ()
 
@@ -18,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"我的预约";
+    [self getMyOrder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,6 +28,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)getMyOrder {
+    [self displayHUD:@"加载中..."];
+    [[JSAPIManager shared] getMyReservation:@"1" withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
+        [self hideHUD:YES];
+        if (!error) {
+            NSLog(@"%@", attributes);
+            _myOrderLabel.text = [NSString stringWithFormat:@"姓名:%@\n身份证:%@\n预约时间:%@\n手机号码:%@\n", attributes[@"name"], attributes[@"identity_number"], attributes[@"phone"], attributes[@"reserve_date"]];
+        }
+    }];
+}
 /*
 #pragma mark - Navigation
 

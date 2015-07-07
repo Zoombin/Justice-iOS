@@ -149,6 +149,18 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     }];
 }
 
+- (void)getMyReservation:(NSString *)uid withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    dict[@"user_id"] = uid;
+    NSLog(@"%@", dict);
+    [self GET:[self pathWithActionName:@"getMyReservation"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block(attributes, nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
 - (void)addServe:(NSString *)userId
            phone:(NSString *)phone
           idCard:(NSString *)idCard
@@ -165,6 +177,15 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     [self GET:[self pathWithActionName:@"reserve"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
         if (block) block(responseObject, nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
+- (void)getQuestions:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
+    [self GET:[self pathWithActionName:@"getQuestions"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (block) block(nil, error, nil);
     }];

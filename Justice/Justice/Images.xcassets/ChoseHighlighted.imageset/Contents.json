@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "bubble_right.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "bubble_right@2x.png"
+      "filename" : "btn_check_buttonless_on.png"
     },
     {
       "idiom" : "universal",

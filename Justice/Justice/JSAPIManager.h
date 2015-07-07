@@ -44,6 +44,9 @@
 //获取预约时间
 - (void)getReserveTime:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 
+//我的预约
+- (void)getMyReservation:(NSString *)uid withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
+
 //新建预约
 - (void)addServe:(NSString *)userId
            phone:(NSString *)phone
@@ -52,4 +55,9 @@
             time:(NSString *)time
        withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 
+//获取题目
+- (void)getQuestions:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
+
+//添加积分
+- (void)addScore:(NSString *)uid score:(NSString *)score eid:(NSString *)eid withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 @end

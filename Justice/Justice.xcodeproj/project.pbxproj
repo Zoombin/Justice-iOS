@@ -57,6 +57,10 @@
 		184BA1371B499F6F00A44B08 /* JSOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184BA1351B499F6F00A44B08 /* JSOrderViewController.xib */; };
 		184BA13B1B499FD400A44B08 /* JSOrderedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BA1391B499FD400A44B08 /* JSOrderedViewController.m */; };
 		184BA13C1B499FD400A44B08 /* JSOrderedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184BA13A1B499FD400A44B08 /* JSOrderedViewController.xib */; };
+		184BA1401B4C858D00A44B08 /* JSExamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BA13E1B4C858D00A44B08 /* JSExamDetailViewController.m */; };
+		184BA1411B4C858D00A44B08 /* JSExamDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184BA13F1B4C858D00A44B08 /* JSExamDetailViewController.xib */; };
+		184BA1441B4C876600A44B08 /* JSQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BA1431B4C876600A44B08 /* JSQuestion.m */; };
+		184BA1471B4C8AAA00A44B08 /* JSQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BA1461B4C8AAA00A44B08 /* JSQuestionView.m */; };
 		581AD8741B463D3C00FC4480 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581AD8731B463D3C00FC4480 /* MapKit.framework */; };
 		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
 		583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */; };
@@ -81,7 +85,6 @@
 		58939C311B4A56C500A60780 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58939C301B4A56C500A60780 /* libiconv.dylib */; };
 		58939C331B4A56D700A60780 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58939C321B4A56D700A60780 /* libz.dylib */; };
 		58939C351B4A56EA00A60780 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58939C341B4A56EA00A60780 /* libresolv.dylib */; };
-		58939E431B4A778700A60780 /* RobotInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58939E421B4A778700A60780 /* RobotInfo.m */; };
 		771ED6E11B39165E0051584D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E01B39165E0051584D /* main.m */; };
 		771ED6E41B39165E0051584D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E31B39165E0051584D /* AppDelegate.mm */; };
 		771ED6EF1B39165F0051584D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771ED6EE1B39165F0051584D /* Images.xcassets */; };
@@ -242,6 +245,13 @@
 		184BA1381B499FD400A44B08 /* JSOrderedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSOrderedViewController.h; sourceTree = "<group>"; };
 		184BA1391B499FD400A44B08 /* JSOrderedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSOrderedViewController.m; sourceTree = "<group>"; };
 		184BA13A1B499FD400A44B08 /* JSOrderedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSOrderedViewController.xib; sourceTree = "<group>"; };
+		184BA13D1B4C858D00A44B08 /* JSExamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSExamDetailViewController.h; sourceTree = "<group>"; };
+		184BA13E1B4C858D00A44B08 /* JSExamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSExamDetailViewController.m; sourceTree = "<group>"; };
+		184BA13F1B4C858D00A44B08 /* JSExamDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSExamDetailViewController.xib; sourceTree = "<group>"; };
+		184BA1421B4C876600A44B08 /* JSQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQuestion.h; sourceTree = "<group>"; };
+		184BA1431B4C876600A44B08 /* JSQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQuestion.m; sourceTree = "<group>"; };
+		184BA1451B4C8AAA00A44B08 /* JSQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQuestionView.h; sourceTree = "<group>"; };
+		184BA1461B4C8AAA00A44B08 /* JSQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQuestionView.m; sourceTree = "<group>"; };
 		581AD8731B463D3C00FC4480 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewViewController.h; sourceTree = "<group>"; };
 		583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewViewController.m; sourceTree = "<group>"; };
@@ -353,8 +363,6 @@
 		58939C301B4A56C500A60780 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		58939C321B4A56D700A60780 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		58939C341B4A56EA00A60780 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
-		58939E411B4A778700A60780 /* RobotInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RobotInfo.h; sourceTree = "<group>"; };
-		58939E421B4A778700A60780 /* RobotInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RobotInfo.m; sourceTree = "<group>"; };
 		58939E981B4A7C5000A60780 /* Justice_prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Justice_prefix.pch; sourceTree = "<group>"; };
 		771ED6DB1B39165D0051584D /* Justice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		771ED6DF1B39165D0051584D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1000,6 +1008,9 @@
 		771ED71C1B391B400051584D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				184BA13D1B4C858D00A44B08 /* JSExamDetailViewController.h */,
+				184BA13E1B4C858D00A44B08 /* JSExamDetailViewController.m */,
+				184BA13F1B4C858D00A44B08 /* JSExamDetailViewController.xib */,
 				771ED70A1B39185F0051584D /* JSExaminationViewController.h */,
 				771ED70B1B39185F0051584D /* JSExaminationViewController.m */,
 				7783FF6A1B3DA5150006B594 /* JSGalleryDetailsViewController.h */,
@@ -1050,8 +1061,6 @@
 		771ED71D1B391B490051584D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				58939E411B4A778700A60780 /* RobotInfo.h */,
-				58939E421B4A778700A60780 /* RobotInfo.m */,
 				7762AE181B3D04DD008470F5 /* JSServiceCategory.h */,
 				7762AE191B3D04DD008470F5 /* JSServiceCategory.m */,
 				7762AE1B1B3D04EC008470F5 /* JSService.h */,
@@ -1064,6 +1073,8 @@
 				7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */,
 				772399491B3E53E20086D0A7 /* JSVideo.h */,
 				7723994A1B3E53E20086D0A7 /* JSVideo.m */,
+				184BA1421B4C876600A44B08 /* JSQuestion.h */,
+				184BA1431B4C876600A44B08 /* JSQuestion.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1082,6 +1093,8 @@
 				583A3E3B1B452E210087FDA3 /* JSImgTableViewCell.xib */,
 				1800DCF91B4692C70046F2D7 /* NoticeView.h */,
 				1800DCFA1B4692C70046F2D7 /* NoticeView.m */,
+				184BA1451B4C8AAA00A44B08 /* JSQuestionView.h */,
+				184BA1461B4C8AAA00A44B08 /* JSQuestionView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1344,6 +1357,7 @@
 				1800DC671B4600CB0046F2D7 /* JSRouteSearchViewController.xib in Resources */,
 				1800DCF71B468E8A0046F2D7 /* step10.html in Resources */,
 				1800DC6E1B466DF10046F2D7 /* lawhelp.html in Resources */,
+				184BA1411B4C858D00A44B08 /* JSExamDetailViewController.xib in Resources */,
 				1800DCEF1B468E8A0046F2D7 /* step2.html in Resources */,
 				587C00C01B43D51200475114 /* JSNewsTableViewCell.xib in Resources */,
 				1800DCF31B468E8A0046F2D7 /* step6.html in Resources */,
@@ -1395,7 +1409,6 @@
 				1800DCC61B46771A0046F2D7 /* MJRefreshConst.m in Sources */,
 				7762AE041B3D00F7008470F5 /* UIColor+Hex.m in Sources */,
 				184BA1361B499F6F00A44B08 /* JSOrderViewController.m in Sources */,
-				58939E431B4A778700A60780 /* RobotInfo.m in Sources */,
 				77A0DF771B424795007ED2BD /* UIImageView+AFNetworking.m in Sources */,
 				587C00C41B43D91400475114 /* JSVideoTableViewCell.m in Sources */,
 				7762AE0C1B3D00F7008470F5 /* UIViewController+ZBUtilites.m in Sources */,
@@ -1404,6 +1417,7 @@
 				77A0DF751B424795007ED2BD /* UIAlertView+AFNetworking.m in Sources */,
 				7762ADFE1B3D00F7008470F5 /* NSString+BundleExtensions.m in Sources */,
 				184BA13B1B499FD400A44B08 /* JSOrderedViewController.m in Sources */,
+				184BA1471B4C8AAA00A44B08 /* JSQuestionView.m in Sources */,
 				1800DC651B45FFE20046F2D7 /* UIImage+Rotate.m in Sources */,
 				771ED7091B3917CC0051584D /* JSNewsViewController.m in Sources */,
 				1800DCB81B46771A0046F2D7 /* MJRefreshBackFooter.m in Sources */,
@@ -1432,6 +1446,7 @@
 				7783FF6C1B3DA5150006B594 /* JSGalleryDetailsViewController.m in Sources */,
 				7762AE061B3D00F7008470F5 /* UIDevice+ZBUtilites.m in Sources */,
 				7762AE0B1B3D00F7008470F5 /* UIViewController+ImagePicker.m in Sources */,
+				184BA1401B4C858D00A44B08 /* JSExamDetailViewController.m in Sources */,
 				1800DCBF1B46771A0046F2D7 /* MJRefreshBackGifFooter.m in Sources */,
 				1800DCC31B46771A0046F2D7 /* MJRefreshNormalHeader.m in Sources */,
 				7762AE101B3D00F7008470F5 /* ZBModel.m in Sources */,
@@ -1443,6 +1458,7 @@
 				7762AE131B3D00F7008470F5 /* ZBViewController.m in Sources */,
 				7762AE001B3D00F7008470F5 /* NSString+ZBUtilites.m in Sources */,
 				771ED6E11B39165E0051584D /* main.m in Sources */,
+				184BA1441B4C876600A44B08 /* JSQuestion.m in Sources */,
 				7762AE161B3D016F008470F5 /* JSAPIManager.m in Sources */,
 				771ED7121B3918A70051584D /* JSJusticeViewController.m in Sources */,
 				77A0DF781B424795007ED2BD /* UIProgressView+AFNetworking.m in Sources */,
