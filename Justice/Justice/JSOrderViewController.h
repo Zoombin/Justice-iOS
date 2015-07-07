@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSOrderViewController : UIViewController
+@interface JSOrderViewController : UIViewController<UIActionSheetDelegate>
 
+@property (nonatomic, weak) IBOutlet UITextField *nameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *phoneTextField;
+@property (nonatomic, weak) IBOutlet UITextField *idTextField;
+@property (nonatomic, weak) IBOutlet UIButton *selectTimeBtn;
 @end

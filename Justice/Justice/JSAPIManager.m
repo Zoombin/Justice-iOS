@@ -131,5 +131,44 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     }];
 }
 
+- (void)getLawerList:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
+    [self GET:[self pathWithActionName:@"getLawyers"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
+- (void)getReserveTime:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block {
+    [self GET:[self pathWithActionName:@"getReserveDate"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
+- (void)addServe:(NSString *)userId
+           phone:(NSString *)phone
+          idCard:(NSString *)idCard
+            name:(NSString *)name
+            time:(NSString *)time
+       withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    dict[@"name"] = name;
+    dict[@"identityNumber"] = idCard;
+    dict[@"user_id"] = userId;
+    dict[@"phone"] = phone;
+    dict[@"reserve_date"] = time;
+    NSLog(@"%@", dict);
+    [self GET:[self pathWithActionName:@"reserve"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block(responseObject, nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
 
 @end

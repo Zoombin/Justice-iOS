@@ -7,6 +7,7 @@
 //
 
 #import "JSLawyersViewController.h"
+#import "JSAPIManager.h"
 
 @interface JSLawyersViewController ()
 
@@ -25,9 +26,18 @@
 	return self;
 }
 
+- (void)getLawers {
+    [[JSAPIManager shared] getLawerList:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+        if (!error) {
+            NSLog(@"%@", multiAttributes);
+        }
+    }];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
+    [self getLawers];
 }
 
 - (void)didReceiveMemoryWarning {
