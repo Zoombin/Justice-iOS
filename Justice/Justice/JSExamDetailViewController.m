@@ -10,7 +10,6 @@
 #import "JSAPIManager.h"
 #import "JSQuestion.h"
 #import "UIViewController+HUD.h"
-#import "JSQuestionView.h"
 
 @interface JSExamDetailViewController ()
 
@@ -18,13 +17,52 @@
 
 @implementation JSExamDetailViewController {
     NSArray *questions;
+    int score;
+    NSMutableArray *correctArray;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"提交" style:UIBarButtonItemStyleBordered target:self action:@selector(submit)];
+    
+    correctArray = [[NSMutableArray alloc] init];
     [self getQuestions];
     _scrollView.pagingEnabled = YES;
+}
+
+- (void)submit {
+    if ([questions count] == 0) {
+        [self displayHUDTitle:nil message:@"尚未获取到试卷信息"];
+        return;
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                    message:@"是否交卷?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"取消"
+                                          otherButtonTitles:@"确定", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.cancelButtonIndex != buttonIndex) {
+        [self displayHUD:@"提交中..."];
+        JSQuestion *question = questions[0];
+        [[JSAPIManager shared] addScore:[JSAPIManager userID] score:score eid:question.eid withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
+            if (!error) {
+                [self displayHUDTitle:nil message:attributes[@"msg"]];
+                NSLog(@"%@", attributes);
+                if ([attributes[@"error"] boolValue] == NO) {
+                    NSLog(@"提交成功");
+                    [self performSelector:@selector(back) withObject:nil afterDelay:2.0];
+                }
+            }
+        }];
+    }
+}
+
+- (void)back {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)getQuestions {
@@ -45,9 +83,24 @@
     for (int i = 0; i < [questions count]; i++) {
         JSQuestion *question = questions[i];
         JSQuestionView *questionView = [[JSQuestionView alloc] initWithFrame:CGRectMake(screenWidth * i, 0, screenWidth, _scrollView.frame.size.height)];
+        questionView.delegate = self;
         [questionView showQuestion:question index:i];
         [_scrollView addSubview:questionView];
     }
+}
+
+- (void)answerIsCorrect:(BOOL)isCorrect index:(NSInteger)index {
+    if (isCorrect) {
+        if (![correctArray containsObject:@(index)]) {
+            [correctArray addObject:@(index)];
+        }
+    } else {
+        if ([correctArray containsObject:@(index)]) {
+            [correctArray removeObject:@(index)];
+        }
+    }
+    NSLog(@"count => %ld", [correctArray count]);
+    
 }
 
 - (void)didReceiveMemoryWarning {

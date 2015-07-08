@@ -30,7 +30,7 @@
 
 - (void)getMyOrder {
     [self displayHUD:@"加载中..."];
-    [[JSAPIManager shared] getMyReservation:@"1" withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
+    [[JSAPIManager shared] getMyReservation:[JSAPIManager userID] withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
         [self hideHUD:YES];
         if (!error) {
             NSLog(@"%@", attributes);

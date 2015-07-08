@@ -74,7 +74,7 @@
         [self displayHUDTitle:nil message:@"预约时间不能为空!"];
         return;
     }
-    [[JSAPIManager shared] addServe:@"1" phone:_phoneTextField.text idCard:_idTextField.text name:_nameTextField.text time:reserveTime withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
+    [[JSAPIManager shared] addServe:[JSAPIManager userID] phone:_phoneTextField.text idCard:_idTextField.text name:_nameTextField.text time:reserveTime withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
         if (!error) {
             NSLog(@"%@", attributes);
             [self displayHUDTitle:nil message:attributes[@"msg"]];

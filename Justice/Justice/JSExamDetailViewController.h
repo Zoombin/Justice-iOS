@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSQuestionView.h"
 
-@interface JSExamDetailViewController : UIViewController
+@interface JSExamDetailViewController : UIViewController <JSQuestionViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @end

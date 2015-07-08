@@ -24,6 +24,7 @@
         _question = [attributes[@"question"] notNull];
         _type = [attributes[@"type"] notNull];
         _yesOrNo = [attributes[@"yes_or_no"] notNull];
+        _answer = [attributes[@"answer"] notNull];
     }
     return self;
 }

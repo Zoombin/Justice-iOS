@@ -36,13 +36,12 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 	return [self userID] ? YES : NO;
 }
 
-+ (NSNumber *)userID {
-//	return @(1);//TODO: hardcode for test
-	NSNumber *userID = [[NSUserDefaults standardUserDefaults] objectForKey:JS_USER_ID_KEY];
++ (NSString *)userID {
+	NSString *userID = [[NSUserDefaults standardUserDefaults] objectForKey:JS_USER_ID_KEY];
 	return userID;
 }
 
-+ (void)saveUserID:(NSNumber *)userID {
++ (void)saveUserID:(NSString *)userID {
 	if (userID) {
 		[[NSUserDefaults standardUserDefaults] setObject:userID forKey:JS_USER_ID_KEY];
 		[[NSUserDefaults standardUserDefaults] synchronize];
@@ -70,7 +69,6 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 
 - (void)signIn:(NSString *)userName andPassword:(NSString *)password withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
     [self GET:[self pathWithActionName:@"signin"] parameters:@{@"account" : userName, @"password" : password} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
         if (block) block(responseObject, nil, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (block) block(nil, error, nil);
@@ -79,7 +77,6 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 
 - (void)signUp:(NSString *)userName andPassword:(NSString *)password withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
     [self GET:[self pathWithActionName:@"signup"] parameters:@{@"account" : userName, @"password" : password} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
         if (block) block(responseObject, nil, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (block) block(nil, error, nil);
@@ -175,7 +172,6 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     dict[@"reserve_date"] = time;
     NSLog(@"%@", dict);
     [self GET:[self pathWithActionName:@"reserve"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
         if (block) block(responseObject, nil, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (block) block(nil, error, nil);
@@ -186,6 +182,22 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     [self GET:[self pathWithActionName:@"getQuestions"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSArray *multiAttributes = [responseObject valueForKeyPath:JS_DATA];
         if (block) block([NSArray arrayWithArray:multiAttributes], nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
+- (void)addScore:(NSString *)uid
+           score:(NSInteger)score
+             eid:(NSString *)eid
+       withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    dict[@"user_id"] = uid;
+    dict[@"score"] = @(score);
+    dict[@"examination_id"] = eid;
+    NSLog(@"%@", dict);
+    [self GET:[self pathWithActionName:@"addMyScore"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (block) block(responseObject, nil, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (block) block(nil, error, nil);
     }];

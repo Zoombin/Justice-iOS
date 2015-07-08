@@ -59,13 +59,15 @@
 }
 
 - (void)onlineButtonClick {
-//    if (![JSAPIManager sessionValid]) {
-//        JSSigninViewController *signinViewController = [JSSigninViewController new];
-//        signinViewController.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:signinViewController animated:YES];
-//    }
-    JSExamDetailViewController *examDetailViewController = [JSExamDetailViewController new];
-    [self.navigationController pushViewController:examDetailViewController animated:YES];
+    if (![JSAPIManager sessionValid]) {
+        JSSigninViewController *signinViewController = [JSSigninViewController new];
+        signinViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:signinViewController animated:YES];
+    } else {
+        JSExamDetailViewController *examDetailViewController = [JSExamDetailViewController new];
+        examDetailViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:examDetailViewController animated:YES];
+    }
 }
 
 - (void)scoreButtonClick {

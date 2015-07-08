@@ -12,7 +12,8 @@
 
 + (instancetype)shared;
 + (BOOL)sessionValid;
-+ (NSNumber *)userID;
++ (void)saveUserID:(NSString *)userID;
++ (NSString *)userID;
 
 //获取个人信息
 - (void)getUserInfo:(NSNumber *)userId withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
@@ -59,5 +60,8 @@
 - (void)getQuestions:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 
 //添加积分
-- (void)addScore:(NSString *)uid score:(NSString *)score eid:(NSString *)eid withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
+- (void)addScore:(NSString *)uid
+           score:(NSInteger)score
+             eid:(NSString *)eid
+       withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 @end

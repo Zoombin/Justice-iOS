@@ -9,6 +9,7 @@
 #import "JSSigninViewController.h"
 #import "UIViewController+HUD.h"
 #import "EaseMob.h"
+#import "JSUserInfo.h"
 #import "Header.h"
 
 @interface JSSigninViewController ()
@@ -71,7 +72,9 @@
             [self displayHUDTitle:nil message:attributes[@"msg"]];
             if (![attributes[@"error"] boolValue]) {
                 NSLog(@"%@", attributes[@"data"]);
-//                [self.navigationController popViewControllerAnimated:NO];
+                JSUserInfo *userInfo = [[JSUserInfo alloc] initWithAttributes:attributes[@"data"]];
+                [JSAPIManager saveUserID:userInfo.ID];
+                [self.navigationController popViewControllerAnimated:NO];
             }
         } else {
             [self displayHUDTitle:nil message:@"网络异常"];
@@ -86,6 +89,9 @@
             [self displayHUDTitle:nil message:attributes[@"msg"]];
             if (![attributes[@"error"] boolValue]) {
                 NSLog(@"%@", attributes[@"data"]);
+                JSUserInfo *userInfo = [[JSUserInfo alloc] initWithAttributes:attributes[@"data"]];
+                [JSAPIManager saveUserID:userInfo.ID];
+                [self.navigationController popViewControllerAnimated:NO];
             }
         } else {
             [self displayHUDTitle:nil message:@"网络异常"];
