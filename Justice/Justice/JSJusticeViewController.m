@@ -9,7 +9,6 @@
 #import "JSJusticeViewController.h"
 #import "Header.h"
 #import "JSSigninViewController.h"
-#import "JSReservationViewController.h"
 #import "JSJusticeNoticeViewController.h"
 #import "JSOrderedViewController.h"
 #import "JSOrderViewController.h"
@@ -101,11 +100,11 @@
 }
 
 - (void)goReservation:(BOOL)myReservation {
-//	if (![JSAPIManager sessionValid]) {
-//        JSSigninViewController *signinViewController = [JSSigninViewController new];
-//        signinViewController.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:signinViewController animated:YES];
-//	} else {
+	if (![JSAPIManager sessionValid]) {
+        JSSigninViewController *signinViewController = [JSSigninViewController new];
+        signinViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:signinViewController animated:YES];
+	} else {
         if (myReservation) {
             JSOrderedViewController *orderedViewController = [JSOrderedViewController new];
             [self.navigationController pushViewController:orderedViewController animated:YES];
@@ -113,7 +112,7 @@
             JSOrderViewController *orderViewController = [JSOrderViewController new];
             [self.navigationController pushViewController:orderViewController animated:YES];
         }
-//    }
+    }
 }
 
 @end

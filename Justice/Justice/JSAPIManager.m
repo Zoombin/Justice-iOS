@@ -151,8 +151,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     dict[@"user_id"] = uid;
     NSLog(@"%@", dict);
     [self GET:[self pathWithActionName:@"getMyReservation"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
-        if (block) block(attributes, nil, nil);
+        if (block) block(responseObject, nil, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (block) block(nil, error, nil);
     }];
@@ -166,7 +165,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
        withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     dict[@"name"] = name;
-    dict[@"identityNumber"] = idCard;
+    dict[@"identity_number"] = idCard;
     dict[@"user_id"] = userId;
     dict[@"phone"] = phone;
     dict[@"reserve_date"] = time;

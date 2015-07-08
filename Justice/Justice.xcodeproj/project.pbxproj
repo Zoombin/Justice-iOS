@@ -134,7 +134,6 @@
 		7783FF651B3DA11E0006B594 /* JSGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF641B3DA11E0006B594 /* JSGallery.m */; };
 		7783FF681B3DA2080006B594 /* JSGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */; };
 		7783FF6C1B3DA5150006B594 /* JSGalleryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */; };
-		77A0DF401B41787A007ED2BD /* JSReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */; };
 		77A0DF431B4230A1007ED2BD /* AppDelegate+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A0DF421B4230A1007ED2BD /* AppDelegate+JS.m */; };
 		77A0DF581B42478F007ED2BD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A0DF461B42478F007ED2BD /* AFHTTPRequestOperation.m */; };
 		77A0DF591B42478F007ED2BD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A0DF481B42478F007ED2BD /* AFHTTPRequestOperationManager.m */; };
@@ -460,8 +459,6 @@
 		7783FF671B3DA2080006B594 /* JSGalleryPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGalleryPhoto.m; sourceTree = "<group>"; };
 		7783FF6A1B3DA5150006B594 /* JSGalleryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGalleryDetailsViewController.h; sourceTree = "<group>"; };
 		7783FF6B1B3DA5150006B594 /* JSGalleryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGalleryDetailsViewController.m; sourceTree = "<group>"; };
-		77A0DF3E1B41787A007ED2BD /* JSReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSReservationViewController.h; sourceTree = "<group>"; };
-		77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSReservationViewController.m; sourceTree = "<group>"; };
 		77A0DF411B4230A1007ED2BD /* AppDelegate+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JS.h"; sourceTree = "<group>"; };
 		77A0DF421B4230A1007ED2BD /* AppDelegate+JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JS.m"; sourceTree = "<group>"; };
 		77A0DF451B42478F007ED2BD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -1037,8 +1034,6 @@
 				184BA1331B499F6F00A44B08 /* JSOrderViewController.h */,
 				184BA1341B499F6F00A44B08 /* JSOrderViewController.m */,
 				184BA1351B499F6F00A44B08 /* JSOrderViewController.xib */,
-				77A0DF3E1B41787A007ED2BD /* JSReservationViewController.h */,
-				77A0DF3F1B41787A007ED2BD /* JSReservationViewController.m */,
 				1800DC601B45FF190046F2D7 /* JSRouteSearchViewController.h */,
 				588ED09B1B46301600A50FBC /* JSRouteSearchViewController.m */,
 				1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */,
@@ -1469,7 +1464,6 @@
 				7762AE081B3D00F7008470F5 /* UITableViewCell+ZBUtilities.m in Sources */,
 				77A0DF581B42478F007ED2BD /* AFHTTPRequestOperation.m in Sources */,
 				77A0DF5A1B42478F007ED2BD /* AFHTTPSessionManager.m in Sources */,
-				77A0DF401B41787A007ED2BD /* JSReservationViewController.m in Sources */,
 				1800DCBD1B46771A0046F2D7 /* MJRefreshAutoNormalFooter.m in Sources */,
 				1800DCC81B46771A0046F2D7 /* UIScrollView+MJRefresh.m in Sources */,
 				771ED7181B3918E90051584D /* JSSigninViewController.m in Sources */,

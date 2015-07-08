@@ -10,6 +10,8 @@
 
 @interface JSAPIManager : AFHTTPRequestOperationManager
 
+#define NETWORK_ERROR @"网络异常"
+
 + (instancetype)shared;
 + (BOOL)sessionValid;
 + (void)saveUserID:(NSString *)userID;

@@ -31,10 +31,20 @@
 - (void)getMyOrder {
     [self displayHUD:@"加载中..."];
     [[JSAPIManager shared] getMyReservation:[JSAPIManager userID] withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
-        [self hideHUD:YES];
         if (!error) {
-            NSLog(@"%@", attributes);
-            _myOrderLabel.text = [NSString stringWithFormat:@"姓名:%@\n身份证:%@\n预约时间:%@\n手机号码:%@\n", attributes[@"name"], attributes[@"identity_number"], attributes[@"phone"], attributes[@"reserve_date"]];
+            if ([attributes[@"error"] boolValue] == NO) {
+                if (![attributes[@"data"] isKindOfClass:[NSNull class]]) {
+                    [self hideHUD:YES];
+                    NSDictionary *dict = attributes[@"data"];
+                    _myOrderLabel.text = [NSString stringWithFormat:@"姓名:%@\n身份证:%@\n预约时间:%@\n手机号码:%@\n", dict[@"name"], dict[@"identity_number"], dict[@"reserve_date"], dict[@"phone"]];
+                } else {
+                    [self displayHUDTitle:nil message:attributes[@"msg"]];
+                }
+            } else {
+                [self displayHUDTitle:nil message:attributes[@"msg"]];
+            }
+        } else {
+            [self displayHUDTitle:nil message:NETWORK_ERROR];
         }
     }];
 }
