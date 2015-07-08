@@ -17,7 +17,7 @@
 
 @implementation JSExamDetailViewController {
     NSArray *questions;
-    int score;
+    NSInteger score;
     NSMutableArray *correctArray;
 }
 
@@ -100,7 +100,7 @@
         }
     }
     NSLog(@"count => %ld", [correctArray count]);
-    
+    score = 10 * [correctArray count];
 }
 
 - (void)didReceiveMemoryWarning {

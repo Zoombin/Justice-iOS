@@ -11,6 +11,7 @@
 #import "UIViewController+HUD.h"
 #import "JSAPIManager.h"
 #import "JSExamDetailViewController.h"
+#import "JSUserInfo.h"
 
 @interface JSExaminationViewController ()
 
@@ -55,7 +56,26 @@
     [scoreButton setTitle:@"积分兑换" forState:UIControlStateNormal];
     [scoreButton addTarget:self action:@selector(scoreButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scoreButton];
+}
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self getUserInfo];
+}
+
+- (void)getUserInfo {
+    if (![JSAPIManager sessionValid]) {
+        return;
+    }
+    [self displayHUD:@"加载中..."];
+    [[JSAPIManager shared] getUserInfo:[JSAPIManager userID] withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
+        [self hideHUD:YES];
+        if (!error) {
+            JSUserInfo *userInfo = [[JSUserInfo alloc] initWithAttributes:attributes[@"data"]];
+            NSLog(@"%@", userInfo.score);
+            self.navigationItem.title = [NSString stringWithFormat:@"我的积分:%@", userInfo.score];
+        }
+    }];
 }
 
 - (void)onlineButtonClick {

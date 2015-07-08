@@ -58,10 +58,10 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 	return path;
 }
 
-- (void)getUserInfo:(NSNumber *)userId withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
+- (void)getUserInfo:(NSString *)userId withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
     [self GET:[self pathWithActionName:@"getUserInfo"] parameters:@{@"user_id" : userId} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
-        if (block) block(attributes, nil, nil);
+//        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
+        if (block) block(responseObject, nil, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (block) block(nil, error, nil);
     }];

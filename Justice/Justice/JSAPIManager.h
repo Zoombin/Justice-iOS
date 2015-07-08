@@ -16,25 +16,33 @@
 + (NSString *)userID;
 
 //获取个人信息
-- (void)getUserInfo:(NSNumber *)userId withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
+- (void)getUserInfo:(NSString *)userId
+          withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 
 //登录
-- (void)signIn:(NSString *)userName andPassword:(NSString *)password withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
+- (void)signIn:(NSString *)userName
+   andPassword:(NSString *)password
+     withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 
 //注册
-- (void)signUp:(NSString *)userName andPassword:(NSString *)password withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
+- (void)signUp:(NSString *)userName
+   andPassword:(NSString *)password
+     withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 
 //服务类别
 - (void)servicesInCategories:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 
 //新闻列表
-- (void)newsInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
+- (void)newsInPage:(NSNumber *)page
+         withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 
 //图片列表
-- (void)galleriesInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
+- (void)galleriesInPage:(NSNumber *)page
+              withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 
 //视频列表
-- (void)videosInPage:(NSNumber *)page withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
+- (void)videosInPage:(NSNumber *)page
+           withBlock:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 
 //获取banner新闻
 - (void)getBanner:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
@@ -46,8 +54,8 @@
 - (void)getReserveTime:(void (^)(NSArray *multiAttributes, NSError *error, NSString *message))block;
 
 //我的预约
-- (void)getMyReservation:(NSString *)uid withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
-
+- (void)getMyReservation:(NSString *)uid
+               withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 //新建预约
 - (void)addServe:(NSString *)userId
            phone:(NSString *)phone
