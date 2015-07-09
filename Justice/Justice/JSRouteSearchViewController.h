@@ -1,25 +1,32 @@
 //
-//  PoiSearchViewController.h
-//  PocketTools
+//  RouteSearchDemoViewController.h
+//  BaiduMapApiDemo
 //
-//  Created by yc on 15-3-12.
-//  Copyright (c) 2015年 yc. All rights reserved.
+//  Copyright 2011 Baidu Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 #import <BaiduMapAPI/BMapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface JSRouteSearchViewController : UIViewController<BMKMapViewDelegate, BMKPoiSearchDelegate,CLLocationManagerDelegate, UITextFieldDelegate> {
+@interface JSRouteSearchViewController : UIViewController<BMKMapViewDelegate, BMKRouteSearchDelegate, CLLocationManagerDelegate> {
     IBOutlet BMKMapView* _mapView;
-    IBOutlet UITextField* _cityText;
-    IBOutlet UITextField* _keyText;
-    IBOutlet UIButton* _nextPageButton;
-    IBOutlet UIButton* _searchButton;
-    BMKPoiSearch* _poisearch;
-    int curPage;
+//    IBOutlet UITextField* _startCityText;
+//    IBOutlet UITextField* _startAddrText;
+//    IBOutlet UITextField* _endCityText;
+//    IBOutlet UITextField* _endAddrText;
+    float currentLat;
+    float currentLng;
+    BMKRouteSearch* _routesearch;
+    NSString *cityName;
 }
+@property (nonatomic, strong) NSString *lat;
+@property (nonatomic, strong) NSString *lng;
 @property (nonatomic, strong) CLLocationManager  *locationManager;
-- (IBAction)onClickOk;
-- (IBAction)onClickNextPage;
+//-(IBAction)onClickBusSearch;
+-(IBAction)onClickDriveSearch;
+//-(IBAction)onClickWalkSearch;
+- (IBAction)textFiledReturnEditing:(id)sender;
+
+
 @end

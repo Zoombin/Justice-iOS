@@ -403,7 +403,7 @@
 		587C00C91B43E01F00475114 /* JSNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C00C71B43E01F00475114 /* JSNewsDetailViewController.m */; };
 		587C00CA1B43E01F00475114 /* JSNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587C00C81B43E01F00475114 /* JSNewsDetailViewController.xib */; };
 		588ED09A1B4626CB00A50FBC /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588ED0991B4626CB00A50FBC /* BaiduMapAPI.framework */; };
-		588ED09C1B46301600A50FBC /* JSRouteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588ED09B1B46301600A50FBC /* JSRouteSearchViewController.m */; };
+		588ED09C1B46301600A50FBC /* JSRouteSearchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 588ED09B1B46301600A50FBC /* JSRouteSearchViewController.mm */; };
 		58939BB51B4A32D300A60780 /* JSSigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58939BB41B4A32D300A60780 /* JSSigninViewController.xib */; };
 		58939C231B4A4F8200A60780 /* libEaseMobClientSDKLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58939C1F1B4A4F8200A60780 /* libEaseMobClientSDKLite.a */; };
 		58939C241B4A4F8200A60780 /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58939C211B4A4F8200A60780 /* EaseMob.bundle */; };
@@ -1076,7 +1076,7 @@
 		587C00C71B43E01F00475114 /* JSNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewsDetailViewController.m; sourceTree = "<group>"; };
 		587C00C81B43E01F00475114 /* JSNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNewsDetailViewController.xib; sourceTree = "<group>"; };
 		588ED0991B4626CB00A50FBC /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = Library/BaiduMap/BaiduMapAPI.framework; sourceTree = "<group>"; };
-		588ED09B1B46301600A50FBC /* JSRouteSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRouteSearchViewController.m; sourceTree = "<group>"; };
+		588ED09B1B46301600A50FBC /* JSRouteSearchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JSRouteSearchViewController.mm; sourceTree = "<group>"; };
 		58939BB41B4A32D300A60780 /* JSSigninViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSSigninViewController.xib; sourceTree = "<group>"; };
 		58939BBB1B4A4F8100A60780 /* EMCallManagerCallDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerCallDelegate.h; sourceTree = "<group>"; };
 		58939BBC1B4A4F8100A60780 /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
@@ -2805,7 +2805,7 @@
 				184BA1341B499F6F00A44B08 /* JSOrderViewController.m */,
 				184BA1351B499F6F00A44B08 /* JSOrderViewController.xib */,
 				1800DC601B45FF190046F2D7 /* JSRouteSearchViewController.h */,
-				588ED09B1B46301600A50FBC /* JSRouteSearchViewController.m */,
+				588ED09B1B46301600A50FBC /* JSRouteSearchViewController.mm */,
 				1800DC661B4600CB0046F2D7 /* JSRouteSearchViewController.xib */,
 				7762AE1E1B3D18E0008470F5 /* JSServiceDetailsViewController.h */,
 				7762AE1F1B3D18E0008470F5 /* JSServiceDetailsViewController.m */,
@@ -3522,7 +3522,7 @@
 				771ED7121B3918A70051584D /* JSJusticeViewController.m in Sources */,
 				77A0DF781B424795007ED2BD /* UIProgressView+AFNetworking.m in Sources */,
 				1896F3BE1B4DE4260071C8F2 /* PushNotificationViewController.m in Sources */,
-				588ED09C1B46301600A50FBC /* JSRouteSearchViewController.m in Sources */,
+				588ED09C1B46301600A50FBC /* JSRouteSearchViewController.mm in Sources */,
 				1896F3C71B4DE4260071C8F2 /* EMSearchDisplayController.m in Sources */,
 				1800DCB71B46771A0046F2D7 /* MJRefreshAutoFooter.m in Sources */,
 				7762AE1A1B3D04DD008470F5 /* JSServiceCategory.m in Sources */,
