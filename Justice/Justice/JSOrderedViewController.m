@@ -35,8 +35,12 @@
             if ([attributes[@"error"] boolValue] == NO) {
                 if (![attributes[@"data"] isKindOfClass:[NSNull class]]) {
                     [self hideHUD:YES];
-                    NSDictionary *dict = attributes[@"data"];
-                    _myOrderLabel.text = [NSString stringWithFormat:@"姓名:%@\n身份证:%@\n预约时间:%@\n手机号码:%@\n", dict[@"name"], dict[@"identity_number"], dict[@"reserve_date"], dict[@"phone"]];
+                    NSArray *arr = attributes[@"data"];
+                    for (int i = 0; i < [arr count]; i++) {
+                        NSDictionary *dict = arr[i];
+                        _myOrderLabel.text = [NSString stringWithFormat:@"%@\n姓名:%@\n身份证:%@\n预约时间:%@\n手机号码:%@\n", _myOrderLabel.text,dict[@"name"], dict[@"identity_number"], dict[@"reserve_date"], dict[@"phone"]];
+                    }
+                    
                 } else {
                     [self displayHUDTitle:nil message:attributes[@"msg"]];
                 }

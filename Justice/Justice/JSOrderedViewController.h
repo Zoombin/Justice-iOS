@@ -10,5 +10,5 @@
 
 @interface JSOrderedViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UILabel *myOrderLabel;
+@property (nonatomic, weak) IBOutlet UITextView *myOrderLabel;
 @end
