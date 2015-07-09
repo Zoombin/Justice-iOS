@@ -390,6 +390,8 @@
 		1896F5791B4DE5310071C8F2 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1896F5371B4DE5310071C8F2 /* libopencore-amrnb.a */; };
 		1896F57A1B4DE5310071C8F2 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1896F53B1B4DE5310071C8F2 /* libopencore-amrwb.a */; };
 		581AD8741B463D3C00FC4480 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581AD8731B463D3C00FC4480 /* MapKit.framework */; };
+		5829BB101B4E26D30057017E /* JSFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5829BB0E1B4E26D30057017E /* JSFeedBackViewController.m */; };
+		5829BB111B4E26D30057017E /* JSFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5829BB0F1B4E26D30057017E /* JSFeedBackViewController.xib */; };
 		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
 		583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */; };
 		583A3E3C1B452E210087FDA3 /* JSImgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E3A1B452E210087FDA3 /* JSImgTableViewCell.m */; };
@@ -1055,6 +1057,9 @@
 		1896F53A1B4DE5310071C8F2 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
 		1896F53B1B4DE5310071C8F2 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		581AD8731B463D3C00FC4480 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5829BB0D1B4E26D30057017E /* JSFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFeedBackViewController.h; sourceTree = "<group>"; };
+		5829BB0E1B4E26D30057017E /* JSFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFeedBackViewController.m; sourceTree = "<group>"; };
+		5829BB0F1B4E26D30057017E /* JSFeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSFeedBackViewController.xib; sourceTree = "<group>"; };
 		583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewViewController.h; sourceTree = "<group>"; };
 		583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewViewController.m; sourceTree = "<group>"; };
 		583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSWebViewViewController.xib; sourceTree = "<group>"; };
@@ -2815,6 +2820,9 @@
 				583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */,
 				583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */,
 				583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */,
+				5829BB0D1B4E26D30057017E /* JSFeedBackViewController.h */,
+				5829BB0E1B4E26D30057017E /* JSFeedBackViewController.m */,
+				5829BB0F1B4E26D30057017E /* JSFeedBackViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -3247,6 +3255,7 @@
 				1896F40F1B4DE4260071C8F2 /* chatBar_more_face.png in Resources */,
 				1896F3F81B4DE4260071C8F2 /* VoiceSearchFeedback016@2x.png in Resources */,
 				1800DCC51B46771A0046F2D7 /* MJRefresh.bundle in Resources */,
+				5829BB111B4E26D30057017E /* JSFeedBackViewController.xib in Resources */,
 				1800DCCB1B46819E0046F2D7 /* JSGalleryDetailsViewController.xib in Resources */,
 				1896F3E01B4DE4260071C8F2 /* VoiceSearchFeedback004@2x.png in Resources */,
 				1896F47C1B4DE4260071C8F2 /* tabbar_chatsHL.png in Resources */,
@@ -3380,6 +3389,7 @@
 				1896F53E1B4DE5310071C8F2 /* EMCDDeviceManager+Media.m in Sources */,
 				1896F3B81B4DE4260071C8F2 /* LoginViewController.m in Sources */,
 				1800DCC61B46771A0046F2D7 /* MJRefreshConst.m in Sources */,
+				5829BB101B4E26D30057017E /* JSFeedBackViewController.m in Sources */,
 				1896F3AF1B4DE4260071C8F2 /* ChineseToPinyin.m in Sources */,
 				7762AE041B3D00F7008470F5 /* UIColor+Hex.m in Sources */,
 				184BA1361B499F6F00A44B08 /* JSOrderViewController.m in Sources */,

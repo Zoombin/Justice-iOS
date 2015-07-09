@@ -7,6 +7,7 @@
 //
 
 #import "JSUserInfoViewController.h"
+#import "JSFeedBackViewController.h"
 #import "JSUserInfo.h"
 
 @interface JSUserInfoViewController ()
@@ -19,7 +20,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"个人中心";
+     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"意见反馈" style:UIBarButtonItemStyleBordered target:self action:@selector(feedBack)];
     [self getUserInfo];
+}
+
+- (void)feedBack {
+    JSFeedBackViewController *feedBackViewController = [JSFeedBackViewController new];
+    [self.navigationController pushViewController:feedBackViewController animated:YES];
 }
 
 - (void)getUserInfo {

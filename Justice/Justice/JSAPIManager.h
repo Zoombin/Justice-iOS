@@ -75,4 +75,9 @@
            score:(NSInteger)score
              eid:(NSString *)eid
        withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
+
+//意见反馈
+- (void)advice:(NSString *)content
+        userID:(NSString *)uid
+     withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 @end

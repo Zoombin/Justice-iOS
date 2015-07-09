@@ -202,5 +202,19 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     }];
 }
 
+- (void)advice:(NSString *)content
+        userID:(NSString *)uid
+     withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    dict[@"user_id"] = uid;
+    dict[@"content"] = content;
+    NSLog(@"%@", dict);
+    [self GET:[self pathWithActionName:@"advice"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (block) block(responseObject, nil, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) block(nil, error, nil);
+    }];
+}
+
 
 @end
