@@ -413,6 +413,8 @@
 		58939C311B4A56C500A60780 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58939C301B4A56C500A60780 /* libiconv.dylib */; };
 		58939C331B4A56D700A60780 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58939C321B4A56D700A60780 /* libz.dylib */; };
 		58939C351B4A56EA00A60780 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58939C341B4A56EA00A60780 /* libresolv.dylib */; };
+		58F76F381B4E19BA0076D02B /* JSUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F76F361B4E19BA0076D02B /* JSUserInfoViewController.m */; };
+		58F76F391B4E19BA0076D02B /* JSUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F76F371B4E19BA0076D02B /* JSUserInfoViewController.xib */; };
 		58FFBE7D1B4CF7DB002C1E67 /* JSUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FFBE7C1B4CF7DB002C1E67 /* JSUserInfo.m */; };
 		771ED6E11B39165E0051584D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E01B39165E0051584D /* main.m */; };
 		771ED6E41B39165E0051584D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 771ED6E31B39165E0051584D /* AppDelegate.mm */; };
@@ -1163,6 +1165,9 @@
 		58939C301B4A56C500A60780 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		58939C321B4A56D700A60780 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		58939C341B4A56EA00A60780 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		58F76F351B4E19BA0076D02B /* JSUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSUserInfoViewController.h; sourceTree = "<group>"; };
+		58F76F361B4E19BA0076D02B /* JSUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSUserInfoViewController.m; sourceTree = "<group>"; };
+		58F76F371B4E19BA0076D02B /* JSUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSUserInfoViewController.xib; sourceTree = "<group>"; };
 		58FFBE7B1B4CF7DB002C1E67 /* JSUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSUserInfo.h; sourceTree = "<group>"; };
 		58FFBE7C1B4CF7DB002C1E67 /* JSUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSUserInfo.m; sourceTree = "<group>"; };
 		771ED6DB1B39165D0051584D /* Justice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2804,6 +2809,9 @@
 				771ED7161B3918E90051584D /* JSSigninViewController.h */,
 				771ED7171B3918E90051584D /* JSSigninViewController.m */,
 				58939BB41B4A32D300A60780 /* JSSigninViewController.xib */,
+				58F76F351B4E19BA0076D02B /* JSUserInfoViewController.h */,
+				58F76F361B4E19BA0076D02B /* JSUserInfoViewController.m */,
+				58F76F371B4E19BA0076D02B /* JSUserInfoViewController.xib */,
 				583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */,
 				583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */,
 				583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */,
@@ -3308,6 +3316,7 @@
 				1896F4661B4DE4260071C8F2 /* account.png in Resources */,
 				1896F4711B4DE4260071C8F2 /* group_header@2x.png in Resources */,
 				1896F3F11B4DE4260071C8F2 /* VoiceSearchFeedback013.png in Resources */,
+				58F76F391B4E19BA0076D02B /* JSUserInfoViewController.xib in Resources */,
 				1896F4791B4DE4260071C8F2 /* newFriends@2x.png in Resources */,
 				1896F3E81B4DE4260071C8F2 /* VoiceSearchFeedback008@2x.png in Resources */,
 				1896F41D1B4DE4260071C8F2 /* faceDelete.png in Resources */,
@@ -3524,6 +3533,7 @@
 				1896F5571B4DE5310071C8F2 /* EMSDWebImagePrefetcher.m in Sources */,
 				1896F39D1B4DE4260071C8F2 /* EMChatViewBaseCell.m in Sources */,
 				77A0DF791B424795007ED2BD /* UIRefreshControl+AFNetworking.m in Sources */,
+				58F76F381B4E19BA0076D02B /* JSUserInfoViewController.m in Sources */,
 				1896F55C1B4DE5310071C8F2 /* UIImage+EMMultiFormat.m in Sources */,
 				7762ADFD1B3D00F7008470F5 /* NSNumber+PrintableMeasurement.m in Sources */,
 				1800DCC21B46771A0046F2D7 /* MJRefreshGifHeader.m in Sources */,

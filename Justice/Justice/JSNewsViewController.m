@@ -19,6 +19,8 @@
 #import "JSWebViewViewController.h"
 #import "JSImgTableViewCell.h"
 #import "MJRefresh.h"
+#import "JSSigninViewController.h"
+#import "JSUserInfoViewController.h"
 
 @interface JSNewsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -52,9 +54,27 @@
     return self;
 }
 
+- (void)showUserInfo {
+    if (![JSAPIManager sessionValid]) {
+        JSSigninViewController *signViewController = [JSSigninViewController new];
+        signViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:signViewController animated:YES];
+    } else {
+        JSUserInfoViewController *userInfoViewController = [JSUserInfoViewController new];
+        userInfoViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:userInfoViewController animated:YES];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"account"]
+                                                                         imageWithRenderingMode:
+                                                                         UIImageRenderingModeAlwaysOriginal] style:
+                                  UIBarButtonItemStylePlain target:self action:@selector(showUserInfo)];
+    self.navigationItem.rightBarButtonItem = barButton;
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.dataSource = self;

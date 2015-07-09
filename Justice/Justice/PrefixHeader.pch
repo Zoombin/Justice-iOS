@@ -24,6 +24,7 @@
 #import "NSString+Valid.h"
 
 #import "EaseMob.h"
+#import "Header.h"
 
 #endif
 

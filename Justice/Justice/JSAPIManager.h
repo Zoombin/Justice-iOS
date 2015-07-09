@@ -15,6 +15,7 @@
 + (instancetype)shared;
 + (BOOL)sessionValid;
 + (void)saveUserID:(NSString *)userID;
++ (void)removeUserID;
 + (NSString *)userID;
 
 //获取个人信息
