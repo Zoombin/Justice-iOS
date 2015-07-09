@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSLawyersViewController : UIViewController
+@interface JSLawyersViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @end

@@ -96,7 +96,7 @@
 //        signinViewController.hidesBottomBarWhenPushed = YES;
 //        [self.navigationController pushViewController:signinViewController animated:YES];
 //    }
-    [self displayHUDTitle:nil message:@"积分兑换功能还未上线，敬请期待。。。"];
+    [self displayHUDTitle:nil message:@"积分兑换功能还未上线，敬请期待..."];
 }
 
 - (void)didReceiveMemoryWarning {
