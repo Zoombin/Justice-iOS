@@ -17,6 +17,8 @@
 	[appearance setBarTintColor:color];
 	[appearance setTintColor:color];
 	[appearance setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    [appearance setTintColor:[UIColor whiteColor]];
 }
 
 @end

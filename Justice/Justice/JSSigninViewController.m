@@ -22,8 +22,6 @@
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
 	self.title = @"登录";
-	
-	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(backOrClose)];
 }
 
 - (BOOL)checkEmpty {
