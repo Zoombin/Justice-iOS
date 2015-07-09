@@ -11,6 +11,7 @@
 #import "Header.h"
 #import "ChatViewController.h"
 #import "JSSigninViewController.h"
+#import "ChatListViewController.h"
 
 @interface JSLawyersViewController ()
 
@@ -28,8 +29,15 @@
 		UIImage *normalImage = [UIImage imageNamed:@"Lawyer"];
 		UIImage *selectedImage = [UIImage imageNamed:@"LawyerHighlighted"];
 		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:self.title image:normalImage selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-	}
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"会话" style:UIBarButtonItemStyleBordered target:self action:@selector(chatList)];
+    }
 	return self;
+}
+
+- (void)chatList {
+    ChatListViewController *chatListViewController = [ChatListViewController new];
+    chatListViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatListViewController animated:YES];
 }
 
 - (void)getLawers {
