@@ -18,7 +18,6 @@
 		1800DC6B1B4669640046F2D7 /* JSLawHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC691B4669640046F2D7 /* JSLawHelpViewController.m */; };
 		1800DC6C1B4669640046F2D7 /* JSLawHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC6A1B4669640046F2D7 /* JSLawHelpViewController.xib */; };
 		1800DC6E1B466DF10046F2D7 /* lawhelp.html in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC6D1B466DF10046F2D7 /* lawhelp.html */; };
-		1800DC711B46700B0046F2D7 /* InfoString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC731B46700B0046F2D7 /* InfoString.strings */; };
 		1800DC781B4672050046F2D7 /* JSJusticeNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC761B4672050046F2D7 /* JSJusticeNoticeViewController.m */; };
 		1800DC791B4672050046F2D7 /* JSJusticeNoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800DC771B4672050046F2D7 /* JSJusticeNoticeViewController.xib */; };
 		1800DCB71B46771A0046F2D7 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800DC8D1B46771A0046F2D7 /* MJRefreshAutoFooter.m */; };
@@ -110,7 +109,6 @@
 		1896F3B41B4DE4260071C8F2 /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896F2831B4DE4260071C8F2 /* ApplyViewController.m */; };
 		1896F3B51B4DE4260071C8F2 /* RealtimeSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896F2851B4DE4260071C8F2 /* RealtimeSearchUtil.m */; };
 		1896F3B61B4DE4260071C8F2 /* InvitationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896F2881B4DE4260071C8F2 /* InvitationManager.m */; };
-		1896F3B71B4DE4260071C8F2 /* LoginViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1896F2891B4DE4260071C8F2 /* LoginViewController.strings */; };
 		1896F3B81B4DE4260071C8F2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896F28C1B4DE4260071C8F2 /* LoginViewController.m */; };
 		1896F3B91B4DE4260071C8F2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896F28E1B4DE4260071C8F2 /* MainViewController.m */; };
 		1896F3BA1B4DE4260071C8F2 /* BackupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896F2911B4DE4260071C8F2 /* BackupViewController.m */; };
@@ -392,6 +390,7 @@
 		581AD8741B463D3C00FC4480 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581AD8731B463D3C00FC4480 /* MapKit.framework */; };
 		5829BB101B4E26D30057017E /* JSFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5829BB0E1B4E26D30057017E /* JSFeedBackViewController.m */; };
 		5829BB111B4E26D30057017E /* JSFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5829BB0F1B4E26D30057017E /* JSFeedBackViewController.xib */; };
+		5829BB171B4E6D5A0057017E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5829BB151B4E6D5A0057017E /* Localizable.strings */; };
 		583A3E371B45115A0087FDA3 /* JSWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */; };
 		583A3E381B45115A0087FDA3 /* JSWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */; };
 		583A3E3C1B452E210087FDA3 /* JSImgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 583A3E3A1B452E210087FDA3 /* JSImgTableViewCell.m */; };
@@ -513,8 +512,6 @@
 		1800DC691B4669640046F2D7 /* JSLawHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLawHelpViewController.m; sourceTree = "<group>"; };
 		1800DC6A1B4669640046F2D7 /* JSLawHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSLawHelpViewController.xib; sourceTree = "<group>"; };
 		1800DC6D1B466DF10046F2D7 /* lawhelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lawhelp.html; sourceTree = "<group>"; };
-		1800DC721B46700B0046F2D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoString.strings; sourceTree = "<group>"; };
-		1800DC741B4670190046F2D7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoString.strings"; sourceTree = "<group>"; };
 		1800DC751B4672050046F2D7 /* JSJusticeNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJusticeNoticeViewController.h; sourceTree = "<group>"; };
 		1800DC761B4672050046F2D7 /* JSJusticeNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJusticeNoticeViewController.m; sourceTree = "<group>"; };
 		1800DC771B4672050046F2D7 /* JSJusticeNoticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSJusticeNoticeViewController.xib; sourceTree = "<group>"; };
@@ -679,7 +676,6 @@
 		1896F2851B4DE4260071C8F2 /* RealtimeSearchUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeSearchUtil.m; sourceTree = "<group>"; };
 		1896F2871B4DE4260071C8F2 /* InvitationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitationManager.h; sourceTree = "<group>"; };
 		1896F2881B4DE4260071C8F2 /* InvitationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitationManager.m; sourceTree = "<group>"; };
-		1896F28A1B4DE4260071C8F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LoginViewController.strings; sourceTree = "<group>"; };
 		1896F28B1B4DE4260071C8F2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1896F28C1B4DE4260071C8F2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		1896F28D1B4DE4260071C8F2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -696,7 +692,6 @@
 		1896F2991B4DE4260071C8F2 /* PushNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationViewController.m; sourceTree = "<group>"; };
 		1896F29A1B4DE4260071C8F2 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		1896F29B1B4DE4260071C8F2 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		1896F29C1B4DE4260071C8F2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LoginViewController.strings"; sourceTree = "<group>"; };
 		1896F29E1B4DE4260071C8F2 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		1896F29F1B4DE4260071C8F2 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		1896F2A01B4DE4260071C8F2 /* EMSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSearchBar.h; sourceTree = "<group>"; };
@@ -1060,6 +1055,8 @@
 		5829BB0D1B4E26D30057017E /* JSFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFeedBackViewController.h; sourceTree = "<group>"; };
 		5829BB0E1B4E26D30057017E /* JSFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFeedBackViewController.m; sourceTree = "<group>"; };
 		5829BB0F1B4E26D30057017E /* JSFeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSFeedBackViewController.xib; sourceTree = "<group>"; };
+		5829BB161B4E6D5A0057017E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5829BB181B4E6D600057017E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		583A3E341B45115A0087FDA3 /* JSWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebViewViewController.h; sourceTree = "<group>"; };
 		583A3E351B45115A0087FDA3 /* JSWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebViewViewController.m; sourceTree = "<group>"; };
 		583A3E361B45115A0087FDA3 /* JSWebViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSWebViewViewController.xib; sourceTree = "<group>"; };
@@ -1479,7 +1476,6 @@
 				1896F26F1B4DE4260071C8F2 /* Chatroom */,
 				1896F2761B4DE4260071C8F2 /* Contacts */,
 				1896F2861B4DE4260071C8F2 /* Core Data */,
-				1896F2891B4DE4260071C8F2 /* LoginViewController.strings */,
 				1896F28B1B4DE4260071C8F2 /* LoginViewController.h */,
 				1896F28C1B4DE4260071C8F2 /* LoginViewController.m */,
 				1896F28D1B4DE4260071C8F2 /* MainViewController.h */,
@@ -2744,11 +2740,11 @@
 		771ED6DE1B39165D0051584D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5829BB151B4E6D5A0057017E /* Localizable.strings */,
 				1800DCCC1B46886B0046F2D7 /* Steps */,
 				1800DC6D1B466DF10046F2D7 /* lawhelp.html */,
 				771ED6DF1B39165D0051584D /* Info.plist */,
 				771ED6E01B39165E0051584D /* main.m */,
-				1800DC731B46700B0046F2D7 /* InfoString.strings */,
 				1896F2111B4DE2710071C8F2 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
@@ -3101,8 +3097,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 				"zh-Hans",
 			);
 			mainGroup = 771ED6D21B39165D0051584D;
@@ -3151,7 +3147,6 @@
 				1896F4441B4DE4260071C8F2 /* chatBar_more_cameraSelected@2x.png in Resources */,
 				1896F43F1B4DE4260071C8F2 /* chatBar_colorMore_videoCallSelected@2x.png in Resources */,
 				1896F3881B4DE4260071C8F2 /* callRing.mp3 in Resources */,
-				1800DC711B46700B0046F2D7 /* InfoString.strings in Resources */,
 				1896F3FA1B4DE4260071C8F2 /* VoiceSearchFeedback017@2x.png in Resources */,
 				1896F3EA1B4DE4260071C8F2 /* VoiceSearchFeedback009@2x.png in Resources */,
 				1896F3CC1B4DE4260071C8F2 /* 57.png in Resources */,
@@ -3217,7 +3212,6 @@
 				1896F43B1B4DE4260071C8F2 /* chatBar_colorMore_photo@2x.png in Resources */,
 				1896F3D31B4DE4260071C8F2 /* chatFire_audioPlaying1.png in Resources */,
 				1896F4201B4DE4260071C8F2 /* messageSendFail@2x.png in Resources */,
-				1896F3B71B4DE4260071C8F2 /* LoginViewController.strings in Resources */,
 				1896F44C1B4DE4260071C8F2 /* chatBar_more_photoSelected@2x.png in Resources */,
 				1896F4631B4DE4260071C8F2 /* chat_sender_audio_playing_full@2x.png in Resources */,
 				1896F3FF1B4DE4260071C8F2 /* VoiceSearchFeedback020.png in Resources */,
@@ -3298,6 +3292,7 @@
 				1896F40B1B4DE4260071C8F2 /* chatBar_more_card.png in Resources */,
 				1896F3D01B4DE4260071C8F2 /* chatListCellHead@2x.png in Resources */,
 				1896F4161B4DE4260071C8F2 /* chat_location_annotation_someone@2x.png in Resources */,
+				5829BB171B4E6D5A0057017E /* Localizable.strings in Resources */,
 				1896F4101B4DE4260071C8F2 /* chatBar_more_face@2x.png in Resources */,
 				1896F40D1B4DE4260071C8F2 /* chatBar_more_cardSelected.png in Resources */,
 				1896F3F71B4DE4260071C8F2 /* VoiceSearchFeedback016.png in Resources */,
@@ -3617,15 +3612,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1800DC731B46700B0046F2D7 /* InfoString.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1800DC721B46700B0046F2D7 /* en */,
-				1800DC741B4670190046F2D7 /* zh-Hans */,
-			);
-			name = InfoString.strings;
-			sourceTree = "<group>";
-		};
 		1896F2191B4DE4260071C8F2 /* LoginViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3634,13 +3620,13 @@
 			name = LoginViewController.xib;
 			sourceTree = "<group>";
 		};
-		1896F2891B4DE4260071C8F2 /* LoginViewController.strings */ = {
+		5829BB151B4E6D5A0057017E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1896F28A1B4DE4260071C8F2 /* en */,
-				1896F29C1B4DE4260071C8F2 /* zh-Hans */,
+				5829BB161B4E6D5A0057017E /* en */,
+				5829BB181B4E6D600057017E /* zh-Hans */,
 			);
-			name = LoginViewController.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
