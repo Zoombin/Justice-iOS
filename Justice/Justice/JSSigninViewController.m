@@ -39,10 +39,13 @@
         [self displayHUDTitle:nil message:@"用户名或密码不能为空！"];
         return;
     }
+    [self displayHUD:@"登录中..."];
     [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:_accountTextField.text password:_passwordTextField.text completion:^(NSDictionary *loginInfo, EMError *error) {
         if (!error && loginInfo) {
+            [self hideHUD:YES];
             NSLog(@"登录成功");
             [JSAPIManager saveUserID:_accountTextField.text];
+            [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
             [self.navigationController popViewControllerAnimated:NO];
 //            [self signIn];
         } else {
@@ -56,10 +59,13 @@
         [self displayHUDTitle:nil message:@"用户名或密码不能为空！"];
         return;
     }
+    [self displayHUD:@"注册中..."];
     [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:_accountTextField.text password:_passwordTextField.text withCompletion:^(NSString *username, NSString *password, EMError *error) {
         if (!error) {
+            [self hideHUD:YES];
             NSLog(@"注册成功");
             [JSAPIManager saveUserID:_accountTextField.text];
+            [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
             [self.navigationController popViewControllerAnimated:NO];
 //            [self signUp];
         } else {

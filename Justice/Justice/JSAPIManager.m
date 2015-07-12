@@ -33,7 +33,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 }
 
 + (BOOL)sessionValid {
-	return [self userID] ? YES : NO;
+	return [self userID] && [[EaseMob sharedInstance].chatManager isLoggedIn] ? YES : NO;
 }
 
 + (NSString *)userID {

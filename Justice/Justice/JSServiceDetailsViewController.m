@@ -16,7 +16,7 @@
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"导航" style:UIBarButtonItemStyleBordered target:self action:@selector(showLocation)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"地图" style:UIBarButtonItemStyleBordered target:self action:@selector(showLocation)];
     
 	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
 	[self.view addSubview:scrollView];

@@ -109,7 +109,7 @@
     if ([JSAPIManager sessionValid]) {
         JSLawerInfo *info = resultArray[indexPath.section];
         NSDictionary *dict = info.lawyers[indexPath.row];
-        ChatViewController *chatViewController = [[ChatViewController alloc] initWithChatter:dict[@"nickname"] isGroup:NO];
+        ChatViewController *chatViewController = [[ChatViewController alloc] initWithChatter:dict[@"account"] isGroup:NO];
         chatViewController.title = dict[@"nickname"];
         chatViewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:chatViewController animated:YES];
