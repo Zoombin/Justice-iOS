@@ -42,7 +42,9 @@
     [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:_accountTextField.text password:_passwordTextField.text completion:^(NSDictionary *loginInfo, EMError *error) {
         if (!error && loginInfo) {
             NSLog(@"登录成功");
-            [self signIn];
+            [JSAPIManager saveUserID:_accountTextField.text];
+            [self.navigationController popViewControllerAnimated:NO];
+//            [self signIn];
         } else {
             [self displayHUDTitle:nil message:error.description];
         }
@@ -57,7 +59,9 @@
     [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:_accountTextField.text password:_passwordTextField.text withCompletion:^(NSString *username, NSString *password, EMError *error) {
         if (!error) {
             NSLog(@"注册成功");
-            [self signUp];
+            [JSAPIManager saveUserID:_accountTextField.text];
+            [self.navigationController popViewControllerAnimated:NO];
+//            [self signUp];
         } else {
             [self displayHUDTitle:nil message:error.description];
         }

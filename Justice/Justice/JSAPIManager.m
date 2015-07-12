@@ -59,7 +59,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 }
 
 - (void)getUserInfo:(NSString *)userId withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
-    [self GET:[self pathWithActionName:@"getUserInfo"] parameters:@{@"user_id" : userId} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self GET:[self pathWithActionName:@"getUserInfo"] parameters:@{@"account" : userId} success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //        NSDictionary *attributes = [responseObject valueForKeyPath:JS_DATA];
         if (block) block(responseObject, nil, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -148,7 +148,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
 
 - (void)getMyReservation:(NSString *)uid withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    dict[@"user_id"] = uid;
+    dict[@"account"] = uid;
     NSLog(@"%@", dict);
     [self GET:[self pathWithActionName:@"getMyReservation"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (block) block(responseObject, nil, nil);
@@ -166,7 +166,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     dict[@"name"] = name;
     dict[@"identity_number"] = idCard;
-    dict[@"user_id"] = userId;
+    dict[@"account"] = userId;
     dict[@"phone"] = phone;
     dict[@"reserve_date"] = time;
     NSLog(@"%@", dict);
@@ -191,7 +191,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
              eid:(NSString *)eid
        withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    dict[@"user_id"] = uid;
+    dict[@"account"] = uid;
     dict[@"score"] = @(score);
     dict[@"examination_id"] = eid;
     NSLog(@"%@", dict);
@@ -206,7 +206,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
         userID:(NSString *)uid
      withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    dict[@"user_id"] = uid;
+    dict[@"account"] = uid;
     dict[@"content"] = content;
     NSLog(@"%@", dict);
     [self GET:[self pathWithActionName:@"advice"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {

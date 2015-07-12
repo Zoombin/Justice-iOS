@@ -71,9 +71,11 @@
     [[JSAPIManager shared] getUserInfo:[JSAPIManager userID] withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
         [self hideHUD:YES];
         if (!error) {
-            JSUserInfo *userInfo = [[JSUserInfo alloc] initWithAttributes:attributes[@"data"]];
-            NSLog(@"%@", userInfo.score);
-            self.navigationItem.title = [NSString stringWithFormat:@"我的积分:%@", userInfo.score];
+            if ([attributes[@"data"] isKindOfClass:[NSDictionary class]]) {
+                JSUserInfo *userInfo = [[JSUserInfo alloc] initWithAttributes:attributes[@"data"]];
+                NSLog(@"%@", userInfo.score);
+                self.navigationItem.title = [NSString stringWithFormat:@"我的积分:%@", userInfo.score];
+            }
         }
     }];
 }
