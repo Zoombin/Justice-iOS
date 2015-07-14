@@ -54,7 +54,7 @@
 
 - (void)showLocation {
     JSRouteSearchViewController *routeSearchViewContrller = [JSRouteSearchViewController new];
-    routeSearchViewContrller.lat = _service.latitude;
+    routeSearchViewContrller.lat =  _service.latitude;
     routeSearchViewContrller.lng = _service.longtitude;
     routeSearchViewContrller.title = _service.name;
     routeSearchViewContrller.hidesBottomBarWhenPushed = YES;

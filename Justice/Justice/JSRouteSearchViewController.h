@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <BaiduMapAPI/BMapKit.h>
+#import "BMapKit.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface JSRouteSearchViewController : UIViewController<BMKMapViewDelegate, BMKRouteSearchDelegate, CLLocationManagerDelegate> {
