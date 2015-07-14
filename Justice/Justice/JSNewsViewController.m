@@ -147,6 +147,7 @@
 
 - (void)getBannerView {
     if ([_bannerNews count] != 0) {
+        [self showBannerView];
         return;
     }
     [[JSAPIManager shared] getBanner:^(NSArray *multiAttributes, NSError *error, NSString *message) {
@@ -160,9 +161,11 @@
 
 - (void)loadInfo:(BOOL)isLoadMore {
     [self displayHUD:@"加载中..."];
-    [self getBannerView];
+    _segmentedControl.userInteractionEnabled = NO;
     if (_segmentedControl.selectedSegmentIndex == 0) {
+        [self getBannerView];
         [[JSAPIManager shared] newsInPage:@(index) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+            _segmentedControl.userInteractionEnabled = YES;
             [self hideHUD:YES];
             [self.tableView.header endRefreshing];
             [self.tableView.footer endRefreshing];
@@ -172,36 +175,39 @@
                 }
                 [_multiNews addObjectsFromArray:[JSNews multiWithAttributesArray:multiAttributes]];
                 [self showBannerView];
-                [_tableView reloadData];
             }
+            [_tableView reloadData];
         }];
     } else if (_segmentedControl.selectedSegmentIndex == 1) {
         [[JSAPIManager shared] galleriesInPage:@(index) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+            _segmentedControl.userInteractionEnabled = YES;
             [self hideHUD:YES];
             [self.tableView.header endRefreshing];
             [self.tableView.footer endRefreshing];
+            [_tableView setTableHeaderView:nil];
             if (!error) {
                 if (!isLoadMore) {
                     [_galleries removeAllObjects];
                 }
                 [_galleries addObjectsFromArray:[JSGallery multiWithAttributesArray:multiAttributes]];
-                [_tableView setTableHeaderView:nil];
-                [_tableView reloadData];
             }
+            [_tableView reloadData];
         }];
     } else {
         [[JSAPIManager shared] videosInPage:@(index) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+            _segmentedControl.userInteractionEnabled = YES;
             [self hideHUD:YES];
             [self.tableView.header endRefreshing];
             [self.tableView.footer endRefreshing];
+            [_tableView setTableHeaderView:nil];
             if (!error) {
                 if (!isLoadMore) {
                     [_videos removeAllObjects];
                 }
                 [_videos addObjectsFromArray:[JSVideo multiWithAttributesArray:multiAttributes]];
-                [_tableView setTableHeaderView:nil];
-                [_tableView reloadData];
+               
             }
+            [_tableView reloadData];
         }];
     }
 }
