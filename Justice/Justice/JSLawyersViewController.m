@@ -41,13 +41,24 @@
 }
 
 - (void)getLawers {
+    [self displayHUD:@"加载中..."];
     [[JSAPIManager shared] getLawerList:^(NSArray *multiAttributes, NSError *error, NSString *message) {
         if (!error) {
             NSLog(@"%@", multiAttributes);
+            [self hideHUD:YES];
             resultArray = [JSLawerInfo multiWithAttributesArray:multiAttributes];
             [resultTableView reloadData];
+        } else {
+            [self displayHUDTitle:nil message:NETWORK_ERROR];
         }
     }];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (resultArray == nil) {
+        [self getLawers];
+    }
 }
 
 - (void)viewDidLoad {
@@ -57,7 +68,7 @@
     resultTableView.dataSource = self;
     resultTableView.delegate = self;
     [_scrollView addSubview:resultTableView];
-    [self getLawers];
+//    [self getLawers];
 }
 
 - (void)didReceiveMemoryWarning {
