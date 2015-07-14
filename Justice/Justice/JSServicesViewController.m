@@ -40,15 +40,26 @@
 	_tableView.dataSource = self;
 	_tableView.delegate = self;
 	[self.view addSubview:_tableView];
-	
-	[self displayHUD:@"加载中..."];
-	[[JSAPIManager shared] servicesInCategories:^(NSArray *multiAttributes, NSError *error, NSString *message) {
-		[self hideHUD:YES];
-		if (!error) {
-			_serviceCategories = [JSServiceCategory multiWithAttributesArray:multiAttributes];
-			[_tableView reloadData];
-		}
-	}];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (!_serviceCategories) {
+        [self loadServices];
+    }
+}
+
+- (void)loadServices {
+    [self displayHUD:@"加载中..."];
+    [[JSAPIManager shared] servicesInCategories:^(NSArray *multiAttributes, NSError *error, NSString *message) {
+        if (!error) {
+            [self hideHUD:YES];
+            _serviceCategories = [JSServiceCategory multiWithAttributesArray:multiAttributes];
+            [_tableView reloadData];
+        } else {
+            [self displayHUDTitle:nil message:NETWORK_ERROR];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
