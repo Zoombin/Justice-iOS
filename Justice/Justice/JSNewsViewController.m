@@ -118,6 +118,7 @@
         imgView.contentMode = UIViewContentModeScaleAspectFit;
         [imgView setImageWithURL:[NSURL URLWithString:news.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
         imgView.userInteractionEnabled = YES;
+        imgView.contentMode = UIViewContentModeScaleToFill;
         imgView.tag = i;
         [scrollView addSubview:imgView];
         
