@@ -70,6 +70,17 @@
         [_locationManager requestAlwaysAuthorization];//添加这句
     }
     [_locationManager startUpdatingLocation];
+    [self addEndLocation];
+}
+
+- (void)addEndLocation {
+    BMKPointAnnotation* item = [[BMKPointAnnotation alloc]init];
+    item.title = self.title;
+    CLLocationCoordinate2D location;
+    location.latitude = [_lat doubleValue];
+    location.longitude = [_lng doubleValue];
+     item.coordinate = location;
+    [_mapView addAnnotation:item];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -83,6 +94,10 @@
          {
              _mapView.centerCoordinate = newLocation.coordinate;
              cityName = [[placemark.addressDictionary objectForKey:@"City"] substringToIndex:2];
+             BMKPointAnnotation* item = [[BMKPointAnnotation alloc]init];
+             item.title = @"当前位置";
+             item.coordinate = newLocation.coordinate;
+             [_mapView addAnnotation:item];
          }
      }];
     [self.locationManager stopUpdatingLocation];
