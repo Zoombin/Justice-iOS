@@ -20,6 +20,7 @@
 		if ([attributes[@"photos"] notNull]) {
 			_photos = [JSGalleryPhoto multiWithAttributesArray:attributes[@"photos"]];
 		}
+		_coverImagePath = [attributes[@"cover"] notNull];
 	}
 	return self;
 }

@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSDate *createdDate;
 @property (nonatomic, strong) NSArray *photos;
+@property (nonatomic, strong) NSString *coverImagePath;
 
 @end

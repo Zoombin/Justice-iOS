@@ -270,12 +270,8 @@
         
         JSGallery *gallery = _galleries[indexPath.row];
         cell.titleLabel.text = gallery.title;
-        if ([gallery.photos count] > 0) {
-            JSGalleryPhoto *photo = gallery.photos[0];
-            if (photo.imagePath.length) {
-                [cell.imgView setImageWithURL:[NSURL URLWithString:photo.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
-            }
-        }
+		[cell.imgView setImageWithURL:[NSURL URLWithString:gallery.coverImagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
+		NSLog(@"gallery.coverImagePath: %@", gallery.coverImagePath);
         return cell;
     } else if (_segmentedControl.selectedSegmentIndex == 2) {
         static NSString *CellIdentifier = @"UITableViewCell";
