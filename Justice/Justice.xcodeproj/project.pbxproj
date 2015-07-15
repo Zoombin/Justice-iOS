@@ -399,6 +399,7 @@
 		1896F5781B4DE5310071C8F2 /* EMVoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1896F5331B4DE5310071C8F2 /* EMVoiceConverter.mm */; };
 		1896F5791B4DE5310071C8F2 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1896F5371B4DE5310071C8F2 /* libopencore-amrnb.a */; };
 		1896F57A1B4DE5310071C8F2 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1896F53B1B4DE5310071C8F2 /* libopencore-amrwb.a */; };
+		5800894E1B55EE270048A712 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5800894D1B55EE270048A712 /* libbaidumapapi.a */; };
 		581AD8741B463D3C00FC4480 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581AD8731B463D3C00FC4480 /* MapKit.framework */; };
 		5829BB101B4E26D30057017E /* JSFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5829BB0E1B4E26D30057017E /* JSFeedBackViewController.m */; };
 		5829BB111B4E26D30057017E /* JSFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5829BB0F1B4E26D30057017E /* JSFeedBackViewController.xib */; };
@@ -409,8 +410,6 @@
 		583A3E3D1B452E210087FDA3 /* JSImgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583A3E3B1B452E210087FDA3 /* JSImgTableViewCell.xib */; };
 		587645C51B5511E4007DEF3A /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 587645BF1B5511E4007DEF3A /* mapapi.bundle */; };
 		587645C61B5511E4007DEF3A /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 587645C01B5511E4007DEF3A /* readme.txt */; };
-		587645C71B5511E4007DEF3A /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 587645C21B5511E4007DEF3A /* libbaidumapapi.a */; };
-		587645C81B5511E4007DEF3A /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 587645C41B5511E4007DEF3A /* libbaidumapapi.a */; };
 		587C00BF1B43D51200475114 /* JSNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C00BD1B43D51200475114 /* JSNewsTableViewCell.m */; };
 		587C00C01B43D51200475114 /* JSNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587C00BE1B43D51200475114 /* JSNewsTableViewCell.xib */; };
 		587C00C41B43D91400475114 /* JSVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C00C21B43D91400475114 /* JSVideoTableViewCell.m */; };
@@ -1092,6 +1091,7 @@
 		1896F5391B4DE5310071C8F2 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
 		1896F53A1B4DE5310071C8F2 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
 		1896F53B1B4DE5310071C8F2 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		5800894D1B55EE270048A712 /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
 		581AD8731B463D3C00FC4480 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5829BB0D1B4E26D30057017E /* JSFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFeedBackViewController.h; sourceTree = "<group>"; };
 		5829BB0E1B4E26D30057017E /* JSFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFeedBackViewController.m; sourceTree = "<group>"; };
@@ -1178,8 +1178,6 @@
 		587645BE1B5511E4007DEF3A /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
 		587645BF1B5511E4007DEF3A /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 		587645C01B5511E4007DEF3A /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
-		587645C21B5511E4007DEF3A /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
-		587645C41B5511E4007DEF3A /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
 		587C00BC1B43D51200475114 /* JSNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewsTableViewCell.h; sourceTree = "<group>"; };
 		587C00BD1B43D51200475114 /* JSNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewsTableViewCell.m; sourceTree = "<group>"; };
 		587C00BE1B43D51200475114 /* JSNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -1434,11 +1432,10 @@
 				58939C331B4A56D700A60780 /* libz.dylib in Frameworks */,
 				58939C311B4A56C500A60780 /* libiconv.dylib in Frameworks */,
 				58939C2F1B4A56B600A60780 /* libxml2.dylib in Frameworks */,
-				587645C81B5511E4007DEF3A /* libbaidumapapi.a in Frameworks */,
 				58939C2D1B4A56A600A60780 /* libsqlite3.dylib in Frameworks */,
 				58939C2A1B4A568A00A60780 /* libstdc++.6.0.9.dylib in Frameworks */,
 				1896F57A1B4DE5310071C8F2 /* libopencore-amrwb.a in Frameworks */,
-				587645C71B5511E4007DEF3A /* libbaidumapapi.a in Frameworks */,
+				5800894E1B55EE270048A712 /* libbaidumapapi.a in Frameworks */,
 				1896F5791B4DE5310071C8F2 /* libopencore-amrnb.a in Frameworks */,
 				58939C281B4A567500A60780 /* CFNetwork.framework in Frameworks */,
 				58939C261B4A566C00A60780 /* MobileCoreServices.framework in Frameworks */,
@@ -2619,11 +2616,10 @@
 		587645751B5511E4007DEF3A /* BaiduMap_IOSSDK_v2.8.0_Lib */ = {
 			isa = PBXGroup;
 			children = (
+				5800894D1B55EE270048A712 /* libbaidumapapi.a */,
 				587645761B5511E4007DEF3A /* inc */,
 				587645BF1B5511E4007DEF3A /* mapapi.bundle */,
 				587645C01B5511E4007DEF3A /* readme.txt */,
-				587645C11B5511E4007DEF3A /* Release-iphoneos */,
-				587645C31B5511E4007DEF3A /* Release-iphonesimulator */,
 			);
 			path = BaiduMap_IOSSDK_v2.8.0_Lib;
 			sourceTree = "<group>";
@@ -2705,22 +2701,6 @@
 				587645BE1B5511E4007DEF3A /* BMKVersion.h */,
 			);
 			path = inc;
-			sourceTree = "<group>";
-		};
-		587645C11B5511E4007DEF3A /* Release-iphoneos */ = {
-			isa = PBXGroup;
-			children = (
-				587645C21B5511E4007DEF3A /* libbaidumapapi.a */,
-			);
-			path = "Release-iphoneos";
-			sourceTree = "<group>";
-		};
-		587645C31B5511E4007DEF3A /* Release-iphonesimulator */ = {
-			isa = PBXGroup;
-			children = (
-				587645C41B5511E4007DEF3A /* libbaidumapapi.a */,
-			);
-			path = "Release-iphonesimulator";
 			sourceTree = "<group>";
 		};
 		58939BB61B4A4F8100A60780 /* EaseMobSDK */ = {
@@ -4067,6 +4047,7 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap_IOSSDK_v2.6.0_Lib",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap_IOSSDK_v2.8.0_Lib/Release-iphoneos",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap_IOSSDK_v2.8.0_Lib/Release-iphonesimulator",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap_IOSSDK_v2.8.0_Lib",
 				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -4121,6 +4102,7 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap_IOSSDK_v2.6.0_Lib",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap_IOSSDK_v2.8.0_Lib/Release-iphoneos",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap_IOSSDK_v2.8.0_Lib/Release-iphonesimulator",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BaiduMap_IOSSDK_v2.8.0_Lib",
 				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
