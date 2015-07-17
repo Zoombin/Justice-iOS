@@ -65,6 +65,7 @@
 
 - (void)getUserInfo {
     if (![JSAPIManager sessionValid]) {
+        self.navigationItem.title = @"在线考试";
         return;
     }
     [self displayHUD:@"加载中..."];
