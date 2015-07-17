@@ -10,7 +10,8 @@
 
 
 //NSString * const JS_HOST = @"http://127.0.0.1/dushuhu-web/";
-NSString * const JS_HOST = @"http://112.124.98.9/dushuhu-web/";
+NSString * const JS_HOST = @"http://www.ufocapital.com:8000/";
+//NSString * const JS_HOST = @"http://112.124.98.9/dushuhu-web/";
 NSString * const JS_API_PREFIX = @"index.php?";
 NSString * const JS_ACTION = @"action";
 NSString * const JS_DATA = @"data";
