@@ -82,13 +82,20 @@
         [self displayHUDTitle:nil message:@"请输入正确的身份证!"];
         return;
     }
+    [self displayHUD:@"预约中..."];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     [[JSAPIManager shared] addServe:[JSAPIManager userID] phone:_phoneTextField.text idCard:_idTextField.text name:_nameTextField.text time:reserveTime withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
         if (!error) {
             NSLog(@"%@", attributes);
             [self displayHUDTitle:nil message:attributes[@"msg"]];
             if ([attributes[@"error"] boolValue] == NO) {
-                [self performSelector:@selector(back) withObject:nil afterDelay:2.0];
+                [self performSelector:@selector(back) withObject:nil afterDelay:DELAY_TIMES];
+            } else {
+                self.navigationItem.rightBarButtonItem.enabled = YES;
             }
+        } else {
+            self.navigationItem.rightBarButtonItem.enabled = YES;
+            [self displayHUDTitle:nil message:NETWORK_ERROR];
         }
     }];
 }

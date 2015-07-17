@@ -40,7 +40,7 @@
             if (!error) {
                 if ([attributes[@"error"] boolValue] == NO) {
                     [self displayHUDTitle:nil message:@"提交成功"];
-                    [self performSelector:@selector(back) withObject:nil afterDelay:2.0];
+                    [self performSelector:@selector(back) withObject:nil afterDelay:DELAY_TIMES];
                 } else {
                     [self displayHUDTitle:nil message:attributes[@"msg"]];
                 }

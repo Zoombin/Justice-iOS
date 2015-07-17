@@ -54,7 +54,7 @@
                 NSLog(@"%@", attributes);
                 if ([attributes[@"error"] boolValue] == NO) {
                     NSLog(@"提交成功");
-                    [self performSelector:@selector(back) withObject:nil afterDelay:2.0];
+                    [self performSelector:@selector(back) withObject:nil afterDelay:DELAY_TIMES];
                 }
             }
         }];

@@ -65,7 +65,7 @@
         if (!error) {
             [JSAPIManager removeUserID];
             [self displayHUDTitle:nil message:@"登出成功"];
-            [self performSelector:@selector(back) withObject:nil afterDelay:2.0];
+            [self performSelector:@selector(back) withObject:nil afterDelay:DELAY_TIMES];
         } else {
             [self displayHUDTitle:nil message:error.description];
         }
