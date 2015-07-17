@@ -17,6 +17,7 @@
 //    IBOutlet UITextField* _endAddrText;
     float currentLat;
     float currentLng;
+    CLLocationCoordinate2D curret;
     BMKRouteSearch* _routesearch;
     NSString *cityName;
 }

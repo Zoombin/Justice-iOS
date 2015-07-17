@@ -80,6 +80,7 @@
     location.latitude = [_lat doubleValue];
     location.longitude = [_lng doubleValue];
      item.coordinate = location;
+    _mapView.centerCoordinate = location;
     [_mapView addAnnotation:item];
 }
 
@@ -92,7 +93,8 @@
      {
          for(CLPlacemark *placemark in placemarks)
          {
-             _mapView.centerCoordinate = newLocation.coordinate;
+//             _mapView.centerCoordinate = newLocation.coordinate;
+             curret = newLocation.coordinate;
              cityName = [[placemark.addressDictionary objectForKey:@"City"] substringToIndex:2];
              BMKPointAnnotation* item = [[BMKPointAnnotation alloc]init];
              item.title = @"当前位置";
@@ -472,7 +474,7 @@
 {
     BMKPlanNode* start = [[BMKPlanNode alloc]init];
     start.name = @"当前位置";
-    start.pt = _mapView.centerCoordinate;
+    start.pt = curret;
     
     BMKPlanNode* end = [[BMKPlanNode alloc]init];
     end.name = self.title;
