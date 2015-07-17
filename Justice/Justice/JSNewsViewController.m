@@ -128,7 +128,9 @@
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(i * screenWidth, CGRectGetMaxY(imgView.frame) - 30, screenWidth, 30)];
         titleLabel.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
         titleLabel.textColor = [UIColor whiteColor];
-        titleLabel.text = [NSString stringWithFormat:@"\t%@", news.title];
+        titleLabel.text = [NSString stringWithFormat:@"%@", news.title];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        [titleLabel setAdjustsFontSizeToFitWidth:YES];
         titleLabel.font = [UIFont systemFontOfSize:14];
         [scrollView addSubview:titleLabel];
     }
