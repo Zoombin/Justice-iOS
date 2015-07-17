@@ -15,6 +15,7 @@
 
 @interface ChatListViewController : BaseViewController
 
+@property (nonatomic, strong) NSArray *lawers;
 - (void)refreshDataSource;
 
 - (void)isConnect:(BOOL)isConnect;

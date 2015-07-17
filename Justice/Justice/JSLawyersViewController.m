@@ -36,6 +36,7 @@
 
 - (void)chatList {
     ChatListViewController *chatListViewController = [ChatListViewController new];
+    chatListViewController.lawers = resultArray;
     chatListViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatListViewController animated:YES];
 }

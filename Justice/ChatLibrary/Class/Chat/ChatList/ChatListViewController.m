@@ -19,6 +19,7 @@
 #import "ChatViewController.h"
 #import "EMSearchDisplayController.h"
 #import "ConvertToCommonEmoticonsHelper.h"
+#import "JSLawerInfo.h"
 
 @interface ChatListViewController ()<UITableViewDelegate,UITableViewDataSource, UISearchDisplayDelegate,SRRefreshDelegate, UISearchBarDelegate, IChatManagerDelegate,ChatViewControllerDelegate>
 
@@ -340,7 +341,7 @@
         cell = [[ChatListCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
     }
     EMConversation *conversation = [self.dataSource objectAtIndex:indexPath.row];
-    cell.name = conversation.chatter;
+    cell.name = [self getLawerNickNameByAccount:conversation.chatter];
     if (conversation.conversationType == eConversationTypeChat) {
         cell.placeholderImage = [UIImage imageNamed:@"chatListCellHead.png"];
     }
@@ -394,7 +395,7 @@
     EMConversation *conversation = [self.dataSource objectAtIndex:indexPath.row];
     
     ChatViewController *chatController;
-    NSString *title = conversation.chatter;
+    NSString *title = [self getLawerNickNameByAccount:conversation.chatter];
     if (conversation.conversationType != eConversationTypeChat) {
         if ([[conversation.ext objectForKey:@"groupSubject"] length])
         {
@@ -574,6 +575,21 @@
 // 根据环信id得到要显示用户名，如果返回nil，则默认显示环信id
 - (NSString *)nickNameWithChatter:(NSString *)chatter{
     return chatter;
+}
+
+- (NSString *)getLawerNickNameByAccount:(NSString *)account {
+    for (int i = 0; i < [_lawers count]; i++) {
+        JSLawerInfo *info = _lawers[i];
+        for (int j = 0; j < [info.lawyers count]; j++) {
+            NSDictionary *infoDict = info.lawyers[j];
+            NSString *nickName = infoDict[@"nickname"];
+            NSString *lawAccount = infoDict[@"account"];
+            if ([lawAccount isEqualToString:account]) {
+                return nickName;
+            }
+        }
+    }
+    return account;
 }
 
 @end
