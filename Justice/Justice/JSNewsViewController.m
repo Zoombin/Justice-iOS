@@ -164,6 +164,7 @@
 - (void)loadInfo:(BOOL)isLoadMore {
     [self displayHUD:@"加载中..."];
     _segmentedControl.userInteractionEnabled = NO;
+    [_tableView reloadData];
     if (_segmentedControl.selectedSegmentIndex == 0) {
         [self getBannerView];
         [[JSAPIManager shared] newsInPage:@(index) withBlock:^(NSArray *multiAttributes, NSError *error, NSString *message) {
