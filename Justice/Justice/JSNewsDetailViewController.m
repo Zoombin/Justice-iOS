@@ -21,10 +21,7 @@
    self.titleLabel.text = _news.title;
     NSMutableString *detailsString = [NSMutableString string];
     [detailsString appendString:_news.content];
-    [detailsString appendString:@"\n"];
-//    [detailsString appendString:_news.createdDate.description];
     self.contentLabel.text = detailsString;
-    [self.contentLabel sizeToFit];
     
     if (_news.imagePath.length) {
         [self.imgView

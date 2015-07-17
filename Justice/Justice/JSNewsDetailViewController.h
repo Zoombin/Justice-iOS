@@ -14,5 +14,5 @@
 @property (nonatomic, strong) JSNews *news;
 @property (nonatomic, weak) IBOutlet UIImageView *imgView;
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *contentLabel;
+@property (nonatomic, weak) IBOutlet UITextView *contentLabel;
 @end
