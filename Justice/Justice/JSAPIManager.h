@@ -65,6 +65,7 @@
           idCard:(NSString *)idCard
             name:(NSString *)name
             time:(NSString *)time
+            type:(NSString *)type
        withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block;
 
 //获取题目

@@ -10,8 +10,8 @@
 
 
 //NSString * const JS_HOST = @"http://127.0.0.1/dushuhu-web/";
-NSString * const JS_HOST = @"http://www.ufocapital.com:8000/";
-//NSString * const JS_HOST = @"http://112.124.98.9/dushuhu-web/";
+//NSString * const JS_HOST = @"http://www.ufocapital.com:8000/";
+NSString * const JS_HOST = @"http://112.124.98.9/justice/";
 NSString * const JS_API_PREFIX = @"index.php?";
 NSString * const JS_ACTION = @"action";
 NSString * const JS_DATA = @"data";
@@ -163,6 +163,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
           idCard:(NSString *)idCard
             name:(NSString *)name
             time:(NSString *)time
+            type:(NSString *)type
        withBlock:(void (^)(NSDictionary *attributes, NSError *error, NSString *message))block {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     dict[@"name"] = name;
@@ -170,6 +171,7 @@ NSString * const JS_USER_ID_KEY = @"JS_USER_ID_KEY";
     dict[@"account"] = userId;
     dict[@"phone"] = phone;
     dict[@"reserve_date"] = time;
+    dict[@"type"] = type;
     NSLog(@"%@", dict);
     [self GET:[self pathWithActionName:@"reserve"] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (block) block(responseObject, nil, nil);

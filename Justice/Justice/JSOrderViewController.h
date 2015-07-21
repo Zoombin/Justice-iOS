@@ -14,4 +14,5 @@
 @property (nonatomic, weak) IBOutlet UITextField *phoneTextField;
 @property (nonatomic, weak) IBOutlet UITextField *idTextField;
 @property (nonatomic, weak) IBOutlet UIButton *selectTimeBtn;
+@property (nonatomic, weak) IBOutlet UIButton *selectOrderType;
 @end

@@ -10,26 +10,51 @@
 #import "UIViewController+HUD.h"
 #import "JSAPIManager.h"
 
+#define TIME_ACTIONSHEET_TAG 1001
+#define TYPE_ACTIONSHEET_TAG 1002
+
 @interface JSOrderViewController ()
 
 @end
 
 @implementation JSOrderViewController {
     NSMutableArray *reserveTimes;
+    NSArray *types;
     NSString *reserveTime;
+    NSString *reserveType;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我要预约";
+    types = @[@"委托公证", @"遗嘱公证", @"继承公证", @"赠与合同", @"保证证据公证", @"现场监督公证", @"房屋买卖合同/组贷合同公证", @"抵押合同/质押合同", @"提存", @"涉外"];
     // Do any additional setup after loading the view from its nib.
     reserveTimes = [[NSMutableArray alloc] init];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"提交" style:UIBarButtonItemStyleBordered target:self action:@selector(submit)];
     
     [_selectTimeBtn addTarget:self action:@selector(showSelectTimeActionSheet) forControlEvents:UIControlEventTouchUpInside];
+    [_selectOrderType addTarget:self action:@selector(showOrderTypeActionSheet) forControlEvents:UIControlEventTouchUpInside];
     
     [self getReserveTime];
+}
+
+- (void)showOrderTypeActionSheet {
+    if ([reserveTimes count] == 0) {
+        [self displayHUDTitle:nil message:@"尚未获取到预约时间!"];
+        return;
+    }
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] init];
+    actionSheet.title = @"选择预约时间";
+    for (int i = 0; i < [types count]; i++) {
+        NSString *type = types[i];
+        [actionSheet addButtonWithTitle:type];
+    }
+    [actionSheet addButtonWithTitle:@"取消"];
+    [actionSheet setCancelButtonIndex:[types count]];
+    actionSheet.tag = TYPE_ACTIONSHEET_TAG;
+    actionSheet.delegate = self;
+    [actionSheet showInView:self.view];
 }
 
 - (void)showSelectTimeActionSheet {
@@ -40,11 +65,12 @@
     UIActionSheet *actionSheet = [[UIActionSheet alloc] init];
     actionSheet.title = @"选择预约时间";
     for (int i = 0; i < [reserveTimes count]; i++) {
-        NSString *time = reserveTimes[i];
-        [actionSheet addButtonWithTitle:time];
+        NSDictionary *time = reserveTimes[i];
+        [actionSheet addButtonWithTitle:[NSString stringWithFormat:@"%@ 剩%@名", time[@"date"], time[@"left"]]];
     }
     [actionSheet addButtonWithTitle:@"取消"];
     [actionSheet setCancelButtonIndex:[reserveTimes count]];
+    actionSheet.tag = TIME_ACTIONSHEET_TAG;
     actionSheet.delegate = self;
     [actionSheet showInView:self.view];
 }
@@ -53,8 +79,18 @@
     if (actionSheet.cancelButtonIndex == buttonIndex) {
         return;
     }
-    reserveTime = reserveTimes[buttonIndex];
-    [_selectTimeBtn setTitle:reserveTime forState:UIControlStateNormal];
+    if (actionSheet.tag == TIME_ACTIONSHEET_TAG) {
+        NSDictionary *timeInfo = reserveTimes[buttonIndex];
+        if ([timeInfo[@"left"] integerValue] == 0) {
+            [self displayHUDTitle:nil message:@"该时段已预约满了!"];
+            return;
+        }
+        reserveTime = timeInfo[@"date"];
+        [_selectTimeBtn setTitle:reserveTime forState:UIControlStateNormal];
+    } else {
+        reserveType = types[buttonIndex];
+        [_selectOrderType setTitle:reserveType forState:UIControlStateNormal];
+    }
 }
 
 - (void)submit {
@@ -74,6 +110,10 @@
         [self displayHUDTitle:nil message:@"预约时间不能为空!"];
         return;
     }
+    if (reserveType == nil) {
+        [self displayHUDTitle:nil message:@"预约类型不能为空!"];
+        return;
+    }
     if (![self isMobileNumber:_phoneTextField.text]) {
         [self displayHUDTitle:nil message:@"请输入正确的手机号!"];
         return;
@@ -84,7 +124,13 @@
     }
     [self displayHUD:@"预约中..."];
     self.navigationItem.rightBarButtonItem.enabled = NO;
-    [[JSAPIManager shared] addServe:[JSAPIManager userID] phone:_phoneTextField.text idCard:_idTextField.text name:_nameTextField.text time:reserveTime withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
+    [[JSAPIManager shared] addServe:[JSAPIManager userID]
+                              phone:_phoneTextField.text
+                             idCard:_idTextField.text
+                               name:_nameTextField.text
+                               time:reserveTime
+                               type:reserveType
+                          withBlock:^(NSDictionary *attributes, NSError *error, NSString *message) {
         if (!error) {
             NSLog(@"%@", attributes);
             [self displayHUDTitle:nil message:attributes[@"msg"]];
