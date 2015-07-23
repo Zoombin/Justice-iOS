@@ -15,6 +15,7 @@
 #import "JSServicesViewController.h"
 #import "JSLawHelpViewController.h"
 #import "EaseMob.h"
+#import "MobClick.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self customizeAppearance];
+    
+    [MobClick startWithAppkey:@"55b0f27d67e58e124c00137f" reportPolicy:BATCH channelId:@"iOS"];
     
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定generalDelegate参数
