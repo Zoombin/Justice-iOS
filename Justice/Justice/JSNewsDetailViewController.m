@@ -8,6 +8,8 @@
 
 #import "JSNewsDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "JSGalleryDetailsViewController.h"
+#import "JSGalleryPhoto.h"
 
 @interface JSNewsDetailViewController ()
 
@@ -27,6 +29,19 @@
         [self.imgView
          setImageWithURL:[NSURL URLWithString:_news.imagePath] placeholderImage:[UIImage imageNamed:@"NewsPlaceholder"]];
     }
+    
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showImageDetail)];
+    [self.imgView addGestureRecognizer:gesture];
+}
+
+- (void)showImageDetail {
+    JSGalleryDetailsViewController *detailViewController = [JSGalleryDetailsViewController new];
+    JSGalleryPhoto *photo = [[JSGalleryPhoto alloc] init];
+    photo.imagePath = _news.imagePath;
+    JSGallery *gallery = [[JSGallery alloc] initWithAttributes:nil];
+    gallery.photos = @[photo];
+    detailViewController.gallery = gallery;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
