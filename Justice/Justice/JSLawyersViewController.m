@@ -19,7 +19,6 @@
 
 @implementation JSLawyersViewController {
     NSArray *resultArray;
-    UITableView *resultTableView;
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -48,7 +47,7 @@
             NSLog(@"%@", multiAttributes);
             [self hideHUD:YES];
             resultArray = [JSLawerInfo multiWithAttributesArray:multiAttributes];
-            [resultTableView reloadData];
+            [_resultTableView reloadData];
         } else {
             [self displayHUDTitle:nil message:NETWORK_ERROR];
         }
@@ -65,10 +64,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
-    resultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height) style:UITableViewStyleGrouped];
-    resultTableView.dataSource = self;
-    resultTableView.delegate = self;
-    [_scrollView addSubview:resultTableView];
 //    [self getLawers];
 }
 
