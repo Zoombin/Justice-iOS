@@ -94,35 +94,34 @@
 }
 
 - (void)submit {
-//    if ([_nameTextField.text isEqualToString:@""]) {
-//        [self displayHUDTitle:nil message:@"姓名不能为空!"];
-//        return;
-//    }
-//    if ([_phoneTextField.text isEqualToString:@""]) {
-//        [self displayHUDTitle:nil message:@"手机号不能为空!"];
-//        return;
-//    }
-//    if ([_idTextField.text isEqualToString:@""]) {
-//        [self displayHUDTitle:nil message:@"身份证不能为空!"];
-//        return;
-//    }
-//    if (reserveTime == nil) {
-//        [self displayHUDTitle:nil message:@"预约时间不能为空!"];
-//        return;
-//    }
-//    if (reserveType == nil) {
-//        [self displayHUDTitle:nil message:@"预约类型不能为空!"];
-//        return;
-//    }
-//    if (![self isMobileNumber:_phoneTextField.text]) {
-//        [self displayHUDTitle:nil message:@"请输入正确的手机号!"];
-//        return;
-//    }
+    if ([_nameTextField.text isEqualToString:@""]) {
+        [self displayHUDTitle:nil message:@"姓名不能为空!"];
+        return;
+    }
+    if ([_phoneTextField.text isEqualToString:@""]) {
+        [self displayHUDTitle:nil message:@"手机号不能为空!"];
+        return;
+    }
+    if ([_idTextField.text isEqualToString:@""]) {
+        [self displayHUDTitle:nil message:@"身份证不能为空!"];
+        return;
+    }
+    if (reserveTime == nil) {
+        [self displayHUDTitle:nil message:@"预约时间不能为空!"];
+        return;
+    }
+    if (reserveType == nil) {
+        [self displayHUDTitle:nil message:@"预约类型不能为空!"];
+        return;
+    }
+    if (![self isMobileNumber:_phoneTextField.text]) {
+        [self displayHUDTitle:nil message:@"请输入正确的手机号!"];
+        return;
+    }
     if (![self checkIdCard:_idTextField.text]) {
         [self displayHUDTitle:nil message:@"请输入正确的身份证!"];
         return;
     }
-    return;
     [self displayHUD:@"预约中..."];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     [[JSAPIManager shared] addServe:[JSAPIManager userID]
