@@ -42,6 +42,11 @@
 	<string>我们需要您的地理位置信息来获取数据</string>
 	<key>CFBundleDisplayName</key>
 	<string>常熟司法局</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
